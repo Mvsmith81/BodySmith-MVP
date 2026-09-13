@@ -1,5 +1,5 @@
-const CACHE='bodysmith-v5';
-const SHELL=['./','./index.html','./styles.css?v=20260913','./app.js?v=20260913','./manifest.webmanifest?v=20260913','./icon.svg?v=20260913'];
+const CACHE='bodysmith-v6';
+const SHELL=['./','./index.html','./styles.css?v=20260913b','./auth-fix.js?v=20260913b','./app.js?v=20260913b','./manifest.webmanifest?v=20260913b','./icon.svg?v=20260913b'];
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(SHELL)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch',e=>{
