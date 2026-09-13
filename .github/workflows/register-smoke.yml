@@ -1,0 +1,29 @@
+name: Register Smoke Test
+
+on:
+  push:
+    paths:
+      - '.github/workflows/register-smoke.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  register:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test account registration
+        shell: bash
+        run: |
+          USERNAME="ci_test_${GITHUB_RUN_ID}"
+          RESPONSE=$(curl -sS -w '\n%{http_code}' -X POST 'https://uuzctytbguqjumwpczfh.supabase.co/functions/v1/bodysmith-api' \
+            -H 'Content-Type: application/json' \
+            -H 'apikey: sb_publishable_ibEVVafS4THz-16p4euMfg_qjG2WeU2' \
+            --data "{\"action\":\"register\",\"displayName\":\"CI Test\",\"username\":\"${USERNAME}\",\"password\":\"BodySmith123!\"}")
+          BODY=$(echo "$RESPONSE" | sed '$d')
+          CODE=$(echo "$RESPONSE" | tail -n1)
+          echo "HTTP $CODE"
+          echo "$BODY"
+          test "$CODE" = "201"
+          echo "$BODY" | grep -q '"token"'
