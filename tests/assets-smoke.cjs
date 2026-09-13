@@ -6,3 +6,6 @@ for(const path of shell)if(path!=='./')assert.ok(fs.existsSync(path.split('?')[0
 for(const path of ['app.js','styles.css','auth-fix.js'])assert.ok(shell.some(x=>x.includes(path)&&fs.readFileSync('index.html','utf8').includes(x)),path+' cache version');
 assert.ok(sw.includes("addEventListener('push'"));assert.equal(fs.readdirSync('media').filter(p=>p.endsWith('.webp')).length,29);
 console.log('PASS manifest, versioned shell, 29 media assets, push handler');
+
+for(const name of fs.readdirSync('media')){const data=fs.readFileSync('media/'+name);assert.ok(data.length>1000,name+' has image data');assert.equal(data.toString('ascii',0,4),'RIFF',name);assert.equal(data.toString('ascii',8,12),'WEBP',name);}
+console.log('PASS nonempty WebP files');
