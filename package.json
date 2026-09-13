@@ -1,0 +1,27 @@
+{
+  "name": "bodysmith-mvp",
+  "version": "2.0.0",
+  "description": "BodySmith is a mobile-first workout PWA with cloud accounts, guided set logging, workout history, progress tracking, and a four-day muscle-building plan.",
+  "main": "app.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "node --check app.js && node --check sw.js && node tests/ui-smoke.cjs",
+    "test:backend": "node tests/backend-smoke.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mvsmith81/BodySmith-MVP.git"
+  },
+  "keywords": [],
+  "author": "",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Mvsmith81/BodySmith-MVP/issues"
+  },
+  "homepage": "https://github.com/Mvsmith81/BodySmith-MVP#readme",
+  "devDependencies": {
+    "jsdom": "26.1.0"
+  }
+}

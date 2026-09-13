@@ -1,13 +1,11 @@
 name: Validate BodySmith
-
 on:
   push:
     branches: [main]
+  pull_request:
   workflow_dispatch:
-
 permissions:
   contents: read
-
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -16,14 +14,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Check JavaScript syntax
-        run: node --check app.js
-      - name: Validate PWA manifest
-        run: node -e "JSON.parse(require('fs').readFileSync('manifest.webmanifest','utf8')); console.log('manifest ok')"
-      - name: Confirm required app files
-        run: test -f index.html && test -f styles.css && test -f app.js && test -f sw.js && test -f manifest.webmanifest && test -f icon.svg
-      - name: Check live BodySmith API
-        run: |
-          response=$(curl --fail-with-body --retry 3 --silent --show-error -X POST 'https://uuzctytbguqjumwpczfh.supabase.co/functions/v1/bodysmith-api' -H 'Content-Type: application/json' --data '{"action":"health"}')
-          echo "$response"
-          echo "$response" | grep -q '"ok":true'
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - run: npm test
+      - name: Validate PWA and media
+        run: node tests/assets-smoke.cjs
+      - name: Check live backend health
+        run: node -e "fetch('https://uuzctytbguqjumwpczfh.supabase.co/functions/v1/bodysmith-api',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:'health'})}).then(async r=>{if(!r.ok||!(await r.json()).ok)process.exit(1);console.log('Backend healthy')})"

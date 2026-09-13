@@ -1,55 +1,32 @@
-# BodySmith
+# BodySmith 2.0
 
-BodySmith is a mobile-first workout PWA with cloud accounts, guided set logging, workout history, progress tracking, and a four-day muscle-building plan.
+Mobile workout PWA: https://mvsmith81.github.io/BodySmith-MVP/
 
-## Current release
+## Using the release
 
-The live app now supports:
+Sign in with your existing BodySmith username/password. New profiles complete onboarding and choose a plan. Michael Muscle Builder remains the recommended four-day starter. Five other templates and a personal plan editor are available in Plan. Saving edits creates a private revision; templates and historical workout snapshots remain intact.
 
-- Separate BodySmith user accounts with private cloud data
-- Username/password sign-in with server-side password hashing
-- 30-day account sessions and sign-out
-- Full 4-day plan: Push, Pull, Legs, Upper + Arms
-- Cloud-saved workout sessions and individual sets
-- Cross-device resume for an in-progress workout
-- Weight, reps, RPE, elbow-pain, completion status, and notes per set
-- Previous-session performance shown during workouts
-- Automatic programmed rest timers
-- Exercise skip and same-muscle swap controls
-- Progression coaching based on rep range and RPE
-- 4+/10 elbow caution and 6+/10 stop/swap guidance
-- Workout summaries and BodySmith session score
-- Workout history and 30-day training metrics
-- Exercise library with search
-- Profile settings and lb/kg preference
-- Daily check-ins for body weight, calories, protein, steps, elbow pain, and notes
-- Offline app shell, cached account data, and queued set-sync when connectivity returns
-- Installable PWA behavior from GitHub Pages
-- Custom exercise-specific vector anatomy illustrations with highlighted working muscles
+Start a workout while connected. Sets, substitutions, rest deadlines, and completion are saved locally before cloud synchronization. An active workout can continue offline and be resumed after reopening. Pending entries show a Retry sync control. Keep the same device/browser and sign in again if your session expires; do not clear site storage while entries are pending. Sign-out is blocked during an active workout or pending sync.
 
-## Architecture
+Tap exercise artwork for a two-position movement guide, setup cues, play/pause, and speed controls. Twenty-nine anatomy sheets cover thirty exercises; equivalent neutral-grip pulldowns share a guide. Compound choice entries demonstrate leg press and split squat respectively. Custom exercises use your own instructions. Illustrations are generated training references; the written movement cues should guide setup and control.
 
-- Front end: static HTML/CSS/JavaScript PWA hosted on GitHub Pages
-- API: Supabase Edge Function (`bodysmith-api`)
-- Database: Supabase Postgres
-- Account security: password hashes and session tokens remain server-side; the browser stores only the user's BodySmith session token
-- Data separation: each workout session, workout set, and daily check-in is scoped to one BodySmith account
+Supplements includes user-entered doses, schedules, active status, Taken/Skipped/Snoozed logging and history. No doses are prescribed. Save reminder category preferences, enable each supplement's reminders, then explicitly enable device notifications. Permission is never requested on first load. Scheduled workout reminders use onboarding weekdays and the chosen reminder time. In-app reminders remain available when push is unavailable. iPhone/iPad push requires a supported version and installation to the Home Screen.
 
-The Supabase publishable key in the front end is intentionally public. Privileged database access remains inside the Edge Function and is never shipped to the browser.
+## Architecture and security
 
-## Training plan
+Static GitHub Pages frontend and Supabase Edge Function. Existing custom PBKDF2 account authentication is preserved. Tokens are hashed server-side. Cloud operations resolve the account from the session token and scope private rows by user ID. Private tables deny anon/authenticated table access via RLS and grants. The service-role key and VAPID private key never enter the frontend. Public exercise templates remain readable; custom exercises are owner-only.
 
-1. Push Day — Chest + Shoulders + Triceps
-2. Pull Day — Back + Biceps
-3. Leg Day — Legs + Abs
-4. Upper Arms Day — Upper Body + Arms
+Additive SQL migrations are in `supabase/migrations`. `save_bodysmith_plan` creates atomic user-owned revisions. No existing account or workout records are deleted. Notification subscriptions belong to an account, and scheduler authentication comes from a server-only database secret. `pg_cron` calls the reminder worker every minute through `pg_net`. Times are interpreted in the user's saved IANA timezone. Expired subscriptions are removed. Check `net._http_response` for worker health; successful dispatch reports sent/failed counts. Browser push delivery requires a valid user-approved subscription and browser/network availability.
 
-The plan, exercise prescriptions, cues, rest times, progression rules, and pain rules are stored in the BodySmith database rather than hard-coded as the only source of truth in the user interface.
+## Validation
 
-## Development
+- `npm ci --ignore-scripts`
+- `npm test`: JavaScript syntax plus jsdom workout/onboarding/editor/offline UI tests.
+- `node tests/assets-smoke.cjs`: PWA cache paths and media completeness.
+- `npm run test:backend`: live independent-account registration/login, onboarding, template loading, active session protection, set validation/idempotency, substitution, completion/history, private plan edits, supplements and cross-user isolation. Creates uniquely named QA accounts; credentials/tokens are not printed. Run intentionally rather than for every commit.
 
-No front-end build step is required. Serve the repository root as static files. GitHub Pages can deploy directly from `main` / root.
+GitHub Actions validates each push/PR. The live backend suite can be run manually with workflow_dispatch. Production backend source is in `supabase/functions/bodysmith-api`. Deploy with JWT verification disabled only because this function implements the existing custom authentication and separately authenticated scheduler. Apply migrations before deploying API changes.
 
-## Security notes
+## PWA updates
 
-`app_users` and `app_sessions` have RLS enabled with no public policies by design. The browser cannot read these tables directly. Account and workout operations go through the BodySmith Edge Function, which authenticates the BodySmith session token before accessing account-specific records.
+Release 2.0 versions the HTML asset references and service-worker cache together. App shell, raster install icons and exercise media are precached. Updates activate without deleting local workout storage. Close/reopen the installed app after a deployment to load the new frontend. Starting new sessions, plan editing and supplement creation require connectivity; active workout logging and supplement state logging queue offline.
