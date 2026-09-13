@@ -8,7 +8,8 @@
   },
   "scripts": {
     "test": "node --check app.js && node --check sw.js && node tests/ui-smoke.cjs",
-    "test:backend": "node tests/backend-smoke.mjs"
+    "test:backend": "node tests/backend-smoke.mjs",
+    "test:live-ui": "node tests/live-ui-smoke.cjs"
   },
   "repository": {
     "type": "git",

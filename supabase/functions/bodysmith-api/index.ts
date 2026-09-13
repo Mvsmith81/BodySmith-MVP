@@ -1,4 +1,4 @@
-import { vapid, deliver } from "./notifications.ts";
+import { vapid, deliver, testPush } from "./notifications.ts";
 import { createClient } from "npm:@supabase/supabase-js@2.57.4";
 
 const SUPABASE_URL = Deno.env.get("SUPABASE_URL")!;
@@ -204,6 +204,7 @@ Deno.serve(async (req: Request) => {
       const {data,error}=await db.from("supplement_logs").upsert(row,{onConflict:"user_id,supplement_id,scheduled_date,scheduled_time"}).select("*").single();if(error)throw error;
       return out(req,{log:data});
     }
+    if(action === "test_push")return out(req,await testPush(db,userId));
     if(action === "notification_config") {
       const keys=await vapid(db);
       return out(req,{publicKey:keys.publicKey,configured:true});

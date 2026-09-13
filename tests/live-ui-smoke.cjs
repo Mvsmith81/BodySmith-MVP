@@ -1,0 +1,20 @@
+// Runs the real deployed frontend against the live API in a DOM runtime.
+// This is integration coverage, not a replacement for rendered browser checks.
+const {JSDOM}=require('jsdom'),vm=require('node:vm'),assert=require('node:assert/strict'),{randomBytes}=require('node:crypto');
+const url='https://mvsmith81.github.io/BodySmith-MVP/';let dom;
+(async()=>{
+ const html=await (await fetch(url)).text(),src=html.match(/src="(.\/app.js[^\"]*)"/)[1],source=await(await fetch(new URL(src,url))).text();
+ dom=new JSDOM('<main id="app"></main><div id="toast"></div>',{url,runScripts:'outside-only'});const w=dom.window;w.structuredClone=structuredClone;w.AbortController=AbortController;w.fetch=fetch;const ctx=dom.getInternalVMContext(),run=code=>vm.runInContext(code,ctx);vm.runInContext(source.replace(/bootstrap\(\);\s*$/,''),ctx);const get=s=>w.document.querySelector(s),input=(s,v)=>{get(s).value=v;get(s).dispatchEvent(new w.Event('input',{bubbles:true}))};let count=0;const pass=t=>{count++;console.log('PASS',t)};
+ run("S.authMode='register';render()");input('[name="displayName"]','UI Release QA');input('[name="username"]','uiqa_'+randomBytes(6).toString('hex'));input('[name="password"]',randomBytes(24).toString('base64url'));await run("submitAuth(document.getElementById('authForm'))");assert.ok(get('#onboardForm'));pass('deployed registration opens onboarding');
+ await get('#onboardForm').onsubmit({preventDefault(){}});assert.ok(get('#planChoice'));assert.equal(run('S.plan.plan_days.length'),4);pass('onboarding saves and loads four-day plan');
+ await run('startWorkout(S.plan.plan_days[0].id)');assert.ok(get('#reps'));pass('start renders workout');
+ input('#weight','20');input('#reps','8');input('#setNote','Automated release verification');await run('logSet()');assert.equal(run('getQueue().length'),0);assert.equal(run('S.active.sets.length'),1);assert.ok(run('S.rest>0'));pass('set saved to cloud and automatic rest started');
+ run("S.activeIndex=1;render()");const alt=run('substitutes(dayExercises(S.activeDay)[1].exercise)[0]');assert.ok(alt);await run(`swapExercise(${JSON.stringify(alt.id)})`);await run('bootstrap()');assert.equal(run('S.active.day_snapshot.plan_day_exercises[1].exercises.id'),alt.id);pass('substitution survives cloud reload');
+ run('showSummary()');assert.ok(get('[data-action="resume"]'));await run('completeWorkout()');await run('bootstrap()');assert.equal(run('S.active'),null);assert.equal(run('S.history[0].status'),'completed');assert.equal(run('S.history[0].sets.length'),1);pass('completion persists in history');
+ await run('startWorkout(S.plan.plan_days[0].id)');assert.match(w.document.body.textContent,/20.*8|8.*20/s);assert.equal(get('#weight').value,'20');pass('previous performance prefills next workout');await run('completeWorkout()');
+ run("S.screen='plan';render()");const original=run('S.plan.id');await get('[data-extra="editplan"]').onclick({preventDefault(){}});input('#editPlanName','UI QA personal revision');await get('[data-extra="saveplan"]').onclick({preventDefault(){}});assert.notEqual(run('S.plan.id'),original);assert.equal(run('S.plan.is_template'),false);pass('plan editor saves a private revision');
+ run("S.screen='supplements';S.suppEditor={};render()");input('[name="name"]','UI QA supplement');input('[name="dose"]','');input('[name="times"]','09:00');await get('#suppForm').onsubmit({preventDefault(){}});assert.equal(run('S.supplements.length'),1);pass('supplement creation through real form');
+ await get('[data-dose$="taken"]').onclick({preventDefault(){}});assert.equal(run('getQueue().length'),0);await run('bootstrap()');assert.equal(run('S.supplementLogs[0].status'),'taken');pass('taken status saved and reloaded');
+ await get('[data-dose$="skipped"]').onclick({preventDefault(){}});await run('bootstrap()');assert.equal(run('S.supplementLogs[0].status'),'skipped');pass('skipped status saved and reloaded');
+ await run('logout()');assert.ok(get('#authForm'));pass('sign out returns login');console.log(count+' deployed frontend/live API integration checks passed');dom.window.close();
+})().catch(e=>{console.error(e.message);dom?.window.close();process.exitCode=1});
