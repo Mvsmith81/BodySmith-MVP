@@ -1,14 +1,15 @@
 {
   "name": "bodysmith-mvp",
-  "version": "2.4.2",
+  "version": "2.5.0",
   "description": "BodySmith is a mobile-first workout PWA with cloud accounts, guided set logging, workout history, progress tracking, and a four-day muscle-building plan.",
   "main": "app.js",
   "directories": {
     "test": "tests"
   },
   "scripts": {
-    "test": "node --check app.js && node --check sw.js && node tests/ui-smoke.cjs && node tests/training-smoke.cjs && node tests/workout-edit-smoke.cjs && node tests/swap-library-smoke.cjs && node tests/sw-smoke.cjs && node tests/brand-smoke.cjs",
+    "test": "node --check app.js && node --check sw.js && node tests/ui-smoke.cjs && node tests/training-smoke.cjs && node tests/workout-edit-smoke.cjs && node tests/swap-library-smoke.cjs && node tests/sw-smoke.cjs && node tests/brand-smoke.cjs && node tests/forge-ui-smoke.cjs",
     "test:backend": "node tests/backend-smoke.mjs",
+    "test:forge": "node tests/forge-backend-smoke.mjs",
     "test:live-ui": "node tests/live-ui-smoke.cjs"
   },
   "repository": {
