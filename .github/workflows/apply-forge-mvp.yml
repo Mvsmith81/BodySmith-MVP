@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - 'tools/apply-forge-mvp.py'
+      - 'tools/forge-retrigger.txt'
 permissions:
   contents: write
 jobs:
@@ -24,7 +25,7 @@ jobs:
         run: npm run test:forge
       - name: Commit Forge MVP and remove one-time tooling
         run: |
-          rm -f tools/apply-forge-mvp.py .github/workflows/apply-forge-mvp.yml
+          rm -f tools/apply-forge-mvp.py tools/forge-retrigger.txt .github/workflows/apply-forge-mvp.yml
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
