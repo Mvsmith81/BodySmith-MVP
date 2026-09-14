@@ -1,6 +1,6 @@
 {
   "name": "bodysmith-mvp",
-  "version": "2.4.0",
+  "version": "2.4.1",
   "description": "BodySmith is a mobile-first workout PWA with cloud accounts, guided set logging, workout history, progress tracking, and a four-day muscle-building plan.",
   "main": "app.js",
   "directories": {

@@ -243,6 +243,8 @@ h1,h2,h3,p {
 }
 
 .pill {
+  align-self: center;
+  justify-self: start;
   border: 1px solid var(--line);
   background: #2563ff12;
   color: var(--blue-light);
@@ -437,7 +439,8 @@ h1,h2,h3,p {
 }
 
 .bottom-nav button small {
-  font-size: 10px;
+  white-space: nowrap;
+  font-size: 9.5px;
   font-weight: 600;
 }
 
@@ -1453,8 +1456,12 @@ select:focus-visible { outline:2px solid var(--blue-light);outline-offset:2px; }
  .topbar .brand { font-size:20px; }
  .screen:has(.active-title) .topbar { min-height:70px; }
  .screen:has(.active-title) .rest-card { top:74px; }
- .screen:has(.active-title) .demo-open .exercise-art.large { height:156px; }
- .screen:has(.active-title) .demo-open .exercise-art.large .art-frame { width:156px; }
+ .screen:has(.active-title) .demo-open { display:flex;align-items:center;gap:12px;font-size:12px; }
+ .screen:has(.active-title) .demo-open .exercise-art.large { height:96px;width:132px;flex-shrink:0;margin:0; }
+ .screen:has(.active-title) .demo-open .exercise-art.large .art-frame { width:96px; }
+ .screen:has(.active-title) .active-title p { font-size:12px; }
+ .screen:has(.active-title) .setcount { white-space:nowrap; }
+ .screen:has(.active-title) .set-line:not(.current):not([role=button]) { display:none; }
  .screen:has(.active-title) .coach-cue { font-size:13px; }
 }
 @media(max-width:360px) { .brand-wordmark{width:140px}.featured-plans{grid-template-columns:1fr}.auth-card{padding:0} }
