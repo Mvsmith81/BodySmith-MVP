@@ -112,7 +112,7 @@ button {
   width: min(100%,820px);
   margin: auto;
   min-height: 100vh;
-  padding: 0 20px 112px;
+  padding: 0 20px calc(112px + env(safe-area-inset-bottom));
   overflow-wrap: anywhere;
 }
 
@@ -1466,3 +1466,10 @@ select:focus-visible { outline:2px solid var(--blue-light);outline-offset:2px; }
 }
 @media(max-width:360px) { .brand-wordmark{width:140px}.featured-plans{grid-template-columns:1fr}.auth-card{padding:0} }
 @media(prefers-reduced-motion:reduce) { *,*::before,*::after { animation-duration:.01ms;animation-iteration-count:1;transition:none;scroll-behavior:auto; } .movement-demo .sprite{animation:none} }
+
+
+/* BodySmith 2.4.2 finishing polish */
+.bottom-nav .ui-icon { opacity:.72; transition:opacity var(--ease), filter var(--ease), transform var(--ease); }
+.bottom-nav button.active .ui-icon { opacity:1; filter:brightness(0) saturate(100%) invert(63%) sepia(52%) saturate(3350%) hue-rotate(193deg) brightness(104%) contrast(104%); }
+.bottom-nav button:focus-visible,.iconbtn:focus-visible,.avatar:focus-visible { outline:2px solid var(--blue-light);outline-offset:2px;box-shadow:var(--focus); }
+@media (hover:hover) { .bottom-nav button:hover { color:var(--soft);background:#ffffff08; } .bottom-nav button.active:hover { color:var(--blue-light);background:#2563ff20; } }
