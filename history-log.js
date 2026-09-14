@@ -14,7 +14,7 @@ async function historyCall(url,action,payload={}){
     return data;
   }finally{clearTimeout(timer)}
 }
-const escHistory=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot',"'":'&#39;'}[c]));
+const escHistory=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function defaultPastWhen(){const d=new Date(Date.now()-86400000);d.setSeconds(0,0);return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}T${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')}`}
 function normalizeSlot(slot){const ex=slot.exercises||slot.exercise;const target=Math.max(1,Math.min(20,Number(slot.target_sets)||3));return{...slot,exercises:ex,exercise_id:ex.id,sets:Array.from({length:target},()=>({}))}}
 function chooseDay(dayId){const day=historyBoot.plan.plan_days.find(d=>d.id===dayId)||historyBoot.plan.plan_days[0];historyState.planDayId=day.id;historyState.name=day.name;historyState.focus=day.focus||'Logged later';historyState.slots=(day.plan_day_exercises||[]).slice().sort((a,b)=>a.sort_order-b.sort_order).map(normalizeSlot)}
