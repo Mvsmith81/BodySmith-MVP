@@ -16,4 +16,5 @@ jobs:
       - run: npm ci --ignore-scripts
       - run: npm run test:backend
       - run: node tests/session-smoke.mjs
+      - run: npm run test:forge
       - run: npm run test:live-ui
