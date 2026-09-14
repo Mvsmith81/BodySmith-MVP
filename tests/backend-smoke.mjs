@@ -10,7 +10,7 @@ const suffix=randomBytes(6).toString('hex'),username='bodysmith_qa_'+suffix,pass
 const a=await call('register',{username,password,displayName:'Release QA',qaMode:true},'',201);cleanup.push(a.token);assert.ok(a.token);assert.equal(a.user.onboarding_completed,false);pass('registration and independent onboarding');
 const login=await call('login',{username,password});const token=login.token;assert.equal(login.user.id,a.user.id);pass('login');
 await call('login',{username,password:'incorrect'},'',401);pass('invalid login rejected');
-let b=await call('bootstrap',{},token);assert.equal(b.plan.plan_days.length,4);assert.ok(b.plans.length>=6);assert.equal(b.history.length,0);pass('default four-day plan and six templates');
+let b=await call('bootstrap',{},token);assert.equal(b.plan.plan_days.length,4);assert.ok(b.plans.length>=6);assert.equal(b.plan.name,'The Smith Method');assert.ok(b.plans.some(p=>p.name==='Cortez Compound'&&p.days_per_week===5));assert.equal(b.history.length,0);pass('Smith Method default, Cortez Compound and starter templates');
 await call('update_profile',{displayName:'Release QA',units:'lb',onboardingCompleted:true,preferences:{goal:'Build strength',trainingDays:[1,3,5],daysPerWeek:3,timezone:'America/New_York'}},token);pass('onboarding saved');
 const other=await call('register',{username:'bodysmith_qa_'+randomBytes(6).toString('hex'),password,displayName:'Isolation QA',qaMode:true},'',201);
 cleanup.push(other.token);
