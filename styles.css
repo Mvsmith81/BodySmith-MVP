@@ -1486,3 +1486,7 @@ select:focus-visible { outline:2px solid var(--blue-light);outline-offset:2px; }
 .forge-safety{margin-top:10px}.forge-safety summary{color:var(--muted);font-size:12px;cursor:pointer}.forge-composer h2{margin:3px 0}.forge-composer:not([data-type="workout"]) .forge-workout-field{display:none}.forge-composer:not([data-type="progress"]) .forge-progress-field{display:none}.forge-privacy-note{font-size:12px;color:var(--muted);padding:10px 12px;border-left:3px solid var(--blue);background:#2563ff0d;border-radius:8px}.forge-rules{text-align:center;margin:18px auto;max-width:580px}.field input[type=file]{padding:11px;background:#0c1320}
 @media(max-width:620px){.forge-hero{align-items:flex-start;padding:16px}.forge-hero h1{font-size:29px}.forge-author{grid-template-columns:40px minmax(0,1fr)}.forge-author>.pill{grid-column:2}.forge-media{grid-template-columns:1fr}.forge-media.compare{grid-template-columns:1fr 1fr}.forge-comment-form{grid-template-columns:1fr}.bottom-nav button small{font-size:8.7px}.bottom-nav{padding-left:3px;padding-right:3px}}
 @media(max-width:380px){.bottom-nav button small{font-size:8px}.forge-media.compare{grid-template-columns:1fr}}
+
+
+/* Forge 2.5.1 ownership controls */
+.forge-owner-actions,.forge-inline-actions{display:flex;gap:14px;align-items:center;flex-wrap:wrap}.forge-owner-actions{padding-top:8px}.forge-inline-actions .linkbtn{font-size:12px}.forge-caption{overflow-wrap:anywhere}
