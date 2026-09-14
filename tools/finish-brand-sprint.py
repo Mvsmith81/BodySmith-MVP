@@ -19,6 +19,12 @@ app = replace_once(
 old_nav = "function nav(){const items=[['plan','clipboard-list'],['exercises','barbell'],['workout','home-2'],['supplements','pill'],['progress','chart-bar'],['profile','user']];return `<nav class=\"bottom-nav\">${items.map(([n,i])=>`<button data-nav=\"${n}\" class=\"${S.screen===n?'active':''}\"><img class=\"ui-icon\" src=\"./brand/icons/${i}.svg\" width=\"23\" height=\"23\" alt=\"\"><small>${n==='workout'?'Home':n[0].toUpperCase()+n.slice(1)}</small></button>`).join('')}</nav>`}"
 new_nav = "function nav(){const items=[['plan','clipboard-list'],['exercises','barbell'],['workout','home-2'],['supplements','pill'],['progress','chart-bar'],['profile','user']];return `<nav class=\"bottom-nav\" aria-label=\"Primary navigation\">${items.map(([n,i])=>`<button type=\"button\" data-nav=\"${n}\" class=\"${S.screen===n?'active':''}\" ${S.screen===n?'aria-current=\"page\"':''}><img class=\"ui-icon\" src=\"./brand/icons/${i}.svg\" width=\"23\" height=\"23\" alt=\"\"><small>${n==='workout'?'Home':n[0].toUpperCase()+n.slice(1)}</small></button>`).join('')}</nav>`}"
 app = replace_once(app, old_nav, new_nav, 'primary navigation semantics')
+app = replace_once(
+    app,
+    ".replace('<nav class=\"bottom-nav\">','<button class=\"secondary huge\" data-training=\"custom\">Start Custom Workout</button><nav class=\"bottom-nav\">')",
+    ".replace('<nav class=\"bottom-nav\" aria-label=\"Primary navigation\">','<button class=\"secondary huge\" data-training=\"custom\">Start Custom Workout</button><nav class=\"bottom-nav\" aria-label=\"Primary navigation\">')",
+    'custom workout insertion target',
+)
 app_path.write_text(app)
 
 css_path = Path('styles.css')
