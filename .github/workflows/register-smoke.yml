@@ -1,6 +1,8 @@
 name: Live Account and Workout Smoke Tests
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
 permissions:
   contents: read
 jobs:
@@ -13,4 +15,5 @@ jobs:
           node-version: '22'
       - run: npm ci --ignore-scripts
       - run: npm run test:backend
+      - run: node tests/session-smoke.mjs
       - run: npm run test:live-ui

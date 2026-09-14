@@ -2,15 +2,18 @@ import assert from 'node:assert/strict';
 import {randomBytes} from 'node:crypto';
 const URL=process.env.BODYSMITH_API||'https://uuzctytbguqjumwpczfh.supabase.co/functions/v1/bodysmith-api';
 async function call(action,payload={},token='',status=200){const r=await fetch(URL,{method:'POST',headers:{'Content-Type':'application/json',apikey:'sb_publishable_ibEVVafS4THz-16p4euMfg_qjG2WeU2'},body:JSON.stringify({action,...payload,token})});const data=await r.json();assert.equal(r.status,status,`${action}: ${JSON.stringify(data)}`);return data;}
+const cleanup=[];
+try {
 let passed=0;const pass=name=>{console.log('PASS',name);passed++};
 assert.equal((await call('health')).ok,true);pass('backend health');
-const suffix=randomBytes(6).toString('hex'),username='qa_'+suffix,password=randomBytes(24).toString('base64url');
-const a=await call('register',{username,password,displayName:'Release QA'},'',201);assert.ok(a.token);assert.equal(a.user.onboarding_completed,false);pass('registration and independent onboarding');
+const suffix=randomBytes(6).toString('hex'),username='bodysmith_qa_'+suffix,password=randomBytes(24).toString('base64url');
+const a=await call('register',{username,password,displayName:'Release QA',qaMode:true},'',201);cleanup.push(a.token);assert.ok(a.token);assert.equal(a.user.onboarding_completed,false);pass('registration and independent onboarding');
 const login=await call('login',{username,password});const token=login.token;assert.equal(login.user.id,a.user.id);pass('login');
 await call('login',{username,password:'incorrect'},'',401);pass('invalid login rejected');
 let b=await call('bootstrap',{},token);assert.equal(b.plan.plan_days.length,4);assert.ok(b.plans.length>=6);assert.equal(b.history.length,0);pass('default four-day plan and six templates');
 await call('update_profile',{displayName:'Release QA',units:'lb',onboardingCompleted:true,preferences:{goal:'Build strength',trainingDays:[1,3,5],daysPerWeek:3,timezone:'America/New_York'}},token);pass('onboarding saved');
-const other=await call('register',{username:'qb_'+suffix,password,displayName:'Isolation QA'},'',201);
+const other=await call('register',{username:'bodysmith_qa_'+randomBytes(6).toString('hex'),password,displayName:'Isolation QA',qaMode:true},'',201);
+cleanup.push(other.token);
 const day=b.plan.plan_days[0],exercise=day.plan_day_exercises[0].exercises;
 const start=await call('start_session',{planDayId:day.id},token,201);assert.ok(start.session.day_snapshot);pass('workout start and snapshot');
 await call('start_session',{planDayId:b.plan.plan_days[1].id},token,409);pass('active workout abandonment protection');
@@ -28,5 +31,7 @@ await call('log_supplement',{supplementId:sup.supplement.id,time:'09:00',date:ne
 const config=await call('notification_config',{},token);assert.ok(config.publicKey);assert.ok(!config.privateKey);pass('push configured with public key only');
 await call('dispatch_reminders',{},'',401);pass('scheduler authorization');
 b=await call('bootstrap',{},other.token);assert.equal(b.history.length,0);assert.equal(b.supplements.length,0);assert.ok(!b.plans.some(p=>p.id===saved.plan.id));pass('independent account data isolation');
-await call('logout',{},token);await call('bootstrap',{},token,401);await call('logout',{},other.token);await call('logout',{},a.token);pass('logout revokes sessions');
-console.log(`${passed} backend smoke checks passed. QA records retained separately; no user data deleted.`);
+await call('logout',{},token);await call('bootstrap',{},token,401);pass('logout revokes sessions');
+console.log(`${passed} backend smoke checks passed. Designated test accounts are cleaned up.`);
+
+} finally {for(const token of cleanup){await call("cleanup_qa",{},token);console.log("PASS temporary account removed");}}

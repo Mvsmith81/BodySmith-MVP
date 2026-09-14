@@ -1,0 +1,5108 @@
+[
+  {
+    "name": "Dumbbell Bench Press",
+    "slug": "dumbbell-bench-press",
+    "canonical_name": "Dumbbell Bench Press",
+    "aliases": [
+      "flat dumbbell press",
+      "db bench"
+    ],
+    "primary_muscle": "Chest",
+    "secondary_muscles": [
+      "Triceps",
+      "Anterior deltoids"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Horizontal push",
+    "movement_pattern": "Horizontal push",
+    "equipment": "Dumbbells",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Lie on a flat bench with feet planted and dumbbells beside the chest, palms forward.",
+    "movement_instructions": "Press dumbbells over the chest; lower until upper arms reach a comfortable depth.",
+    "cue": "Keep wrists stacked above elbows.",
+    "common_mistakes": [
+      "Bouncing off the chest",
+      "Flaring elbows excessively"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 180,
+    "substitution_group": "flat-press",
+    "thumbnail_url": "./media/thumbs/dumbbell-bench-press.webp",
+    "image_url": "./media/dumbbell-bench-press.webp",
+    "motion_url": "./media/dumbbell-bench-press.webp",
+    "motion_kind": "two-position",
+    "load_basis": "per_dumbbell",
+    "is_legacy": false
+  },
+  {
+    "name": "Incline Machine Press",
+    "slug": "incline-machine-press",
+    "canonical_name": "Incline Machine Press",
+    "aliases": [
+      "incline chest machine"
+    ],
+    "primary_muscle": "Chest",
+    "secondary_muscles": [
+      "Anterior deltoids",
+      "Triceps"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Incline push",
+    "movement_pattern": "Incline push",
+    "equipment": "Selectorized machine",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Beginner",
+    "setup_instructions": "Adjust the angled seat so handles line up with the upper chest; keep back against the pad.",
+    "movement_instructions": "Press handles forward and upward; return with control.",
+    "cue": "Press upward without shrugging.",
+    "common_mistakes": [
+      "Using an overly steep bench",
+      "Lifting hips off the pad"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 180,
+    "substitution_group": "incline-press",
+    "thumbnail_url": "./media/thumbs/incline-machine-press.webp",
+    "image_url": "./media/incline-machine-press.webp",
+    "motion_url": "./media/incline-machine-press.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Machine Shoulder Press",
+    "slug": "machine-shoulder-press",
+    "canonical_name": "Machine Shoulder Press",
+    "aliases": [
+      "shoulder press machine"
+    ],
+    "primary_muscle": "Shoulders",
+    "secondary_muscles": [
+      "Triceps",
+      "Upper chest"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Vertical push",
+    "movement_pattern": "Vertical push",
+    "equipment": "Selectorized machine",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Beginner",
+    "setup_instructions": "Adjust seat so handles begin near shoulder height, feet flat and back supported.",
+    "movement_instructions": "Press overhead without locking hard; lower to the starting handle position.",
+    "cue": "Keep ribs stacked over the pelvis.",
+    "common_mistakes": [
+      "Excessive lower-back arch",
+      "Pressing behind the neck"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 180,
+    "substitution_group": "overhead-press",
+    "thumbnail_url": "./media/thumbs/machine-shoulder-press.webp",
+    "image_url": "./media/machine-shoulder-press.webp",
+    "motion_url": "./media/machine-shoulder-press.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Cable Chest Fly",
+    "slug": "cable-chest-fly",
+    "canonical_name": "Cable Chest Fly",
+    "aliases": [
+      "cable crossover",
+      "mid cable fly"
+    ],
+    "primary_muscle": "Chest",
+    "secondary_muscles": [
+      "Anterior deltoids"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Horizontal adduction",
+    "movement_pattern": "Horizontal adduction",
+    "equipment": "Cable",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Set two pulleys at chest height. Stand between the towers in a split stance with one handle in each hand.",
+    "movement_instructions": "Bring hands together in front of the chest; reopen along the same arc.",
+    "cue": "Keep a soft, fixed elbow bend.",
+    "common_mistakes": [
+      "Turning the fly into a press",
+      "Overstretching behind the torso"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "chest-fly",
+    "thumbnail_url": "./media/thumbs/cable-chest-fly.webp",
+    "image_url": "./media/cable-chest-fly.webp",
+    "motion_url": "./media/cable-chest-fly.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Cable Lateral Raise",
+    "slug": "cable-lateral-raise",
+    "canonical_name": "Cable Lateral Raise",
+    "aliases": [
+      "single arm cable lateral"
+    ],
+    "primary_muscle": "Shoulders",
+    "secondary_muscles": [
+      "Supraspinatus",
+      "Upper trapezius"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Shoulder abduction",
+    "movement_pattern": "Shoulder abduction",
+    "equipment": "Cable",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Stand beside a cable tower with its pulley at the lowest position. Hold the handle in the farther hand, cable running from that pulley across your front.",
+    "movement_instructions": "Raise the working arm out to shoulder level; lower toward the opposite hip.",
+    "cue": "Lead outward with elbows and relaxed traps.",
+    "common_mistakes": [
+      "Swinging the torso",
+      "Raising far above shoulder height"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "lateral-raise",
+    "thumbnail_url": "./media/thumbs/cable-lateral-raise.webp",
+    "image_url": "./media/cable-lateral-raise.webp",
+    "motion_url": "./media/cable-lateral-raise.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Rope Triceps Pressdown",
+    "slug": "rope-triceps-pressdown",
+    "canonical_name": "Rope Triceps Pressdown",
+    "aliases": [
+      "rope pushdown",
+      "triceps rope"
+    ],
+    "primary_muscle": "Triceps",
+    "secondary_muscles": [],
+    "body_region": "Upper body",
+    "movement_type": "Elbow extension",
+    "movement_pattern": "Elbow extension",
+    "equipment": "Cable",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Beginner",
+    "setup_instructions": "Attach a rope to a high pulley. Face the tower and hold both rope ends with elbows tucked.",
+    "movement_instructions": "Extend elbows downward; separate rope ends slightly near thighs, then return.",
+    "cue": "Keep elbows beside your ribs.",
+    "common_mistakes": [
+      "Moving the shoulders",
+      "Leaning body weight onto the handle"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "pressdown",
+    "thumbnail_url": "./media/thumbs/rope-triceps-pressdown.webp",
+    "image_url": "./media/rope-triceps-pressdown.webp",
+    "motion_url": "./media/rope-triceps-pressdown.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Treadmill Walk",
+    "slug": "treadmill-walk",
+    "canonical_name": "Treadmill Walk",
+    "aliases": [
+      "treadmill walking",
+      "walking"
+    ],
+    "primary_muscle": "Cardio",
+    "secondary_muscles": [
+      "Legs"
+    ],
+    "body_region": "Full body",
+    "movement_type": "Cardio",
+    "movement_pattern": "Cardio",
+    "equipment": "Treadmill",
+    "laterality": "Bilateral",
+    "exercise_type": "cardio",
+    "difficulty": "Beginner",
+    "setup_instructions": "Stand on the side rails, attach the safety clip, start the belt slowly and step onto it.",
+    "movement_instructions": "Walk upright with natural arm swing and steady steps.",
+    "cue": "Choose a pace you can sustain with control.",
+    "common_mistakes": [
+      "Starting too fast",
+      "Ignoring equipment stop controls"
+    ],
+    "rest_min_seconds": 0,
+    "rest_max_seconds": 60,
+    "substitution_group": "cardio",
+    "thumbnail_url": "./media/thumbs/treadmill-walk.webp",
+    "image_url": "./media/treadmill-walk.webp",
+    "motion_url": "./media/treadmill-walk.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Neutral-Grip Lat Pulldown",
+    "slug": "neutral-grip-lat-pulldown",
+    "canonical_name": "Neutral-Grip Lat Pulldown",
+    "aliases": [
+      "neutral pulldown",
+      "parallel grip lat pulldown"
+    ],
+    "primary_muscle": "Back",
+    "secondary_muscles": [
+      "Biceps",
+      "Lower trapezius"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Vertical pull",
+    "movement_pattern": "Vertical pull",
+    "equipment": "Cable",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Sit with thighs secured beneath pads. Hold parallel handles with palms facing each other.",
+    "movement_instructions": "Pull handles to upper chest with elbows moving down; return overhead with control.",
+    "cue": "Lead with elbows; keep the rib cage controlled.",
+    "common_mistakes": [
+      "Pulling behind the neck",
+      "Swinging the torso"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 150,
+    "substitution_group": "vertical-pull",
+    "thumbnail_url": "./media/thumbs/neutral-grip-lat-pulldown.webp",
+    "image_url": "./media/neutral-grip-lat-pulldown.webp",
+    "motion_url": "./media/neutral-grip-lat-pulldown.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Neutral-Grip Pulldown",
+    "slug": "neutral-grip-pulldown",
+    "canonical_name": "Neutral-Grip Pulldown",
+    "aliases": [
+      "neutral pulldown legacy"
+    ],
+    "primary_muscle": "Back",
+    "secondary_muscles": [
+      "Biceps",
+      "Lower trapezius"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Vertical pull",
+    "movement_pattern": "Vertical pull",
+    "equipment": "Cable",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Sit with thighs secured and hold parallel overhead handles.",
+    "movement_instructions": "Draw elbows toward your sides; let arms extend overhead slowly.",
+    "cue": "Lead with elbows; keep the rib cage controlled.",
+    "common_mistakes": [
+      "Pulling behind the neck",
+      "Swinging the torso"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 150,
+    "substitution_group": "vertical-pull",
+    "thumbnail_url": "./media/thumbs/neutral-grip-lat-pulldown.webp",
+    "image_url": "./media/neutral-grip-lat-pulldown.webp",
+    "motion_url": "./media/neutral-grip-lat-pulldown.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": true
+  },
+  {
+    "name": "Seated Cable Row",
+    "slug": "seated-cable-row",
+    "canonical_name": "Seated Cable Row",
+    "aliases": [
+      "close grip cable row",
+      "low row"
+    ],
+    "primary_muscle": "Back",
+    "secondary_muscles": [
+      "Biceps",
+      "Rear deltoids"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Horizontal pull",
+    "movement_pattern": "Horizontal pull",
+    "equipment": "Cable",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Sit facing a low cable pulley with feet on the supports and a neutral-grip handle in both hands.",
+    "movement_instructions": "Pull the handle toward lower ribs; extend arms while keeping torso steady.",
+    "cue": "Draw elbows back without shrugging.",
+    "common_mistakes": [
+      "Jerking the weight",
+      "Losing a stable torso"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 150,
+    "substitution_group": "row",
+    "thumbnail_url": "./media/thumbs/seated-cable-row.webp",
+    "image_url": "./media/seated-cable-row.webp",
+    "motion_url": "./media/seated-cable-row.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Chest-Supported Row",
+    "slug": "chest-supported-row",
+    "canonical_name": "Chest-Supported Row",
+    "aliases": [
+      "chest supported machine row",
+      "machine row"
+    ],
+    "primary_muscle": "Back",
+    "secondary_muscles": [
+      "Biceps",
+      "Rear deltoids"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Horizontal pull",
+    "movement_pattern": "Horizontal pull",
+    "equipment": "Selectorized machine",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Beginner",
+    "setup_instructions": "Adjust the chest pad so both feet are supported and handles are reachable without lifting the chest.",
+    "movement_instructions": "Pull elbows behind the torso; return arms forward against the chest pad.",
+    "cue": "Draw elbows back without shrugging.",
+    "common_mistakes": [
+      "Jerking the weight",
+      "Losing a stable torso"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 150,
+    "substitution_group": "row",
+    "thumbnail_url": "./media/thumbs/chest-supported-row.webp",
+    "image_url": "./media/chest-supported-row.webp",
+    "motion_url": "./media/chest-supported-row.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "One-Arm Cable Row",
+    "slug": "one-arm-cable-row",
+    "canonical_name": "One-Arm Cable Row",
+    "aliases": [
+      "single arm cable row"
+    ],
+    "primary_muscle": "Back",
+    "secondary_muscles": [
+      "Biceps",
+      "Rear deltoids"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Horizontal pull",
+    "movement_pattern": "Horizontal pull",
+    "equipment": "Cable",
+    "laterality": "Unilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Face a cable pulley set around waist height in a stable split stance, one handle in one hand.",
+    "movement_instructions": "Draw the elbow toward the hip without twisting; extend the arm.",
+    "cue": "Draw elbows back without shrugging.",
+    "common_mistakes": [
+      "Jerking the weight",
+      "Losing a stable torso"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 150,
+    "substitution_group": "row",
+    "thumbnail_url": "./media/thumbs/one-arm-cable-row.webp",
+    "image_url": "./media/one-arm-cable-row.webp",
+    "motion_url": "./media/one-arm-cable-row.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Rear Delt Fly",
+    "slug": "rear-delt-fly",
+    "canonical_name": "Rear Delt Fly",
+    "aliases": [
+      "reverse pec deck",
+      "rear delt machine",
+      "reverse fly machine"
+    ],
+    "primary_muscle": "Shoulders",
+    "secondary_muscles": [
+      "Rhomboids",
+      "Middle trapezius"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Horizontal abduction",
+    "movement_pattern": "Horizontal abduction",
+    "equipment": "Selectorized machine",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Beginner",
+    "setup_instructions": "Face the chest pad of a reverse pec-deck machine with handles at shoulder level.",
+    "movement_instructions": "Open both arms outward and back; return slowly while chest stays supported.",
+    "cue": "Open the arms with a soft elbow bend.",
+    "common_mistakes": [
+      "Shrugging",
+      "Throwing the weight"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "rear-delt",
+    "thumbnail_url": "./media/thumbs/rear-delt-fly.webp",
+    "image_url": "./media/rear-delt-fly.webp",
+    "motion_url": "./media/rear-delt-fly.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Cable Curl",
+    "slug": "cable-curl",
+    "canonical_name": "Cable Curl",
+    "aliases": [
+      "standing cable biceps curl"
+    ],
+    "primary_muscle": "Biceps",
+    "secondary_muscles": [
+      "Brachialis",
+      "Forearms"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Elbow flexion",
+    "movement_pattern": "Elbow flexion",
+    "equipment": "Cable",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Attach a straight bar to a low pulley and stand facing the tower, palms upward.",
+    "movement_instructions": "Curl the bar toward shoulders with elbows still; lower fully under control.",
+    "cue": "Keep upper arms still as elbows bend.",
+    "common_mistakes": [
+      "Swinging the shoulders",
+      "Bending wrists backward"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "curl",
+    "thumbnail_url": "./media/thumbs/cable-curl.webp",
+    "image_url": "./media/cable-curl.webp",
+    "motion_url": "./media/cable-curl.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Hammer Curl",
+    "slug": "hammer-curl",
+    "canonical_name": "Hammer Curl",
+    "aliases": [
+      "neutral grip dumbbell curl"
+    ],
+    "primary_muscle": "Biceps",
+    "secondary_muscles": [
+      "Brachialis",
+      "Brachioradialis"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Neutral-grip elbow flexion",
+    "movement_pattern": "Neutral-grip elbow flexion",
+    "equipment": "Dumbbells",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Stand with dumbbells at your sides, palms facing inward.",
+    "movement_instructions": "Curl both weights toward shoulders without turning palms; lower slowly.",
+    "cue": "Keep palms facing inward.",
+    "common_mistakes": [
+      "Swinging from the hips",
+      "Letting elbows drift forward"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "hammer-curl",
+    "thumbnail_url": "./media/thumbs/hammer-curl.webp",
+    "image_url": "./media/hammer-curl.webp",
+    "motion_url": "./media/hammer-curl.webp",
+    "motion_kind": "two-position",
+    "load_basis": "per_dumbbell",
+    "is_legacy": false
+  },
+  {
+    "name": "Back Extension",
+    "slug": "back-extension",
+    "canonical_name": "Back Extension",
+    "aliases": [
+      "45 degree back extension",
+      "hyperextension"
+    ],
+    "primary_muscle": "Posterior chain",
+    "secondary_muscles": [
+      "Glutes",
+      "Hamstrings"
+    ],
+    "body_region": "Lower body",
+    "movement_type": "Hip hinge",
+    "movement_pattern": "Hip hinge",
+    "equipment": "Back extension bench",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Set the hip pad below the hip crease and secure feet under the ankle supports.",
+    "movement_instructions": "Fold at the hips; raise the torso only until it aligns with the legs.",
+    "cue": "Hinge at the hips and stop at a straight body line.",
+    "common_mistakes": [
+      "Hyperextending at the top",
+      "Rounding and bouncing"
+    ],
+    "rest_min_seconds": 60,
+    "rest_max_seconds": 120,
+    "substitution_group": "back-extension",
+    "thumbnail_url": "./media/thumbs/back-extension.webp",
+    "image_url": "./media/back-extension.webp",
+    "motion_url": "./media/back-extension.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Romanian Deadlift",
+    "slug": "romanian-deadlift",
+    "canonical_name": "Romanian Deadlift",
+    "aliases": [
+      "barbell rdl",
+      "rdl"
+    ],
+    "primary_muscle": "Hamstrings",
+    "secondary_muscles": [
+      "Glutes",
+      "Spinal erectors"
+    ],
+    "body_region": "Lower body",
+    "movement_type": "Hip hinge",
+    "movement_pattern": "Hip hinge",
+    "equipment": "Barbell",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Stand holding a barbell against thighs with an overhand grip and knees softly bent.",
+    "movement_instructions": "Push hips backward while bar tracks down the legs; stand by extending hips.",
+    "cue": "Push hips backward and keep load close.",
+    "common_mistakes": [
+      "Rounding the back",
+      "Turning a hinge into a squat"
+    ],
+    "rest_min_seconds": 120,
+    "rest_max_seconds": 180,
+    "substitution_group": "hinge",
+    "thumbnail_url": "./media/thumbs/romanian-deadlift.webp",
+    "image_url": "./media/romanian-deadlift.webp",
+    "motion_url": "./media/romanian-deadlift.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Leg Press or Squat",
+    "slug": "leg-press-or-squat",
+    "canonical_name": "Leg Press or Squat",
+    "aliases": [
+      "legacy leg choice"
+    ],
+    "primary_muscle": "Quads",
+    "secondary_muscles": [
+      "Glutes",
+      "Adductors"
+    ],
+    "body_region": "Lower body",
+    "movement_type": "Leg press",
+    "movement_pattern": "Leg press",
+    "equipment": "Leg press machine",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Beginner",
+    "setup_instructions": "Legacy plan choice. The illustration shows a leg press: sit with hips and back against the pad and feet on the platform.",
+    "movement_instructions": "Lower the sled only while the pelvis stays on the pad; press through the whole foot. Choose a specific squat separately in new plans.",
+    "cue": "Keep hips and lower back on the pad.",
+    "common_mistakes": [
+      "Pelvis curling off the pad",
+      "Forcefully locking knees"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 180,
+    "substitution_group": "leg-press",
+    "thumbnail_url": "./media/thumbs/leg-press-or-squat.webp",
+    "image_url": "./media/leg-press-or-squat.webp",
+    "motion_url": "./media/leg-press-or-squat.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": true
+  },
+  {
+    "name": "Seated Leg Curl",
+    "slug": "seated-leg-curl",
+    "canonical_name": "Seated Leg Curl",
+    "aliases": [
+      "seated hamstring curl"
+    ],
+    "primary_muscle": "Hamstrings",
+    "secondary_muscles": [
+      "Gastrocnemius"
+    ],
+    "body_region": "Lower body",
+    "movement_type": "Knee flexion",
+    "movement_pattern": "Knee flexion",
+    "equipment": "Selectorized machine",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Beginner",
+    "setup_instructions": "Align knees with the machine pivot, secure thigh pad and place lower legs on the roller.",
+    "movement_instructions": "Bend knees to draw heels beneath the seat; extend slowly.",
+    "cue": "Curl without lifting hips off the pad.",
+    "common_mistakes": [
+      "Arching the back",
+      "Letting the stack slam"
+    ],
+    "rest_min_seconds": 60,
+    "rest_max_seconds": 90,
+    "substitution_group": "leg-curl",
+    "thumbnail_url": "./media/thumbs/seated-leg-curl.webp",
+    "image_url": "./media/seated-leg-curl.webp",
+    "motion_url": "./media/seated-leg-curl.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Leg Extension",
+    "slug": "leg-extension",
+    "canonical_name": "Leg Extension",
+    "aliases": [
+      "quad extension",
+      "knee extension"
+    ],
+    "primary_muscle": "Quads",
+    "secondary_muscles": [],
+    "body_region": "Lower body",
+    "movement_type": "Knee extension",
+    "movement_pattern": "Knee extension",
+    "equipment": "Selectorized machine",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Beginner",
+    "setup_instructions": "Sit with knees aligned to the pivot and the roller above the front of the ankles.",
+    "movement_instructions": "Straighten knees smoothly; lower until knees bend comfortably.",
+    "cue": "Extend smoothly without kicking.",
+    "common_mistakes": [
+      "Swinging the torso",
+      "Misaligning knee and machine pivot"
+    ],
+    "rest_min_seconds": 60,
+    "rest_max_seconds": 90,
+    "substitution_group": "knee-extension",
+    "thumbnail_url": "./media/thumbs/leg-extension.webp",
+    "image_url": "./media/leg-extension.webp",
+    "motion_url": "./media/leg-extension.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Calf Raise",
+    "slug": "calf-raise",
+    "canonical_name": "Calf Raise",
+    "aliases": [
+      "standing machine calf raise"
+    ],
+    "primary_muscle": "Calves",
+    "secondary_muscles": [],
+    "body_region": "Lower body",
+    "movement_type": "Plantar flexion",
+    "movement_pattern": "Plantar flexion",
+    "equipment": "Calf raise machine",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Beginner",
+    "setup_instructions": "Set shoulder pads and place balls of feet on the standing machine platform, heels free.",
+    "movement_instructions": "Rise onto the forefoot; lower heels through a comfortable range.",
+    "cue": "Pause at the top and lower slowly.",
+    "common_mistakes": [
+      "Bouncing",
+      "Rolling onto the outside edge of the foot"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "calf",
+    "thumbnail_url": "./media/thumbs/calf-raise.webp",
+    "image_url": "./media/calf-raise.webp",
+    "motion_url": "./media/calf-raise.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Walking Lunge or Split Squat",
+    "slug": "walking-lunge-or-split-squat",
+    "canonical_name": "Walking Lunge or Split Squat",
+    "aliases": [
+      "legacy lunge choice",
+      "stationary split squat"
+    ],
+    "primary_muscle": "Quads",
+    "secondary_muscles": [
+      "Glutes",
+      "Adductors"
+    ],
+    "body_region": "Lower body",
+    "movement_type": "Lunge",
+    "movement_pattern": "Lunge",
+    "equipment": "Dumbbells",
+    "laterality": "Unilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Legacy plan choice. The illustration shows a stationary split squat: stand in a staggered stance with both feet on the floor.",
+    "movement_instructions": "Lower the back knee toward the floor; press through the front foot. Choose walking lunges separately in new plans.",
+    "cue": "Push through the whole front foot.",
+    "common_mistakes": [
+      "Losing balance",
+      "Front knee collapsing inward"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 150,
+    "substitution_group": "lunge",
+    "thumbnail_url": "./media/thumbs/walking-lunge-or-split-squat.webp",
+    "image_url": "./media/walking-lunge-or-split-squat.webp",
+    "motion_url": "./media/walking-lunge-or-split-squat.webp",
+    "motion_kind": "two-position",
+    "load_basis": "per_dumbbell",
+    "is_legacy": true
+  },
+  {
+    "name": "Cable Crunch",
+    "slug": "cable-crunch",
+    "canonical_name": "Cable Crunch",
+    "aliases": [
+      "kneeling cable crunch"
+    ],
+    "primary_muscle": "Abs",
+    "secondary_muscles": [
+      "Obliques"
+    ],
+    "body_region": "Core",
+    "movement_type": "Trunk flexion",
+    "movement_pattern": "Trunk flexion",
+    "equipment": "Cable",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Attach a rope to a high pulley. Kneel facing the tower, rope held beside the head, hips steady.",
+    "movement_instructions": "Curl ribs toward pelvis; return without pulling with the arms.",
+    "cue": "Curl ribs toward pelvis; breathe out.",
+    "common_mistakes": [
+      "Pulling on the neck",
+      "Using hip momentum"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "core-flexion",
+    "thumbnail_url": "./media/thumbs/cable-crunch.webp",
+    "image_url": "./media/cable-crunch.webp",
+    "motion_url": "./media/cable-crunch.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Incline Dumbbell Press",
+    "slug": "incline-dumbbell-press",
+    "canonical_name": "Incline Dumbbell Press",
+    "aliases": [
+      "incline dumbbell bench press",
+      "incline db press"
+    ],
+    "primary_muscle": "Chest",
+    "secondary_muscles": [
+      "Anterior deltoids",
+      "Triceps"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Incline push",
+    "movement_pattern": "Incline push",
+    "equipment": "Dumbbells",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Set bench to about 30 degrees. Sit back with feet planted and dumbbells beside upper chest.",
+    "movement_instructions": "Press upward over shoulders; lower along a controlled arc.",
+    "cue": "Press upward without shrugging.",
+    "common_mistakes": [
+      "Using an overly steep bench",
+      "Lifting hips off the pad"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 180,
+    "substitution_group": "incline-press",
+    "thumbnail_url": "./media/thumbs/incline-dumbbell-press.webp",
+    "image_url": "./media/incline-dumbbell-press.webp",
+    "motion_url": "./media/incline-dumbbell-press.webp",
+    "motion_kind": "two-position",
+    "load_basis": "per_dumbbell",
+    "is_legacy": false
+  },
+  {
+    "name": "Lateral Raise",
+    "slug": "lateral-raise",
+    "canonical_name": "Lateral Raise",
+    "aliases": [
+      "dumbbell lateral raise",
+      "side raise",
+      "db lateral"
+    ],
+    "primary_muscle": "Shoulders",
+    "secondary_muscles": [
+      "Supraspinatus",
+      "Upper trapezius"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Shoulder abduction",
+    "movement_pattern": "Shoulder abduction",
+    "equipment": "Dumbbells",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Stand with dumbbells beside thighs and elbows softly bent.",
+    "movement_instructions": "Lift arms slightly forward of your sides to shoulder level; lower slowly.",
+    "cue": "Lead outward with elbows and relaxed traps.",
+    "common_mistakes": [
+      "Swinging the torso",
+      "Raising far above shoulder height"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "lateral-raise",
+    "thumbnail_url": "./media/thumbs/lateral-raise.webp",
+    "image_url": "./media/lateral-raise.webp",
+    "motion_url": "./media/lateral-raise.webp",
+    "motion_kind": "two-position",
+    "load_basis": "per_dumbbell",
+    "is_legacy": false
+  },
+  {
+    "name": "Goblet Squat",
+    "slug": "goblet-squat",
+    "canonical_name": "Goblet Squat",
+    "aliases": [
+      "dumbbell goblet squat"
+    ],
+    "primary_muscle": "Quads",
+    "secondary_muscles": [
+      "Glutes",
+      "Adductors"
+    ],
+    "body_region": "Lower body",
+    "movement_type": "Squat",
+    "movement_pattern": "Squat",
+    "equipment": "Dumbbell",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Hold one dumbbell vertically at chest level and set feet around shoulder width.",
+    "movement_instructions": "Sit down between the hips; stand while keeping heels grounded.",
+    "cue": "Track knees in line with toes.",
+    "common_mistakes": [
+      "Heels lifting",
+      "Knees collapsing inward"
+    ],
+    "rest_min_seconds": 120,
+    "rest_max_seconds": 180,
+    "substitution_group": "knee-dominant",
+    "thumbnail_url": "./media/thumbs/goblet-squat.webp",
+    "image_url": "./media/goblet-squat.webp",
+    "motion_url": "./media/goblet-squat.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "One-Arm Dumbbell Row",
+    "slug": "dumbbell-row",
+    "canonical_name": "One-Arm Dumbbell Row",
+    "aliases": [
+      "dumbbell row",
+      "db row",
+      "one arm row"
+    ],
+    "primary_muscle": "Back",
+    "secondary_muscles": [
+      "Biceps",
+      "Rear deltoids"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Horizontal pull",
+    "movement_pattern": "Horizontal pull",
+    "equipment": "Dumbbell and bench",
+    "laterality": "Unilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Support one hand and knee on a flat bench; hold a dumbbell in the other hand with hips level.",
+    "movement_instructions": "Pull the elbow toward your hip; lower without rotating the torso.",
+    "cue": "Draw elbows back without shrugging.",
+    "common_mistakes": [
+      "Jerking the weight",
+      "Losing a stable torso"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 150,
+    "substitution_group": "row",
+    "thumbnail_url": "./media/thumbs/dumbbell-row.webp",
+    "image_url": "./media/dumbbell-row.webp",
+    "motion_url": "./media/dumbbell-row.webp",
+    "motion_kind": "two-position",
+    "load_basis": "per_dumbbell",
+    "is_legacy": false
+  },
+  {
+    "name": "Push-Up",
+    "slug": "push-up",
+    "canonical_name": "Push-Up",
+    "aliases": [
+      "press up",
+      "pushup"
+    ],
+    "primary_muscle": "Chest",
+    "secondary_muscles": [
+      "Triceps",
+      "Anterior deltoids"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Horizontal push",
+    "movement_pattern": "Horizontal push",
+    "equipment": "Bodyweight",
+    "laterality": "Bilateral",
+    "exercise_type": "bodyweight",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Place hands slightly wider than shoulders and extend legs into a straight-body plank.",
+    "movement_instructions": "Lower chest between hands; press back up as one unit.",
+    "cue": "Keep wrists stacked above elbows.",
+    "common_mistakes": [
+      "Bouncing off the chest",
+      "Flaring elbows excessively"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 180,
+    "substitution_group": "flat-press",
+    "thumbnail_url": "./media/thumbs/push-up.webp",
+    "image_url": "./media/push-up.webp",
+    "motion_url": "./media/push-up.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Glute Bridge",
+    "slug": "glute-bridge",
+    "canonical_name": "Glute Bridge",
+    "aliases": [
+      "floor bridge"
+    ],
+    "primary_muscle": "Glutes",
+    "secondary_muscles": [
+      "Hamstrings"
+    ],
+    "body_region": "Lower body",
+    "movement_type": "Hip extension",
+    "movement_pattern": "Hip extension",
+    "equipment": "Bodyweight",
+    "laterality": "Bilateral",
+    "exercise_type": "bodyweight",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Lie on your back with knees bent and feet flat, arms on the floor.",
+    "movement_instructions": "Drive through feet to lift hips; pause with ribs down and lower.",
+    "cue": "Finish with glutes, not a lower-back arch.",
+    "common_mistakes": [
+      "Overextending the spine",
+      "Driving through the toes"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 150,
+    "substitution_group": "hip-extension",
+    "thumbnail_url": "./media/thumbs/glute-bridge.webp",
+    "image_url": "./media/glute-bridge.webp",
+    "motion_url": "./media/glute-bridge.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Plank",
+    "slug": "plank",
+    "canonical_name": "Plank",
+    "aliases": [
+      "front plank",
+      "forearm plank"
+    ],
+    "primary_muscle": "Abs",
+    "secondary_muscles": [
+      "Glutes",
+      "Shoulders"
+    ],
+    "body_region": "Core",
+    "movement_type": "Anti-extension",
+    "movement_pattern": "Anti-extension",
+    "equipment": "Bodyweight",
+    "laterality": "Bilateral",
+    "exercise_type": "timed",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Place elbows beneath shoulders, forearms on floor, legs extended and toes grounded.",
+    "movement_instructions": "Hold a straight-body position while taking steady breaths.",
+    "cue": "Brace and keep breathing.",
+    "common_mistakes": [
+      "Sagging hips",
+      "Holding the breath"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "brace",
+    "thumbnail_url": "./media/thumbs/plank.webp",
+    "image_url": "./media/plank.webp",
+    "motion_url": "./media/plank.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Barbell Bench Press",
+    "slug": "barbell-bench-press",
+    "canonical_name": "Barbell Bench Press",
+    "aliases": [
+      "bench press",
+      "flat bench",
+      "barbell chest press",
+      "flat barbell press"
+    ],
+    "primary_muscle": "Chest",
+    "secondary_muscles": [
+      "Triceps",
+      "Anterior deltoids"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Horizontal push",
+    "movement_pattern": "Horizontal push",
+    "equipment": "Barbell",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Lie on a flat bench with feet planted. Grip just outside shoulder width. Use a spotter or correctly positioned safety arms.",
+    "movement_instructions": "Unrack over shoulders, lower to mid-chest with forearms vertical, then press up and slightly back.",
+    "cue": "Keep wrists stacked above elbows.",
+    "common_mistakes": [
+      "Bouncing off the chest",
+      "Flaring elbows excessively"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 180,
+    "substitution_group": "flat-press",
+    "thumbnail_url": "./media/thumbs/barbell-bench-press.webp",
+    "image_url": "./media/barbell-bench-press.webp",
+    "motion_url": "./media/barbell-bench-press.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Incline Barbell Bench Press",
+    "slug": "incline-barbell-bench-press",
+    "canonical_name": "Incline Barbell Bench Press",
+    "aliases": [
+      "incline bench",
+      "incline barbell press",
+      "incline chest press"
+    ],
+    "primary_muscle": "Chest",
+    "secondary_muscles": [
+      "Anterior deltoids",
+      "Triceps"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Incline push",
+    "movement_pattern": "Incline push",
+    "equipment": "Barbell",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Set a bench about 30 degrees with head higher than hips. Grip just outside shoulders and set safeties or use a spotter.",
+    "movement_instructions": "Lower the bar to upper chest; press vertically over shoulders without lifting hips.",
+    "cue": "Press upward without shrugging.",
+    "common_mistakes": [
+      "Using an overly steep bench",
+      "Lifting hips off the pad"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 180,
+    "substitution_group": "incline-press",
+    "thumbnail_url": "./media/thumbs/incline-barbell-bench-press.webp",
+    "image_url": "./media/incline-barbell-bench-press.webp",
+    "motion_url": "./media/incline-barbell-bench-press.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Decline Barbell Bench Press",
+    "slug": "decline-barbell-bench-press",
+    "canonical_name": "Decline Barbell Bench Press",
+    "aliases": [
+      "decline bench",
+      "decline barbell press"
+    ],
+    "primary_muscle": "Chest",
+    "secondary_muscles": [
+      "Triceps",
+      "Anterior deltoids"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Decline push",
+    "movement_pattern": "Decline push",
+    "equipment": "Barbell",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Advanced",
+    "setup_instructions": "Use a shallow decline bench with head below hips and legs secured under the rollers. Set safeties and use a spotter.",
+    "movement_instructions": "Lower to the lower chest; press back over shoulders, keeping body secured.",
+    "cue": "Keep shoulders supported and wrists stacked.",
+    "common_mistakes": [
+      "Unsecured legs",
+      "Bouncing the load"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 180,
+    "substitution_group": "decline-press",
+    "thumbnail_url": "./media/thumbs/decline-barbell-bench-press.webp",
+    "image_url": "./media/decline-barbell-bench-press.webp",
+    "motion_url": "./media/decline-barbell-bench-press.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Smith Machine Bench Press",
+    "slug": "smith-machine-bench-press",
+    "canonical_name": "Smith Machine Bench Press",
+    "aliases": [
+      "smith flat bench",
+      "smith chest press"
+    ],
+    "primary_muscle": "Chest",
+    "secondary_muscles": [
+      "Triceps",
+      "Anterior deltoids"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Horizontal push",
+    "movement_pattern": "Horizontal push",
+    "equipment": "Smith machine",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Beginner",
+    "setup_instructions": "Position a flat bench under the Smith bar so its track meets the mid-chest. Set safety stops just below your intended range.",
+    "movement_instructions": "Unhook the bar, lower to chest level and press along the rails. Rehook only at the top.",
+    "cue": "Keep wrists stacked above elbows.",
+    "common_mistakes": [
+      "Bouncing off the chest",
+      "Flaring elbows excessively"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 180,
+    "substitution_group": "flat-press",
+    "thumbnail_url": "./media/thumbs/smith-machine-bench-press.webp",
+    "image_url": "./media/smith-machine-bench-press.webp",
+    "motion_url": "./media/smith-machine-bench-press.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Smith Machine Incline Press",
+    "slug": "smith-machine-incline-press",
+    "canonical_name": "Smith Machine Incline Press",
+    "aliases": [
+      "smith incline bench"
+    ],
+    "primary_muscle": "Chest",
+    "secondary_muscles": [
+      "Anterior deltoids",
+      "Triceps"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Incline push",
+    "movement_pattern": "Incline push",
+    "equipment": "Smith machine",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Beginner",
+    "setup_instructions": "Set a roughly 30-degree bench beneath the Smith bar so it reaches upper chest. Set safety stops.",
+    "movement_instructions": "Unhook, lower with elbows beneath the bar, then press along the rails.",
+    "cue": "Press upward without shrugging.",
+    "common_mistakes": [
+      "Using an overly steep bench",
+      "Lifting hips off the pad"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 180,
+    "substitution_group": "incline-press",
+    "thumbnail_url": "./media/thumbs/smith-machine-incline-press.webp",
+    "image_url": "./media/smith-machine-incline-press.webp",
+    "motion_url": "./media/smith-machine-incline-press.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Smith Machine Decline Press",
+    "slug": "smith-machine-decline-press",
+    "canonical_name": "Smith Machine Decline Press",
+    "aliases": [
+      "smith decline bench"
+    ],
+    "primary_muscle": "Chest",
+    "secondary_muscles": [
+      "Triceps",
+      "Anterior deltoids"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Decline push",
+    "movement_pattern": "Decline push",
+    "equipment": "Smith machine",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Beginner",
+    "setup_instructions": "Secure legs on a shallow decline bench under the Smith bar. Position the track at lower chest and set stops.",
+    "movement_instructions": "Unhook and lower the bar with control; press up along the rails.",
+    "cue": "Keep shoulders supported and wrists stacked.",
+    "common_mistakes": [
+      "Unsecured legs",
+      "Bouncing the load"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 180,
+    "substitution_group": "decline-press",
+    "thumbnail_url": "./media/thumbs/smith-machine-decline-press.webp",
+    "image_url": "./media/smith-machine-decline-press.webp",
+    "motion_url": "./media/smith-machine-decline-press.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Decline Dumbbell Press",
+    "slug": "decline-dumbbell-press",
+    "canonical_name": "Decline Dumbbell Press",
+    "aliases": [
+      "decline db bench"
+    ],
+    "primary_muscle": "Chest",
+    "secondary_muscles": [
+      "Triceps",
+      "Anterior deltoids"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Decline push",
+    "movement_pattern": "Decline push",
+    "equipment": "Dumbbells",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Secure legs on a shallow decline bench, head lower than hips. Get the dumbbells into position safely, with assistance if needed.",
+    "movement_instructions": "Lower beside lower chest; press over shoulders without clashing the weights.",
+    "cue": "Keep shoulders supported and wrists stacked.",
+    "common_mistakes": [
+      "Unsecured legs",
+      "Bouncing the load"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 180,
+    "substitution_group": "decline-press",
+    "thumbnail_url": "./media/thumbs/decline-dumbbell-press.webp",
+    "image_url": "./media/decline-dumbbell-press.webp",
+    "motion_url": "./media/decline-dumbbell-press.webp",
+    "motion_kind": "two-position",
+    "load_basis": "per_dumbbell",
+    "is_legacy": false
+  },
+  {
+    "name": "Flat Machine Chest Press",
+    "slug": "flat-machine-chest-press",
+    "canonical_name": "Flat Machine Chest Press",
+    "aliases": [
+      "machine chest press",
+      "seated chest press"
+    ],
+    "primary_muscle": "Chest",
+    "secondary_muscles": [
+      "Triceps",
+      "Anterior deltoids"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Horizontal push",
+    "movement_pattern": "Horizontal push",
+    "equipment": "Selectorized machine",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Beginner",
+    "setup_instructions": "Set the seat so handles align with mid-chest and keep feet flat and back against the pad.",
+    "movement_instructions": "Press handles forward; return until elbows reach a comfortable depth.",
+    "cue": "Keep wrists stacked above elbows.",
+    "common_mistakes": [
+      "Bouncing off the chest",
+      "Flaring elbows excessively"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 180,
+    "substitution_group": "flat-press",
+    "thumbnail_url": "./media/thumbs/flat-machine-chest-press.webp",
+    "image_url": "./media/flat-machine-chest-press.webp",
+    "motion_url": "./media/flat-machine-chest-press.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Plate-Loaded Chest Press",
+    "slug": "plate-loaded-chest-press",
+    "canonical_name": "Plate-Loaded Chest Press",
+    "aliases": [
+      "hammer strength chest press",
+      "iso lateral chest press"
+    ],
+    "primary_muscle": "Chest",
+    "secondary_muscles": [
+      "Triceps",
+      "Anterior deltoids"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Horizontal push",
+    "movement_pattern": "Horizontal push",
+    "equipment": "Plate-loaded machine",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Beginner",
+    "setup_instructions": "Load both machine arms evenly. Adjust seat so handles start at mid-chest and back is supported.",
+    "movement_instructions": "Press the levers forward; return smoothly without bouncing against stops.",
+    "cue": "Keep wrists stacked above elbows.",
+    "common_mistakes": [
+      "Bouncing off the chest",
+      "Flaring elbows excessively"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 180,
+    "substitution_group": "flat-press",
+    "thumbnail_url": "./media/thumbs/plate-loaded-chest-press.webp",
+    "image_url": "./media/plate-loaded-chest-press.webp",
+    "motion_url": "./media/plate-loaded-chest-press.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Incline Plate-Loaded Chest Press",
+    "slug": "incline-plate-loaded-chest-press",
+    "canonical_name": "Incline Plate-Loaded Chest Press",
+    "aliases": [
+      "hammer strength incline press"
+    ],
+    "primary_muscle": "Chest",
+    "secondary_muscles": [
+      "Anterior deltoids",
+      "Triceps"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Incline push",
+    "movement_pattern": "Incline push",
+    "equipment": "Plate-loaded machine",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Beginner",
+    "setup_instructions": "Load both sides evenly and adjust seat so the inclined lever handles begin at upper chest.",
+    "movement_instructions": "Press forward and upward along the machine arc; lower under control.",
+    "cue": "Press upward without shrugging.",
+    "common_mistakes": [
+      "Using an overly steep bench",
+      "Lifting hips off the pad"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 180,
+    "substitution_group": "incline-press",
+    "thumbnail_url": "./media/thumbs/incline-plate-loaded-chest-press.webp",
+    "image_url": "./media/incline-plate-loaded-chest-press.webp",
+    "motion_url": "./media/incline-plate-loaded-chest-press.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Chest Dip",
+    "slug": "chest-dip",
+    "canonical_name": "Chest Dip",
+    "aliases": [
+      "parallel bar dip",
+      "pectoral dip"
+    ],
+    "primary_muscle": "Chest",
+    "secondary_muscles": [
+      "Triceps",
+      "Anterior deltoids"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Dip",
+    "movement_pattern": "Dip",
+    "equipment": "Parallel bars",
+    "laterality": "Bilateral",
+    "exercise_type": "bodyweight",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Support yourself on parallel bars with shoulders down and a slight forward torso lean.",
+    "movement_instructions": "Bend elbows to a comfortable depth, then press back to the top without swinging.",
+    "cue": "Use a comfortable shoulder range.",
+    "common_mistakes": [
+      "Dropping too deep",
+      "Shrugging at the bottom"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 150,
+    "substitution_group": "dip",
+    "thumbnail_url": "./media/thumbs/chest-dip.webp",
+    "image_url": "./media/chest-dip.webp",
+    "motion_url": "./media/chest-dip.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Pec Deck",
+    "slug": "pec-deck",
+    "canonical_name": "Pec Deck",
+    "aliases": [
+      "chest fly machine",
+      "butterfly machine"
+    ],
+    "primary_muscle": "Chest",
+    "secondary_muscles": [
+      "Anterior deltoids"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Horizontal adduction",
+    "movement_pattern": "Horizontal adduction",
+    "equipment": "Selectorized machine",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Beginner",
+    "setup_instructions": "Sit with back against the pad and adjust handles or forearm pads around chest height.",
+    "movement_instructions": "Bring arms together in front of the chest; open only to a comfortable stretch.",
+    "cue": "Keep a soft, fixed elbow bend.",
+    "common_mistakes": [
+      "Turning the fly into a press",
+      "Overstretching behind the torso"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "chest-fly",
+    "thumbnail_url": "./media/thumbs/pec-deck.webp",
+    "image_url": "./media/pec-deck.webp",
+    "motion_url": "./media/pec-deck.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Low-to-High Cable Fly",
+    "slug": "low-to-high-cable-fly",
+    "canonical_name": "Low-to-High Cable Fly",
+    "aliases": [
+      "low cable fly",
+      "upper chest cable fly"
+    ],
+    "primary_muscle": "Chest",
+    "secondary_muscles": [
+      "Anterior deltoids"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Horizontal adduction",
+    "movement_pattern": "Horizontal adduction",
+    "equipment": "Cable",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Set both machine pulleys low and stand between the towers in a split stance, cables running from the visible low pulleys to the handles.",
+    "movement_instructions": "Sweep hands upward and inward toward upper chest; return along the same arc.",
+    "cue": "Keep a soft, fixed elbow bend.",
+    "common_mistakes": [
+      "Turning the fly into a press",
+      "Overstretching behind the torso"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "chest-fly",
+    "thumbnail_url": "./media/thumbs/low-to-high-cable-fly.webp",
+    "image_url": "./media/low-to-high-cable-fly.webp",
+    "motion_url": "./media/low-to-high-cable-fly.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "High-to-Low Cable Fly",
+    "slug": "high-to-low-cable-fly",
+    "canonical_name": "High-to-Low Cable Fly",
+    "aliases": [
+      "high cable crossover",
+      "lower chest fly"
+    ],
+    "primary_muscle": "Chest",
+    "secondary_muscles": [
+      "Anterior deltoids"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Horizontal adduction",
+    "movement_pattern": "Horizontal adduction",
+    "equipment": "Cable",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Set both machine pulleys above shoulder height; hold handles and step forward between the towers.",
+    "movement_instructions": "Sweep hands down and inward toward the lower chest; return smoothly.",
+    "cue": "Keep a soft, fixed elbow bend.",
+    "common_mistakes": [
+      "Turning the fly into a press",
+      "Overstretching behind the torso"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "chest-fly",
+    "thumbnail_url": "./media/thumbs/high-to-low-cable-fly.webp",
+    "image_url": "./media/high-to-low-cable-fly.webp",
+    "motion_url": "./media/high-to-low-cable-fly.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Single-Arm Cable Fly",
+    "slug": "single-arm-cable-fly",
+    "canonical_name": "Single-Arm Cable Fly",
+    "aliases": [
+      "one arm cable fly"
+    ],
+    "primary_muscle": "Chest",
+    "secondary_muscles": [
+      "Anterior deltoids"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Horizontal adduction",
+    "movement_pattern": "Horizontal adduction",
+    "equipment": "Cable",
+    "laterality": "Unilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Stand side-on to a chest-height machine pulley with one handle and a stable split stance.",
+    "movement_instructions": "Sweep the working hand across the chest without rotating your torso; return.",
+    "cue": "Keep a soft, fixed elbow bend.",
+    "common_mistakes": [
+      "Turning the fly into a press",
+      "Overstretching behind the torso"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "chest-fly",
+    "thumbnail_url": "./media/thumbs/single-arm-cable-fly.webp",
+    "image_url": "./media/single-arm-cable-fly.webp",
+    "motion_url": "./media/single-arm-cable-fly.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Dumbbell Chest Fly",
+    "slug": "dumbbell-chest-fly",
+    "canonical_name": "Dumbbell Chest Fly",
+    "aliases": [
+      "flat dumbbell fly",
+      "db fly"
+    ],
+    "primary_muscle": "Chest",
+    "secondary_muscles": [
+      "Anterior deltoids"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Horizontal adduction",
+    "movement_pattern": "Horizontal adduction",
+    "equipment": "Dumbbells",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Lie on a flat bench with dumbbells above chest, palms facing and elbows softly bent.",
+    "movement_instructions": "Open arms in a wide arc to a comfortable depth; bring them together above chest.",
+    "cue": "Keep a soft, fixed elbow bend.",
+    "common_mistakes": [
+      "Turning the fly into a press",
+      "Overstretching behind the torso"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "chest-fly",
+    "thumbnail_url": "./media/thumbs/dumbbell-chest-fly.webp",
+    "image_url": "./media/dumbbell-chest-fly.webp",
+    "motion_url": "./media/dumbbell-chest-fly.webp",
+    "motion_kind": "two-position",
+    "load_basis": "per_dumbbell",
+    "is_legacy": false
+  },
+  {
+    "name": "Incline Push-Up",
+    "slug": "incline-push-up",
+    "canonical_name": "Incline Push-Up",
+    "aliases": [
+      "elevated pushup",
+      "bench push up"
+    ],
+    "primary_muscle": "Chest",
+    "secondary_muscles": [
+      "Triceps",
+      "Anterior deltoids"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Horizontal push",
+    "movement_pattern": "Horizontal push",
+    "equipment": "Bodyweight and bench",
+    "laterality": "Bilateral",
+    "exercise_type": "bodyweight",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Place hands on a stable elevated bench or bar and walk feet back into a straight body line.",
+    "movement_instructions": "Lower chest toward the support; press away without bending at the hips.",
+    "cue": "Keep wrists stacked above elbows.",
+    "common_mistakes": [
+      "Bouncing off the chest",
+      "Flaring elbows excessively"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 180,
+    "substitution_group": "flat-press",
+    "thumbnail_url": "./media/thumbs/incline-push-up.webp",
+    "image_url": "./media/incline-push-up.webp",
+    "motion_url": "./media/incline-push-up.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Decline Push-Up",
+    "slug": "decline-push-up",
+    "canonical_name": "Decline Push-Up",
+    "aliases": [
+      "feet elevated pushup"
+    ],
+    "primary_muscle": "Chest",
+    "secondary_muscles": [
+      "Anterior deltoids",
+      "Triceps"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Incline push",
+    "movement_pattern": "Incline push",
+    "equipment": "Bodyweight and bench",
+    "laterality": "Bilateral",
+    "exercise_type": "bodyweight",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Place toes on a stable low bench and hands on floor, maintaining a braced straight body.",
+    "movement_instructions": "Lower chest toward floor; press up without letting the lower back sag.",
+    "cue": "Press upward without shrugging.",
+    "common_mistakes": [
+      "Using an overly steep bench",
+      "Lifting hips off the pad"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 180,
+    "substitution_group": "incline-press",
+    "thumbnail_url": "./media/thumbs/decline-push-up.webp",
+    "image_url": "./media/decline-push-up.webp",
+    "motion_url": "./media/decline-push-up.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Pull-Up",
+    "slug": "pull-up",
+    "canonical_name": "Pull-Up",
+    "aliases": [
+      "overhand pullup",
+      "conventional pull up"
+    ],
+    "primary_muscle": "Back",
+    "secondary_muscles": [
+      "Biceps",
+      "Lower trapezius"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Vertical pull",
+    "movement_pattern": "Vertical pull",
+    "equipment": "Pull-up bar",
+    "laterality": "Bilateral",
+    "exercise_type": "bodyweight",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Hang from a secure bar with an overhand grip just wider than shoulders; brace the torso.",
+    "movement_instructions": "Pull until chin clears the bar without craning; lower to a controlled hang.",
+    "cue": "Lead with elbows; keep the rib cage controlled.",
+    "common_mistakes": [
+      "Pulling behind the neck",
+      "Swinging the torso"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 150,
+    "substitution_group": "vertical-pull",
+    "thumbnail_url": "./media/thumbs/pull-up.webp",
+    "image_url": "./media/pull-up.webp",
+    "motion_url": "./media/pull-up.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Assisted Pull-Up",
+    "slug": "assisted-pull-up",
+    "canonical_name": "Assisted Pull-Up",
+    "aliases": [
+      "assisted chin pull machine"
+    ],
+    "primary_muscle": "Back",
+    "secondary_muscles": [
+      "Biceps",
+      "Lower trapezius"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Vertical pull",
+    "movement_pattern": "Vertical pull",
+    "equipment": "Assisted pull-up machine",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Beginner",
+    "setup_instructions": "Select assistance, step onto the machine and place knees or feet on the moving support as designed.",
+    "movement_instructions": "Pull upward with elbows down; lower slowly while staying on the support.",
+    "cue": "Lead with elbows; keep the rib cage controlled.",
+    "common_mistakes": [
+      "Pulling behind the neck",
+      "Swinging the torso"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 150,
+    "substitution_group": "vertical-pull",
+    "thumbnail_url": "./media/thumbs/assisted-pull-up.webp",
+    "image_url": "./media/assisted-pull-up.webp",
+    "motion_url": "./media/assisted-pull-up.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Chin-Up",
+    "slug": "chin-up",
+    "canonical_name": "Chin-Up",
+    "aliases": [
+      "chinup",
+      "underhand pull up"
+    ],
+    "primary_muscle": "Back",
+    "secondary_muscles": [
+      "Biceps",
+      "Lower trapezius"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Vertical pull",
+    "movement_pattern": "Vertical pull",
+    "equipment": "Pull-up bar",
+    "laterality": "Bilateral",
+    "exercise_type": "bodyweight",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Hang from a secure bar with palms facing you and hands around shoulder width.",
+    "movement_instructions": "Pull chest toward the bar; lower without swinging or dropping.",
+    "cue": "Lead with elbows; keep the rib cage controlled.",
+    "common_mistakes": [
+      "Pulling behind the neck",
+      "Swinging the torso"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 150,
+    "substitution_group": "vertical-pull",
+    "thumbnail_url": "./media/thumbs/chin-up.webp",
+    "image_url": "./media/chin-up.webp",
+    "motion_url": "./media/chin-up.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Neutral-Grip Pull-Up",
+    "slug": "neutral-grip-pull-up",
+    "canonical_name": "Neutral-Grip Pull-Up",
+    "aliases": [
+      "parallel grip pullup"
+    ],
+    "primary_muscle": "Back",
+    "secondary_muscles": [
+      "Biceps",
+      "Lower trapezius"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Vertical pull",
+    "movement_pattern": "Vertical pull",
+    "equipment": "Pull-up bar",
+    "laterality": "Bilateral",
+    "exercise_type": "bodyweight",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Use parallel overhead handles so palms face each other and brace the trunk.",
+    "movement_instructions": "Pull elbows toward sides until chin passes handle height; lower under control.",
+    "cue": "Lead with elbows; keep the rib cage controlled.",
+    "common_mistakes": [
+      "Pulling behind the neck",
+      "Swinging the torso"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 150,
+    "substitution_group": "vertical-pull",
+    "thumbnail_url": "./media/thumbs/neutral-grip-pull-up.webp",
+    "image_url": "./media/neutral-grip-pull-up.webp",
+    "motion_url": "./media/neutral-grip-pull-up.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Wide-Grip Lat Pulldown",
+    "slug": "wide-grip-lat-pulldown",
+    "canonical_name": "Wide-Grip Lat Pulldown",
+    "aliases": [
+      "wide pulldown",
+      "lat pull down"
+    ],
+    "primary_muscle": "Back",
+    "secondary_muscles": [
+      "Biceps",
+      "Lower trapezius"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Vertical pull",
+    "movement_pattern": "Vertical pull",
+    "equipment": "Cable",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Secure thighs beneath pads and take an overhand grip wider than shoulders on the overhead bar.",
+    "movement_instructions": "Pull to upper chest in front of your face; return overhead slowly.",
+    "cue": "Lead with elbows; keep the rib cage controlled.",
+    "common_mistakes": [
+      "Pulling behind the neck",
+      "Swinging the torso"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 150,
+    "substitution_group": "vertical-pull",
+    "thumbnail_url": "./media/thumbs/wide-grip-lat-pulldown.webp",
+    "image_url": "./media/wide-grip-lat-pulldown.webp",
+    "motion_url": "./media/wide-grip-lat-pulldown.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Close-Grip Lat Pulldown",
+    "slug": "close-grip-lat-pulldown",
+    "canonical_name": "Close-Grip Lat Pulldown",
+    "aliases": [
+      "v bar pulldown",
+      "close grip pulldown"
+    ],
+    "primary_muscle": "Back",
+    "secondary_muscles": [
+      "Biceps",
+      "Lower trapezius"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Vertical pull",
+    "movement_pattern": "Vertical pull",
+    "equipment": "Cable",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Attach a close-grip V handle to the high pulley, sit and secure thighs beneath pads.",
+    "movement_instructions": "Draw the handle to upper chest; extend arms overhead with control.",
+    "cue": "Lead with elbows; keep the rib cage controlled.",
+    "common_mistakes": [
+      "Pulling behind the neck",
+      "Swinging the torso"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 150,
+    "substitution_group": "vertical-pull",
+    "thumbnail_url": "./media/thumbs/close-grip-lat-pulldown.webp",
+    "image_url": "./media/close-grip-lat-pulldown.webp",
+    "motion_url": "./media/close-grip-lat-pulldown.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Single-Arm Lat Pulldown",
+    "slug": "single-arm-lat-pulldown",
+    "canonical_name": "Single-Arm Lat Pulldown",
+    "aliases": [
+      "one arm pulldown"
+    ],
+    "primary_muscle": "Back",
+    "secondary_muscles": [
+      "Biceps",
+      "Lower trapezius"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Vertical pull",
+    "movement_pattern": "Vertical pull",
+    "equipment": "Cable",
+    "laterality": "Unilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Kneel or sit facing a high machine pulley with a single handle in one hand.",
+    "movement_instructions": "Pull elbow down toward the ribs; return the arm overhead without twisting.",
+    "cue": "Lead with elbows; keep the rib cage controlled.",
+    "common_mistakes": [
+      "Pulling behind the neck",
+      "Swinging the torso"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 150,
+    "substitution_group": "vertical-pull",
+    "thumbnail_url": "./media/thumbs/single-arm-lat-pulldown.webp",
+    "image_url": "./media/single-arm-lat-pulldown.webp",
+    "motion_url": "./media/single-arm-lat-pulldown.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Straight-Arm Pulldown",
+    "slug": "straight-arm-pulldown",
+    "canonical_name": "Straight-Arm Pulldown",
+    "aliases": [
+      "cable pullover",
+      "lat prayer"
+    ],
+    "primary_muscle": "Back",
+    "secondary_muscles": [
+      "Triceps long head",
+      "Abdominals"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Shoulder extension",
+    "movement_pattern": "Shoulder extension",
+    "equipment": "Cable",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Attach a straight bar to a high pulley. Face the tower, hinge slightly and hold the bar with nearly straight arms.",
+    "movement_instructions": "Sweep the bar down toward thighs using the shoulders; return overhead to a comfortable stretch.",
+    "cue": "Move at the shoulders with almost-straight arms.",
+    "common_mistakes": [
+      "Bending elbows into a pressdown",
+      "Arching the lower back"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "straight-pull",
+    "thumbnail_url": "./media/thumbs/straight-arm-pulldown.webp",
+    "image_url": "./media/straight-arm-pulldown.webp",
+    "motion_url": "./media/straight-arm-pulldown.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Barbell Row",
+    "slug": "barbell-row",
+    "canonical_name": "Barbell Row",
+    "aliases": [
+      "bent over barbell row",
+      "bent over row"
+    ],
+    "primary_muscle": "Back",
+    "secondary_muscles": [
+      "Biceps",
+      "Rear deltoids"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Horizontal pull",
+    "movement_pattern": "Horizontal pull",
+    "equipment": "Barbell",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Hold a barbell with overhand grip. Hinge forward with knees soft and a braced neutral back.",
+    "movement_instructions": "Row toward lower ribs; lower while preserving the torso angle.",
+    "cue": "Draw elbows back without shrugging.",
+    "common_mistakes": [
+      "Jerking the weight",
+      "Losing a stable torso"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 150,
+    "substitution_group": "row",
+    "thumbnail_url": "./media/thumbs/barbell-row.webp",
+    "image_url": "./media/barbell-row.webp",
+    "motion_url": "./media/barbell-row.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Pendlay Row",
+    "slug": "pendlay-row",
+    "canonical_name": "Pendlay Row",
+    "aliases": [
+      "dead stop row"
+    ],
+    "primary_muscle": "Back",
+    "secondary_muscles": [
+      "Biceps",
+      "Rear deltoids"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Horizontal pull",
+    "movement_pattern": "Horizontal pull",
+    "equipment": "Barbell",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Advanced",
+    "setup_instructions": "Set a barbell on the floor. Hinge until torso is nearly horizontal while maintaining a neutral back; bend knees as needed.",
+    "movement_instructions": "Row from a dead stop to lower chest, then return the bar to the floor each rep.",
+    "cue": "Draw elbows back without shrugging.",
+    "common_mistakes": [
+      "Jerking the weight",
+      "Losing a stable torso"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 150,
+    "substitution_group": "row",
+    "thumbnail_url": "./media/thumbs/pendlay-row.webp",
+    "image_url": "./media/pendlay-row.webp",
+    "motion_url": "./media/pendlay-row.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "T-Bar Row",
+    "slug": "t-bar-row",
+    "canonical_name": "T-Bar Row",
+    "aliases": [
+      "tbar row",
+      "close grip t bar"
+    ],
+    "primary_muscle": "Back",
+    "secondary_muscles": [
+      "Biceps",
+      "Rear deltoids"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Horizontal pull",
+    "movement_pattern": "Horizontal pull",
+    "equipment": "T-bar row machine",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Beginner",
+    "setup_instructions": "Stand on the foot platform of a landmine-style T-bar station, hinge and grip the close handles.",
+    "movement_instructions": "Row the loaded lever toward the abdomen; lower without rounding.",
+    "cue": "Draw elbows back without shrugging.",
+    "common_mistakes": [
+      "Jerking the weight",
+      "Losing a stable torso"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 150,
+    "substitution_group": "row",
+    "thumbnail_url": "./media/thumbs/t-bar-row.webp",
+    "image_url": "./media/t-bar-row.webp",
+    "motion_url": "./media/t-bar-row.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Landmine Row",
+    "slug": "landmine-row",
+    "canonical_name": "Landmine Row",
+    "aliases": [
+      "meadows landmine two arm row"
+    ],
+    "primary_muscle": "Back",
+    "secondary_muscles": [
+      "Biceps",
+      "Rear deltoids"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Horizontal pull",
+    "movement_pattern": "Horizontal pull",
+    "equipment": "Landmine barbell",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Secure one barbell end in a landmine pivot. Straddle the bar and use a V handle beneath the free end, knees soft.",
+    "movement_instructions": "Row the free end toward lower ribs; lower with torso steady.",
+    "cue": "Draw elbows back without shrugging.",
+    "common_mistakes": [
+      "Jerking the weight",
+      "Losing a stable torso"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 150,
+    "substitution_group": "row",
+    "thumbnail_url": "./media/thumbs/landmine-row.webp",
+    "image_url": "./media/landmine-row.webp",
+    "motion_url": "./media/landmine-row.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Chest-Supported Dumbbell Row",
+    "slug": "chest-supported-dumbbell-row",
+    "canonical_name": "Chest-Supported Dumbbell Row",
+    "aliases": [
+      "incline dumbbell row",
+      "seal incline row"
+    ],
+    "primary_muscle": "Back",
+    "secondary_muscles": [
+      "Biceps",
+      "Rear deltoids"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Horizontal pull",
+    "movement_pattern": "Horizontal pull",
+    "equipment": "Dumbbells and bench",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Lie chest-down on a bench inclined about 30–45 degrees with feet planted and dumbbells hanging.",
+    "movement_instructions": "Draw elbows back beside the body; lower without lifting the chest.",
+    "cue": "Draw elbows back without shrugging.",
+    "common_mistakes": [
+      "Jerking the weight",
+      "Losing a stable torso"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 150,
+    "substitution_group": "row",
+    "thumbnail_url": "./media/thumbs/chest-supported-dumbbell-row.webp",
+    "image_url": "./media/chest-supported-dumbbell-row.webp",
+    "motion_url": "./media/chest-supported-dumbbell-row.webp",
+    "motion_kind": "two-position",
+    "load_basis": "per_dumbbell",
+    "is_legacy": false
+  },
+  {
+    "name": "Wide-Grip Seated Cable Row",
+    "slug": "wide-grip-seated-cable-row",
+    "canonical_name": "Wide-Grip Seated Cable Row",
+    "aliases": [
+      "wide cable row"
+    ],
+    "primary_muscle": "Back",
+    "secondary_muscles": [
+      "Biceps",
+      "Rear deltoids"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Horizontal pull",
+    "movement_pattern": "Horizontal pull",
+    "equipment": "Cable",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Sit at a low pulley with feet supported and hold a wide straight bar overhand.",
+    "movement_instructions": "Pull toward upper abdomen with elbows out moderately; return without rocking.",
+    "cue": "Draw elbows back without shrugging.",
+    "common_mistakes": [
+      "Jerking the weight",
+      "Losing a stable torso"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 150,
+    "substitution_group": "row",
+    "thumbnail_url": "./media/thumbs/wide-grip-seated-cable-row.webp",
+    "image_url": "./media/wide-grip-seated-cable-row.webp",
+    "motion_url": "./media/wide-grip-seated-cable-row.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Machine High Row",
+    "slug": "machine-high-row",
+    "canonical_name": "Machine High Row",
+    "aliases": [
+      "hammer strength high row"
+    ],
+    "primary_muscle": "Back",
+    "secondary_muscles": [
+      "Biceps",
+      "Rear deltoids"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Horizontal pull",
+    "movement_pattern": "Horizontal pull",
+    "equipment": "Plate-loaded machine",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Beginner",
+    "setup_instructions": "Adjust seat and chest pad so overhead diagonal handles are reachable and feet are supported.",
+    "movement_instructions": "Pull the levers down and back toward upper ribs; extend along their arc.",
+    "cue": "Draw elbows back without shrugging.",
+    "common_mistakes": [
+      "Jerking the weight",
+      "Losing a stable torso"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 150,
+    "substitution_group": "row",
+    "thumbnail_url": "./media/thumbs/machine-high-row.webp",
+    "image_url": "./media/machine-high-row.webp",
+    "motion_url": "./media/machine-high-row.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Standing Barbell Overhead Press",
+    "slug": "standing-barbell-overhead-press",
+    "canonical_name": "Standing Barbell Overhead Press",
+    "aliases": [
+      "overhead press",
+      "military press",
+      "ohp",
+      "standing press"
+    ],
+    "primary_muscle": "Shoulders",
+    "secondary_muscles": [
+      "Triceps",
+      "Upper chest"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Vertical push",
+    "movement_pattern": "Vertical push",
+    "equipment": "Barbell",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Stand with feet hip-width, bar at upper chest and hands just outside shoulders.",
+    "movement_instructions": "Press overhead, moving head slightly out of the bar path; finish stacked and lower.",
+    "cue": "Keep ribs stacked over the pelvis.",
+    "common_mistakes": [
+      "Excessive lower-back arch",
+      "Pressing behind the neck"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 180,
+    "substitution_group": "overhead-press",
+    "thumbnail_url": "./media/thumbs/standing-barbell-overhead-press.webp",
+    "image_url": "./media/standing-barbell-overhead-press.webp",
+    "motion_url": "./media/standing-barbell-overhead-press.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Seated Barbell Shoulder Press",
+    "slug": "seated-barbell-shoulder-press",
+    "canonical_name": "Seated Barbell Shoulder Press",
+    "aliases": [
+      "seated military press"
+    ],
+    "primary_muscle": "Shoulders",
+    "secondary_muscles": [
+      "Triceps",
+      "Upper chest"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Vertical push",
+    "movement_pattern": "Vertical push",
+    "equipment": "Barbell",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Use a nearly upright bench in a rack with safeties. Grip just outside shoulders with bar in front of the face.",
+    "movement_instructions": "Lower toward upper chest as comfortable; press overhead without arching.",
+    "cue": "Keep ribs stacked over the pelvis.",
+    "common_mistakes": [
+      "Excessive lower-back arch",
+      "Pressing behind the neck"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 180,
+    "substitution_group": "overhead-press",
+    "thumbnail_url": "./media/thumbs/seated-barbell-shoulder-press.webp",
+    "image_url": "./media/seated-barbell-shoulder-press.webp",
+    "motion_url": "./media/seated-barbell-shoulder-press.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Dumbbell Shoulder Press",
+    "slug": "dumbbell-shoulder-press",
+    "canonical_name": "Dumbbell Shoulder Press",
+    "aliases": [
+      "seated dumbbell press",
+      "db shoulder press"
+    ],
+    "primary_muscle": "Shoulders",
+    "secondary_muscles": [
+      "Triceps",
+      "Upper chest"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Vertical push",
+    "movement_pattern": "Vertical push",
+    "equipment": "Dumbbells",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Sit on a nearly upright bench with dumbbells beside shoulders and forearms vertical.",
+    "movement_instructions": "Press overhead in a comfortable path; lower to shoulder height.",
+    "cue": "Keep ribs stacked over the pelvis.",
+    "common_mistakes": [
+      "Excessive lower-back arch",
+      "Pressing behind the neck"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 180,
+    "substitution_group": "overhead-press",
+    "thumbnail_url": "./media/thumbs/dumbbell-shoulder-press.webp",
+    "image_url": "./media/dumbbell-shoulder-press.webp",
+    "motion_url": "./media/dumbbell-shoulder-press.webp",
+    "motion_kind": "two-position",
+    "load_basis": "per_dumbbell",
+    "is_legacy": false
+  },
+  {
+    "name": "Arnold Press",
+    "slug": "arnold-press",
+    "canonical_name": "Arnold Press",
+    "aliases": [
+      "arnold shoulder press"
+    ],
+    "primary_muscle": "Shoulders",
+    "secondary_muscles": [
+      "Triceps",
+      "Upper chest"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Vertical push",
+    "movement_pattern": "Vertical push",
+    "equipment": "Dumbbells",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Sit upright with dumbbells in front of shoulders, palms facing you and elbows bent.",
+    "movement_instructions": "Rotate palms forward as you press overhead; reverse the rotation while lowering.",
+    "cue": "Keep ribs stacked over the pelvis.",
+    "common_mistakes": [
+      "Excessive lower-back arch",
+      "Pressing behind the neck"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 180,
+    "substitution_group": "overhead-press",
+    "thumbnail_url": "./media/thumbs/arnold-press.webp",
+    "image_url": "./media/arnold-press.webp",
+    "motion_url": "./media/arnold-press.webp",
+    "motion_kind": "two-position",
+    "load_basis": "per_dumbbell",
+    "is_legacy": false
+  },
+  {
+    "name": "Smith Machine Shoulder Press",
+    "slug": "smith-machine-shoulder-press",
+    "canonical_name": "Smith Machine Shoulder Press",
+    "aliases": [
+      "smith shoulder press"
+    ],
+    "primary_muscle": "Shoulders",
+    "secondary_muscles": [
+      "Triceps",
+      "Upper chest"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Vertical push",
+    "movement_pattern": "Vertical push",
+    "equipment": "Smith machine",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Beginner",
+    "setup_instructions": "Place a nearly upright bench under the Smith bar, track in front of your face, with safety stops set.",
+    "movement_instructions": "Press from upper-chest height along the rails; lower under control.",
+    "cue": "Keep ribs stacked over the pelvis.",
+    "common_mistakes": [
+      "Excessive lower-back arch",
+      "Pressing behind the neck"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 180,
+    "substitution_group": "overhead-press",
+    "thumbnail_url": "./media/thumbs/smith-machine-shoulder-press.webp",
+    "image_url": "./media/smith-machine-shoulder-press.webp",
+    "motion_url": "./media/smith-machine-shoulder-press.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Machine Lateral Raise",
+    "slug": "machine-lateral-raise",
+    "canonical_name": "Machine Lateral Raise",
+    "aliases": [
+      "lateral raise machine"
+    ],
+    "primary_muscle": "Shoulders",
+    "secondary_muscles": [
+      "Supraspinatus",
+      "Upper trapezius"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Shoulder abduction",
+    "movement_pattern": "Shoulder abduction",
+    "equipment": "Selectorized machine",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Beginner",
+    "setup_instructions": "Adjust seat with shoulders aligned to the machine pivot and upper arms beneath pads.",
+    "movement_instructions": "Lift elbows outward to shoulder height; lower slowly.",
+    "cue": "Lead outward with elbows and relaxed traps.",
+    "common_mistakes": [
+      "Swinging the torso",
+      "Raising far above shoulder height"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "lateral-raise",
+    "thumbnail_url": "./media/thumbs/machine-lateral-raise.webp",
+    "image_url": "./media/machine-lateral-raise.webp",
+    "motion_url": "./media/machine-lateral-raise.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Leaning Dumbbell Lateral Raise",
+    "slug": "leaning-dumbbell-lateral-raise",
+    "canonical_name": "Leaning Dumbbell Lateral Raise",
+    "aliases": [
+      "lean away lateral raise"
+    ],
+    "primary_muscle": "Shoulders",
+    "secondary_muscles": [
+      "Supraspinatus",
+      "Upper trapezius"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Shoulder abduction",
+    "movement_pattern": "Shoulder abduction",
+    "equipment": "Dumbbell",
+    "laterality": "Unilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Hold a stable upright with the free hand and lean slightly away, dumbbell in the outside hand.",
+    "movement_instructions": "Raise the working arm out to shoulder level; return without swinging.",
+    "cue": "Lead outward with elbows and relaxed traps.",
+    "common_mistakes": [
+      "Swinging the torso",
+      "Raising far above shoulder height"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "lateral-raise",
+    "thumbnail_url": "./media/thumbs/leaning-dumbbell-lateral-raise.webp",
+    "image_url": "./media/leaning-dumbbell-lateral-raise.webp",
+    "motion_url": "./media/leaning-dumbbell-lateral-raise.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Dumbbell Front Raise",
+    "slug": "dumbbell-front-raise",
+    "canonical_name": "Dumbbell Front Raise",
+    "aliases": [
+      "front delt raise"
+    ],
+    "primary_muscle": "Shoulders",
+    "secondary_muscles": [
+      "Upper chest"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Shoulder flexion",
+    "movement_pattern": "Shoulder flexion",
+    "equipment": "Dumbbells",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Stand with dumbbells in front of thighs, palms facing down and elbows soft.",
+    "movement_instructions": "Raise weights forward to shoulder height; lower under control.",
+    "cue": "Raise only to about shoulder level.",
+    "common_mistakes": [
+      "Leaning backward",
+      "Using momentum"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "front-raise",
+    "thumbnail_url": "./media/thumbs/dumbbell-front-raise.webp",
+    "image_url": "./media/dumbbell-front-raise.webp",
+    "motion_url": "./media/dumbbell-front-raise.webp",
+    "motion_kind": "two-position",
+    "load_basis": "per_dumbbell",
+    "is_legacy": false
+  },
+  {
+    "name": "Cable Front Raise",
+    "slug": "cable-front-raise",
+    "canonical_name": "Cable Front Raise",
+    "aliases": [
+      "rope front raise"
+    ],
+    "primary_muscle": "Shoulders",
+    "secondary_muscles": [
+      "Upper chest"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Shoulder flexion",
+    "movement_pattern": "Shoulder flexion",
+    "equipment": "Cable",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Face away from a low machine pulley with a rope passing between the legs from the actual pulley.",
+    "movement_instructions": "Raise hands forward to shoulder height; lower without leaning back.",
+    "cue": "Raise only to about shoulder level.",
+    "common_mistakes": [
+      "Leaning backward",
+      "Using momentum"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "front-raise",
+    "thumbnail_url": "./media/thumbs/cable-front-raise.webp",
+    "image_url": "./media/cable-front-raise.webp",
+    "motion_url": "./media/cable-front-raise.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Dumbbell Rear-Delt Fly",
+    "slug": "dumbbell-rear-delt-fly",
+    "canonical_name": "Dumbbell Rear-Delt Fly",
+    "aliases": [
+      "bent over reverse fly",
+      "rear delt dumbbell fly"
+    ],
+    "primary_muscle": "Shoulders",
+    "secondary_muscles": [
+      "Rhomboids",
+      "Middle trapezius"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Horizontal abduction",
+    "movement_pattern": "Horizontal abduction",
+    "equipment": "Dumbbells",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Hinge at hips with a braced back and dumbbells beneath shoulders, elbows softly bent.",
+    "movement_instructions": "Open arms out to the sides; lower without changing torso position.",
+    "cue": "Open the arms with a soft elbow bend.",
+    "common_mistakes": [
+      "Shrugging",
+      "Throwing the weight"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "rear-delt",
+    "thumbnail_url": "./media/thumbs/dumbbell-rear-delt-fly.webp",
+    "image_url": "./media/dumbbell-rear-delt-fly.webp",
+    "motion_url": "./media/dumbbell-rear-delt-fly.webp",
+    "motion_kind": "two-position",
+    "load_basis": "per_dumbbell",
+    "is_legacy": false
+  },
+  {
+    "name": "Face Pull",
+    "slug": "face-pull",
+    "canonical_name": "Face Pull",
+    "aliases": [
+      "cable face pull"
+    ],
+    "primary_muscle": "Shoulders",
+    "secondary_muscles": [
+      "Rhomboids",
+      "Middle trapezius"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Horizontal abduction",
+    "movement_pattern": "Horizontal abduction",
+    "equipment": "Cable",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Attach a rope to a machine pulley around eye level. Step back and hold both ends with arms forward.",
+    "movement_instructions": "Pull rope toward forehead while separating hands beside the head; return.",
+    "cue": "Open the arms with a soft elbow bend.",
+    "common_mistakes": [
+      "Shrugging",
+      "Throwing the weight"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "rear-delt",
+    "thumbnail_url": "./media/thumbs/face-pull.webp",
+    "image_url": "./media/face-pull.webp",
+    "motion_url": "./media/face-pull.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Cable Upright Row",
+    "slug": "cable-upright-row",
+    "canonical_name": "Cable Upright Row",
+    "aliases": [
+      "wide grip upright row"
+    ],
+    "primary_muscle": "Shoulders",
+    "secondary_muscles": [
+      "Supraspinatus",
+      "Upper trapezius"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Shoulder abduction",
+    "movement_pattern": "Shoulder abduction",
+    "equipment": "Cable",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Face a low pulley using a wide straight-bar grip, shoulders relaxed.",
+    "movement_instructions": "Lift elbows outward only to a comfortable height below shoulder level; lower.",
+    "cue": "Lead outward with elbows and relaxed traps.",
+    "common_mistakes": [
+      "Swinging the torso",
+      "Raising far above shoulder height"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "lateral-raise",
+    "thumbnail_url": "./media/thumbs/cable-upright-row.webp",
+    "image_url": "./media/cable-upright-row.webp",
+    "motion_url": "./media/cable-upright-row.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Barbell Curl",
+    "slug": "barbell-curl",
+    "canonical_name": "Barbell Curl",
+    "aliases": [
+      "standing barbell biceps curl"
+    ],
+    "primary_muscle": "Biceps",
+    "secondary_muscles": [
+      "Brachialis",
+      "Forearms"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Elbow flexion",
+    "movement_pattern": "Elbow flexion",
+    "equipment": "Barbell",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Stand holding a straight bar with an underhand shoulder-width grip, elbows beside torso.",
+    "movement_instructions": "Curl toward shoulders without moving upper arms; lower slowly.",
+    "cue": "Keep upper arms still as elbows bend.",
+    "common_mistakes": [
+      "Swinging the shoulders",
+      "Bending wrists backward"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "curl",
+    "thumbnail_url": "./media/thumbs/barbell-curl.webp",
+    "image_url": "./media/barbell-curl.webp",
+    "motion_url": "./media/barbell-curl.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "EZ-Bar Curl",
+    "slug": "ez-bar-curl",
+    "canonical_name": "EZ-Bar Curl",
+    "aliases": [
+      "ez curl",
+      "easy bar curl"
+    ],
+    "primary_muscle": "Biceps",
+    "secondary_muscles": [
+      "Brachialis",
+      "Forearms"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Elbow flexion",
+    "movement_pattern": "Elbow flexion",
+    "equipment": "EZ-bar",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Hold the angled grips of an EZ bar with palms mostly upward, elbows beside torso.",
+    "movement_instructions": "Curl toward shoulders; lower while keeping wrists aligned.",
+    "cue": "Keep upper arms still as elbows bend.",
+    "common_mistakes": [
+      "Swinging the shoulders",
+      "Bending wrists backward"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "curl",
+    "thumbnail_url": "./media/thumbs/ez-bar-curl.webp",
+    "image_url": "./media/ez-bar-curl.webp",
+    "motion_url": "./media/ez-bar-curl.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Dumbbell Curl",
+    "slug": "dumbbell-curl",
+    "canonical_name": "Dumbbell Curl",
+    "aliases": [
+      "standing db biceps curl"
+    ],
+    "primary_muscle": "Biceps",
+    "secondary_muscles": [
+      "Brachialis",
+      "Forearms"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Elbow flexion",
+    "movement_pattern": "Elbow flexion",
+    "equipment": "Dumbbells",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Stand with one dumbbell in each hand, palms forward and arms by your sides.",
+    "movement_instructions": "Curl both weights toward shoulders; lower with elbows steady.",
+    "cue": "Keep upper arms still as elbows bend.",
+    "common_mistakes": [
+      "Swinging the shoulders",
+      "Bending wrists backward"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "curl",
+    "thumbnail_url": "./media/thumbs/dumbbell-curl.webp",
+    "image_url": "./media/dumbbell-curl.webp",
+    "motion_url": "./media/dumbbell-curl.webp",
+    "motion_kind": "two-position",
+    "load_basis": "per_dumbbell",
+    "is_legacy": false
+  },
+  {
+    "name": "Alternating Dumbbell Curl",
+    "slug": "alternating-dumbbell-curl",
+    "canonical_name": "Alternating Dumbbell Curl",
+    "aliases": [
+      "alternating curl",
+      "alternate db curl"
+    ],
+    "primary_muscle": "Biceps",
+    "secondary_muscles": [
+      "Brachialis",
+      "Forearms"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Elbow flexion",
+    "movement_pattern": "Elbow flexion",
+    "equipment": "Dumbbells",
+    "laterality": "Unilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Stand with dumbbells at sides, elbows close to ribs.",
+    "movement_instructions": "Curl one weight while turning palm upward, lower it, then repeat on the other side.",
+    "cue": "Keep upper arms still as elbows bend.",
+    "common_mistakes": [
+      "Swinging the shoulders",
+      "Bending wrists backward"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "curl",
+    "thumbnail_url": "./media/thumbs/alternating-dumbbell-curl.webp",
+    "image_url": "./media/alternating-dumbbell-curl.webp",
+    "motion_url": "./media/alternating-dumbbell-curl.webp",
+    "motion_kind": "two-position",
+    "load_basis": "per_dumbbell",
+    "is_legacy": false
+  },
+  {
+    "name": "Incline Dumbbell Curl",
+    "slug": "incline-dumbbell-curl",
+    "canonical_name": "Incline Dumbbell Curl",
+    "aliases": [
+      "incline curl"
+    ],
+    "primary_muscle": "Biceps",
+    "secondary_muscles": [
+      "Brachialis",
+      "Forearms"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Elbow flexion",
+    "movement_pattern": "Elbow flexion",
+    "equipment": "Dumbbells and bench",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Sit back on a bench inclined about 45–60 degrees, arms hanging behind the torso line.",
+    "movement_instructions": "Curl with upper arms still; lower to a comfortable stretch without forcing shoulders back.",
+    "cue": "Keep upper arms still as elbows bend.",
+    "common_mistakes": [
+      "Swinging the shoulders",
+      "Bending wrists backward"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "curl",
+    "thumbnail_url": "./media/thumbs/incline-dumbbell-curl.webp",
+    "image_url": "./media/incline-dumbbell-curl.webp",
+    "motion_url": "./media/incline-dumbbell-curl.webp",
+    "motion_kind": "two-position",
+    "load_basis": "per_dumbbell",
+    "is_legacy": false
+  },
+  {
+    "name": "Cross-Body Hammer Curl",
+    "slug": "cross-body-hammer-curl",
+    "canonical_name": "Cross-Body Hammer Curl",
+    "aliases": [
+      "pinwheel curl"
+    ],
+    "primary_muscle": "Biceps",
+    "secondary_muscles": [
+      "Brachialis",
+      "Brachioradialis"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Neutral-grip elbow flexion",
+    "movement_pattern": "Neutral-grip elbow flexion",
+    "equipment": "Dumbbells",
+    "laterality": "Unilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Stand holding dumbbells with neutral palms, arms beside torso.",
+    "movement_instructions": "Curl one weight diagonally toward the opposite chest while keeping elbow close; lower and alternate.",
+    "cue": "Keep palms facing inward.",
+    "common_mistakes": [
+      "Swinging from the hips",
+      "Letting elbows drift forward"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "hammer-curl",
+    "thumbnail_url": "./media/thumbs/cross-body-hammer-curl.webp",
+    "image_url": "./media/cross-body-hammer-curl.webp",
+    "motion_url": "./media/cross-body-hammer-curl.webp",
+    "motion_kind": "two-position",
+    "load_basis": "per_dumbbell",
+    "is_legacy": false
+  },
+  {
+    "name": "Bayesian Cable Curl",
+    "slug": "bayesian-cable-curl",
+    "canonical_name": "Bayesian Cable Curl",
+    "aliases": [
+      "behind body cable curl"
+    ],
+    "primary_muscle": "Biceps",
+    "secondary_muscles": [
+      "Brachialis",
+      "Forearms"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Elbow flexion",
+    "movement_pattern": "Elbow flexion",
+    "equipment": "Cable",
+    "laterality": "Unilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Stand facing away from a low machine pulley, handle in one hand with upper arm slightly behind torso, cable visibly connected behind you.",
+    "movement_instructions": "Bend the elbow to curl forward without moving the upper arm; extend slowly.",
+    "cue": "Keep upper arms still as elbows bend.",
+    "common_mistakes": [
+      "Swinging the shoulders",
+      "Bending wrists backward"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "curl",
+    "thumbnail_url": "./media/thumbs/bayesian-cable-curl.webp",
+    "image_url": "./media/bayesian-cable-curl.webp",
+    "motion_url": "./media/bayesian-cable-curl.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Preacher Curl",
+    "slug": "preacher-curl",
+    "canonical_name": "Preacher Curl",
+    "aliases": [
+      "ez preacher curl",
+      "preacher bench curl"
+    ],
+    "primary_muscle": "Biceps",
+    "secondary_muscles": [
+      "Brachialis",
+      "Forearms"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Elbow flexion",
+    "movement_pattern": "Elbow flexion",
+    "equipment": "EZ-bar and preacher bench",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Set the preacher pad under upper arms with armpits near its top edge; hold an EZ bar palms up.",
+    "movement_instructions": "Curl the bar up; lower slowly without forcing elbows into a locked stretch.",
+    "cue": "Keep upper arms still as elbows bend.",
+    "common_mistakes": [
+      "Swinging the shoulders",
+      "Bending wrists backward"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "curl",
+    "thumbnail_url": "./media/thumbs/preacher-curl.webp",
+    "image_url": "./media/preacher-curl.webp",
+    "motion_url": "./media/preacher-curl.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Machine Preacher Curl",
+    "slug": "machine-preacher-curl",
+    "canonical_name": "Machine Preacher Curl",
+    "aliases": [
+      "biceps curl machine"
+    ],
+    "primary_muscle": "Biceps",
+    "secondary_muscles": [
+      "Brachialis",
+      "Forearms"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Elbow flexion",
+    "movement_pattern": "Elbow flexion",
+    "equipment": "Selectorized machine",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Beginner",
+    "setup_instructions": "Adjust seat so upper arms rest fully on the preacher pad and elbows align with the pivot.",
+    "movement_instructions": "Curl the handles; extend slowly without lifting arms off the pad.",
+    "cue": "Keep upper arms still as elbows bend.",
+    "common_mistakes": [
+      "Swinging the shoulders",
+      "Bending wrists backward"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "curl",
+    "thumbnail_url": "./media/thumbs/machine-preacher-curl.webp",
+    "image_url": "./media/machine-preacher-curl.webp",
+    "motion_url": "./media/machine-preacher-curl.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Concentration Curl",
+    "slug": "concentration-curl",
+    "canonical_name": "Concentration Curl",
+    "aliases": [
+      "seated concentration biceps curl"
+    ],
+    "primary_muscle": "Biceps",
+    "secondary_muscles": [
+      "Brachialis",
+      "Forearms"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Elbow flexion",
+    "movement_pattern": "Elbow flexion",
+    "equipment": "Dumbbell",
+    "laterality": "Unilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Sit with feet apart and brace the working upper arm against the inside of the same-side thigh.",
+    "movement_instructions": "Curl toward the shoulder; lower without moving the upper arm.",
+    "cue": "Keep upper arms still as elbows bend.",
+    "common_mistakes": [
+      "Swinging the shoulders",
+      "Bending wrists backward"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "curl",
+    "thumbnail_url": "./media/thumbs/concentration-curl.webp",
+    "image_url": "./media/concentration-curl.webp",
+    "motion_url": "./media/concentration-curl.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Straight-Bar Triceps Pressdown",
+    "slug": "straight-bar-triceps-pressdown",
+    "canonical_name": "Straight-Bar Triceps Pressdown",
+    "aliases": [
+      "straight bar pushdown",
+      "triceps pushdown"
+    ],
+    "primary_muscle": "Triceps",
+    "secondary_muscles": [],
+    "body_region": "Upper body",
+    "movement_type": "Elbow extension",
+    "movement_pattern": "Elbow extension",
+    "equipment": "Cable",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Beginner",
+    "setup_instructions": "Attach a straight bar to a high machine pulley and hold it overhand with elbows at your sides.",
+    "movement_instructions": "Extend elbows until arms are straight; return without lifting upper arms.",
+    "cue": "Keep elbows beside your ribs.",
+    "common_mistakes": [
+      "Moving the shoulders",
+      "Leaning body weight onto the handle"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "pressdown",
+    "thumbnail_url": "./media/thumbs/straight-bar-triceps-pressdown.webp",
+    "image_url": "./media/straight-bar-triceps-pressdown.webp",
+    "motion_url": "./media/straight-bar-triceps-pressdown.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Reverse-Grip Triceps Pressdown",
+    "slug": "reverse-grip-triceps-pressdown",
+    "canonical_name": "Reverse-Grip Triceps Pressdown",
+    "aliases": [
+      "underhand pushdown"
+    ],
+    "primary_muscle": "Triceps",
+    "secondary_muscles": [],
+    "body_region": "Upper body",
+    "movement_type": "Elbow extension",
+    "movement_pattern": "Elbow extension",
+    "equipment": "Cable",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Beginner",
+    "setup_instructions": "Attach a bar to a high pulley and use an underhand grip with a manageable load.",
+    "movement_instructions": "Extend elbows down while wrists stay straight; bend elbows slowly to return.",
+    "cue": "Keep elbows beside your ribs.",
+    "common_mistakes": [
+      "Moving the shoulders",
+      "Leaning body weight onto the handle"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "pressdown",
+    "thumbnail_url": "./media/thumbs/reverse-grip-triceps-pressdown.webp",
+    "image_url": "./media/reverse-grip-triceps-pressdown.webp",
+    "motion_url": "./media/reverse-grip-triceps-pressdown.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Single-Arm Cable Pressdown",
+    "slug": "single-arm-cable-pressdown",
+    "canonical_name": "Single-Arm Cable Pressdown",
+    "aliases": [
+      "one arm triceps pushdown"
+    ],
+    "primary_muscle": "Triceps",
+    "secondary_muscles": [],
+    "body_region": "Upper body",
+    "movement_type": "Elbow extension",
+    "movement_pattern": "Elbow extension",
+    "equipment": "Cable",
+    "laterality": "Unilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Beginner",
+    "setup_instructions": "Face a high machine pulley and hold one handle with the elbow beside the torso.",
+    "movement_instructions": "Straighten the elbow toward the thigh; return without rotating the shoulder.",
+    "cue": "Keep elbows beside your ribs.",
+    "common_mistakes": [
+      "Moving the shoulders",
+      "Leaning body weight onto the handle"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "pressdown",
+    "thumbnail_url": "./media/thumbs/single-arm-cable-pressdown.webp",
+    "image_url": "./media/single-arm-cable-pressdown.webp",
+    "motion_url": "./media/single-arm-cable-pressdown.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Overhead Rope Triceps Extension",
+    "slug": "overhead-rope-triceps-extension",
+    "canonical_name": "Overhead Rope Triceps Extension",
+    "aliases": [
+      "overhead rope extension",
+      "cable overhead triceps"
+    ],
+    "primary_muscle": "Triceps",
+    "secondary_muscles": [],
+    "body_region": "Upper body",
+    "movement_type": "Overhead elbow extension",
+    "movement_pattern": "Overhead elbow extension",
+    "equipment": "Cable",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Attach a rope to a low machine pulley behind you. Face away, hold rope above the head and set a staggered stance.",
+    "movement_instructions": "Bend elbows to lower hands behind head; extend elbows overhead, keeping cable connected to the pulley behind.",
+    "cue": "Keep ribs down and upper arms steady.",
+    "common_mistakes": [
+      "Flaring elbows excessively",
+      "Arching the lower back"
+    ],
+    "rest_min_seconds": 60,
+    "rest_max_seconds": 90,
+    "substitution_group": "overhead-extension",
+    "thumbnail_url": "./media/thumbs/overhead-rope-triceps-extension.webp",
+    "image_url": "./media/overhead-rope-triceps-extension.webp",
+    "motion_url": "./media/overhead-rope-triceps-extension.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Dumbbell Overhead Triceps Extension",
+    "slug": "dumbbell-overhead-triceps-extension",
+    "canonical_name": "Dumbbell Overhead Triceps Extension",
+    "aliases": [
+      "overhead dumbbell extension",
+      "french press dumbbell"
+    ],
+    "primary_muscle": "Triceps",
+    "secondary_muscles": [],
+    "body_region": "Upper body",
+    "movement_type": "Overhead elbow extension",
+    "movement_pattern": "Overhead elbow extension",
+    "equipment": "Dumbbell",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Sit upright and support one dumbbell with both hands above your head.",
+    "movement_instructions": "Bend elbows to lower the weight behind head; extend without arching the back.",
+    "cue": "Keep ribs down and upper arms steady.",
+    "common_mistakes": [
+      "Flaring elbows excessively",
+      "Arching the lower back"
+    ],
+    "rest_min_seconds": 60,
+    "rest_max_seconds": 90,
+    "substitution_group": "overhead-extension",
+    "thumbnail_url": "./media/thumbs/dumbbell-overhead-triceps-extension.webp",
+    "image_url": "./media/dumbbell-overhead-triceps-extension.webp",
+    "motion_url": "./media/dumbbell-overhead-triceps-extension.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Barbell Skull Crusher",
+    "slug": "barbell-skull-crusher",
+    "canonical_name": "Barbell Skull Crusher",
+    "aliases": [
+      "skull crusher",
+      "lying triceps extension"
+    ],
+    "primary_muscle": "Triceps",
+    "secondary_muscles": [],
+    "body_region": "Upper body",
+    "movement_type": "Lying elbow extension",
+    "movement_pattern": "Lying elbow extension",
+    "equipment": "Barbell",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Lie on a flat bench with a straight bar held above shoulders in a shoulder-width overhand grip.",
+    "movement_instructions": "Bend elbows to lower bar just behind forehead; extend slowly back up.",
+    "cue": "Bend at the elbows with controlled range.",
+    "common_mistakes": [
+      "Dropping weight toward the face",
+      "Turning the movement into a press"
+    ],
+    "rest_min_seconds": 60,
+    "rest_max_seconds": 90,
+    "substitution_group": "lying-extension",
+    "thumbnail_url": "./media/thumbs/barbell-skull-crusher.webp",
+    "image_url": "./media/barbell-skull-crusher.webp",
+    "motion_url": "./media/barbell-skull-crusher.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "EZ-Bar Skull Crusher",
+    "slug": "ez-bar-skull-crusher",
+    "canonical_name": "EZ-Bar Skull Crusher",
+    "aliases": [
+      "ez lying triceps extension"
+    ],
+    "primary_muscle": "Triceps",
+    "secondary_muscles": [],
+    "body_region": "Upper body",
+    "movement_type": "Lying elbow extension",
+    "movement_pattern": "Lying elbow extension",
+    "equipment": "EZ-bar",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Lie on a flat bench holding the angled EZ-bar grips above shoulders.",
+    "movement_instructions": "Lower the bar just behind forehead by bending elbows; extend with upper arms steady.",
+    "cue": "Bend at the elbows with controlled range.",
+    "common_mistakes": [
+      "Dropping weight toward the face",
+      "Turning the movement into a press"
+    ],
+    "rest_min_seconds": 60,
+    "rest_max_seconds": 90,
+    "substitution_group": "lying-extension",
+    "thumbnail_url": "./media/thumbs/ez-bar-skull-crusher.webp",
+    "image_url": "./media/ez-bar-skull-crusher.webp",
+    "motion_url": "./media/ez-bar-skull-crusher.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Close-Grip Bench Press",
+    "slug": "close-grip-bench-press",
+    "canonical_name": "Close-Grip Bench Press",
+    "aliases": [
+      "close grip barbell bench",
+      "triceps bench"
+    ],
+    "primary_muscle": "Triceps",
+    "secondary_muscles": [
+      "Chest",
+      "Anterior deltoids"
+    ],
+    "body_region": "Upper body",
+    "movement_type": "Horizontal push",
+    "movement_pattern": "Horizontal push",
+    "equipment": "Barbell",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Set up on a flat bench with hands around shoulder width, not touching. Use a spotter or safety arms.",
+    "movement_instructions": "Lower to lower chest with elbows near torso; press back over shoulders.",
+    "cue": "Keep wrists stacked above elbows.",
+    "common_mistakes": [
+      "Bouncing off the chest",
+      "Flaring elbows excessively"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 180,
+    "substitution_group": "flat-press",
+    "thumbnail_url": "./media/thumbs/close-grip-bench-press.webp",
+    "image_url": "./media/close-grip-bench-press.webp",
+    "motion_url": "./media/close-grip-bench-press.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Machine Dip",
+    "slug": "machine-dip",
+    "canonical_name": "Machine Dip",
+    "aliases": [
+      "seated dip machine",
+      "triceps dip machine"
+    ],
+    "primary_muscle": "Triceps",
+    "secondary_muscles": [],
+    "body_region": "Upper body",
+    "movement_type": "Elbow extension",
+    "movement_pattern": "Elbow extension",
+    "equipment": "Selectorized machine",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Beginner",
+    "setup_instructions": "Sit against the back pad, feet supported, hands on the side handles and elbows bent.",
+    "movement_instructions": "Press handles down by extending elbows; return smoothly.",
+    "cue": "Keep elbows beside your ribs.",
+    "common_mistakes": [
+      "Moving the shoulders",
+      "Leaning body weight onto the handle"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "pressdown",
+    "thumbnail_url": "./media/thumbs/machine-dip.webp",
+    "image_url": "./media/machine-dip.webp",
+    "motion_url": "./media/machine-dip.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Bench Dip",
+    "slug": "bench-dip",
+    "canonical_name": "Bench Dip",
+    "aliases": [
+      "triceps bench dip"
+    ],
+    "primary_muscle": "Triceps",
+    "secondary_muscles": [],
+    "body_region": "Upper body",
+    "movement_type": "Elbow extension",
+    "movement_pattern": "Elbow extension",
+    "equipment": "Bodyweight and bench",
+    "laterality": "Bilateral",
+    "exercise_type": "bodyweight",
+    "difficulty": "Beginner",
+    "setup_instructions": "Place hands beside hips on a stable bench, feet on the floor and knees bent. Keep hips close to the bench.",
+    "movement_instructions": "Bend elbows through a shallow comfortable range; press back up. Skip if shoulder position is uncomfortable.",
+    "cue": "Keep elbows beside your ribs.",
+    "common_mistakes": [
+      "Moving the shoulders",
+      "Leaning body weight onto the handle"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "pressdown",
+    "thumbnail_url": "./media/thumbs/bench-dip.webp",
+    "image_url": "./media/bench-dip.webp",
+    "motion_url": "./media/bench-dip.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Back Squat",
+    "slug": "back-squat",
+    "canonical_name": "Back Squat",
+    "aliases": [
+      "barbell squat",
+      "barbell back squat"
+    ],
+    "primary_muscle": "Quads",
+    "secondary_muscles": [
+      "Glutes",
+      "Adductors"
+    ],
+    "body_region": "Lower body",
+    "movement_type": "Squat",
+    "movement_pattern": "Squat",
+    "equipment": "Barbell",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Set a bar on upper traps in a rack with safety arms. Brace, unrack and stand with feet around shoulder width.",
+    "movement_instructions": "Bend knees and hips together to a controlled depth; stand through the whole foot.",
+    "cue": "Track knees in line with toes.",
+    "common_mistakes": [
+      "Heels lifting",
+      "Knees collapsing inward"
+    ],
+    "rest_min_seconds": 120,
+    "rest_max_seconds": 180,
+    "substitution_group": "knee-dominant",
+    "thumbnail_url": "./media/thumbs/back-squat.webp",
+    "image_url": "./media/back-squat.webp",
+    "motion_url": "./media/back-squat.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Front Squat",
+    "slug": "front-squat",
+    "canonical_name": "Front Squat",
+    "aliases": [
+      "barbell front squat"
+    ],
+    "primary_muscle": "Quads",
+    "secondary_muscles": [
+      "Glutes",
+      "Adductors"
+    ],
+    "body_region": "Lower body",
+    "movement_type": "Squat",
+    "movement_pattern": "Squat",
+    "equipment": "Barbell",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Advanced",
+    "setup_instructions": "Rack the bar on front shoulders with elbows high; use safety arms and a stable front-rack grip.",
+    "movement_instructions": "Sit down between hips with chest upright; stand without dropping elbows.",
+    "cue": "Track knees in line with toes.",
+    "common_mistakes": [
+      "Heels lifting",
+      "Knees collapsing inward"
+    ],
+    "rest_min_seconds": 120,
+    "rest_max_seconds": 180,
+    "substitution_group": "knee-dominant",
+    "thumbnail_url": "./media/thumbs/front-squat.webp",
+    "image_url": "./media/front-squat.webp",
+    "motion_url": "./media/front-squat.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Smith Machine Squat",
+    "slug": "smith-machine-squat",
+    "canonical_name": "Smith Machine Squat",
+    "aliases": [
+      "smith squat"
+    ],
+    "primary_muscle": "Quads",
+    "secondary_muscles": [
+      "Glutes",
+      "Adductors"
+    ],
+    "body_region": "Lower body",
+    "movement_type": "Squat",
+    "movement_pattern": "Squat",
+    "equipment": "Smith machine",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Beginner",
+    "setup_instructions": "Position bar across upper traps and feet where you can squat comfortably along the rail path. Set safety stops.",
+    "movement_instructions": "Unhook, squat under control with knees tracking toes, then stand.",
+    "cue": "Track knees in line with toes.",
+    "common_mistakes": [
+      "Heels lifting",
+      "Knees collapsing inward"
+    ],
+    "rest_min_seconds": 120,
+    "rest_max_seconds": 180,
+    "substitution_group": "knee-dominant",
+    "thumbnail_url": "./media/thumbs/smith-machine-squat.webp",
+    "image_url": "./media/smith-machine-squat.webp",
+    "motion_url": "./media/smith-machine-squat.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Hack Squat",
+    "slug": "hack-squat",
+    "canonical_name": "Hack Squat",
+    "aliases": [
+      "hack squat sled"
+    ],
+    "primary_muscle": "Quads",
+    "secondary_muscles": [
+      "Glutes",
+      "Adductors"
+    ],
+    "body_region": "Lower body",
+    "movement_type": "Squat",
+    "movement_pattern": "Squat",
+    "equipment": "Hack squat machine",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Beginner",
+    "setup_instructions": "Place back and shoulders on the sled pads and feet on the angled platform. Set stops before unracking.",
+    "movement_instructions": "Lower the sled by bending knees; drive up without locking knees hard.",
+    "cue": "Track knees in line with toes.",
+    "common_mistakes": [
+      "Heels lifting",
+      "Knees collapsing inward"
+    ],
+    "rest_min_seconds": 120,
+    "rest_max_seconds": 180,
+    "substitution_group": "knee-dominant",
+    "thumbnail_url": "./media/thumbs/hack-squat.webp",
+    "image_url": "./media/hack-squat.webp",
+    "motion_url": "./media/hack-squat.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Pendulum Squat",
+    "slug": "pendulum-squat",
+    "canonical_name": "Pendulum Squat",
+    "aliases": [
+      "pendulum machine squat"
+    ],
+    "primary_muscle": "Quads",
+    "secondary_muscles": [
+      "Glutes",
+      "Adductors"
+    ],
+    "body_region": "Lower body",
+    "movement_type": "Squat",
+    "movement_pattern": "Squat",
+    "equipment": "Pendulum squat machine",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Beginner",
+    "setup_instructions": "Place shoulders beneath pads and back against support, feet on the fixed platform; set the safety catch.",
+    "movement_instructions": "Lower along the pivoting arm arc; stand through the whole foot.",
+    "cue": "Track knees in line with toes.",
+    "common_mistakes": [
+      "Heels lifting",
+      "Knees collapsing inward"
+    ],
+    "rest_min_seconds": 120,
+    "rest_max_seconds": 180,
+    "substitution_group": "knee-dominant",
+    "thumbnail_url": "./media/thumbs/pendulum-squat.webp",
+    "image_url": "./media/pendulum-squat.webp",
+    "motion_url": "./media/pendulum-squat.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Leg Press",
+    "slug": "leg-press",
+    "canonical_name": "Leg Press",
+    "aliases": [
+      "45 degree leg press",
+      "sled press"
+    ],
+    "primary_muscle": "Quads",
+    "secondary_muscles": [
+      "Glutes",
+      "Adductors"
+    ],
+    "body_region": "Lower body",
+    "movement_type": "Leg press",
+    "movement_pattern": "Leg press",
+    "equipment": "Leg press machine",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Beginner",
+    "setup_instructions": "Sit in a 45-degree sled leg press with back supported, feet shoulder-width on the platform and safety catches ready.",
+    "movement_instructions": "Lower until before hips curl off the pad; press the sled away without snapping knees straight.",
+    "cue": "Keep hips and lower back on the pad.",
+    "common_mistakes": [
+      "Pelvis curling off the pad",
+      "Forcefully locking knees"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 180,
+    "substitution_group": "leg-press",
+    "thumbnail_url": "./media/thumbs/leg-press-or-squat.webp",
+    "image_url": "./media/leg-press-or-squat.webp",
+    "motion_url": "./media/leg-press-or-squat.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Single-Leg Press",
+    "slug": "single-leg-press",
+    "canonical_name": "Single-Leg Press",
+    "aliases": [
+      "one leg press"
+    ],
+    "primary_muscle": "Quads",
+    "secondary_muscles": [
+      "Glutes",
+      "Adductors"
+    ],
+    "body_region": "Lower body",
+    "movement_type": "Leg press",
+    "movement_pattern": "Leg press",
+    "equipment": "Leg press machine",
+    "laterality": "Unilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Beginner",
+    "setup_instructions": "Sit with pelvis square and one foot centered on the sled platform; use a light load and engage safeties.",
+    "movement_instructions": "Bend the working knee under control; press through the whole foot while pelvis stays level.",
+    "cue": "Keep hips and lower back on the pad.",
+    "common_mistakes": [
+      "Pelvis curling off the pad",
+      "Forcefully locking knees"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 180,
+    "substitution_group": "leg-press",
+    "thumbnail_url": "./media/thumbs/single-leg-press.webp",
+    "image_url": "./media/single-leg-press.webp",
+    "motion_url": "./media/single-leg-press.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Bulgarian Split Squat",
+    "slug": "bulgarian-split-squat",
+    "canonical_name": "Bulgarian Split Squat",
+    "aliases": [
+      "rear foot elevated split squat",
+      "rfess"
+    ],
+    "primary_muscle": "Quads",
+    "secondary_muscles": [
+      "Glutes",
+      "Adductors"
+    ],
+    "body_region": "Lower body",
+    "movement_type": "Lunge",
+    "movement_pattern": "Lunge",
+    "equipment": "Dumbbells and bench",
+    "laterality": "Unilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Stand in front of a low bench, rear foot resting on it, front foot planted far enough forward for balance.",
+    "movement_instructions": "Lower the back knee toward the floor; drive through the front leg to stand.",
+    "cue": "Push through the whole front foot.",
+    "common_mistakes": [
+      "Losing balance",
+      "Front knee collapsing inward"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 150,
+    "substitution_group": "lunge",
+    "thumbnail_url": "./media/thumbs/bulgarian-split-squat.webp",
+    "image_url": "./media/bulgarian-split-squat.webp",
+    "motion_url": "./media/bulgarian-split-squat.webp",
+    "motion_kind": "two-position",
+    "load_basis": "per_dumbbell",
+    "is_legacy": false
+  },
+  {
+    "name": "Walking Lunge",
+    "slug": "walking-lunge",
+    "canonical_name": "Walking Lunge",
+    "aliases": [
+      "walking dumbbell lunge"
+    ],
+    "primary_muscle": "Quads",
+    "secondary_muscles": [
+      "Glutes",
+      "Adductors"
+    ],
+    "body_region": "Lower body",
+    "movement_type": "Lunge",
+    "movement_pattern": "Lunge",
+    "equipment": "Dumbbells",
+    "laterality": "Unilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Stand tall with dumbbells at sides and clear space ahead.",
+    "movement_instructions": "Step forward, lower back knee toward floor, then push through front foot and bring rear leg forward into the next step.",
+    "cue": "Push through the whole front foot.",
+    "common_mistakes": [
+      "Losing balance",
+      "Front knee collapsing inward"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 150,
+    "substitution_group": "lunge",
+    "thumbnail_url": "./media/thumbs/walking-lunge.webp",
+    "image_url": "./media/walking-lunge.webp",
+    "motion_url": "./media/walking-lunge.webp",
+    "motion_kind": "two-position",
+    "load_basis": "per_dumbbell",
+    "is_legacy": false
+  },
+  {
+    "name": "Reverse Lunge",
+    "slug": "reverse-lunge",
+    "canonical_name": "Reverse Lunge",
+    "aliases": [
+      "backward lunge"
+    ],
+    "primary_muscle": "Quads",
+    "secondary_muscles": [
+      "Glutes",
+      "Adductors"
+    ],
+    "body_region": "Lower body",
+    "movement_type": "Lunge",
+    "movement_pattern": "Lunge",
+    "equipment": "Dumbbells",
+    "laterality": "Unilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Stand with feet hip-width and dumbbells at sides.",
+    "movement_instructions": "Step one foot backward and lower; push through the front foot to return, then alternate.",
+    "cue": "Push through the whole front foot.",
+    "common_mistakes": [
+      "Losing balance",
+      "Front knee collapsing inward"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 150,
+    "substitution_group": "lunge",
+    "thumbnail_url": "./media/thumbs/reverse-lunge.webp",
+    "image_url": "./media/reverse-lunge.webp",
+    "motion_url": "./media/reverse-lunge.webp",
+    "motion_kind": "two-position",
+    "load_basis": "per_dumbbell",
+    "is_legacy": false
+  },
+  {
+    "name": "Step-Up",
+    "slug": "step-up",
+    "canonical_name": "Step-Up",
+    "aliases": [
+      "box step up"
+    ],
+    "primary_muscle": "Quads",
+    "secondary_muscles": [
+      "Glutes",
+      "Adductors"
+    ],
+    "body_region": "Lower body",
+    "movement_type": "Lunge",
+    "movement_pattern": "Lunge",
+    "equipment": "Dumbbells and box",
+    "laterality": "Unilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Face a stable box at a height you can control; place the whole lead foot on top.",
+    "movement_instructions": "Drive through the lead leg to stand on the box; step down slowly with minimal push from the trailing foot.",
+    "cue": "Push through the whole front foot.",
+    "common_mistakes": [
+      "Losing balance",
+      "Front knee collapsing inward"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 150,
+    "substitution_group": "lunge",
+    "thumbnail_url": "./media/thumbs/step-up.webp",
+    "image_url": "./media/step-up.webp",
+    "motion_url": "./media/step-up.webp",
+    "motion_kind": "two-position",
+    "load_basis": "per_dumbbell",
+    "is_legacy": false
+  },
+  {
+    "name": "Dumbbell Hip Thrust",
+    "slug": "dumbbell-hip-thrust",
+    "canonical_name": "Dumbbell Hip Thrust",
+    "aliases": [
+      "hip thrust",
+      "weighted hip thrust"
+    ],
+    "primary_muscle": "Glutes",
+    "secondary_muscles": [
+      "Hamstrings"
+    ],
+    "body_region": "Lower body",
+    "movement_type": "Hip extension",
+    "movement_pattern": "Hip extension",
+    "equipment": "Dumbbell and bench",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Rest upper back on a stable bench, feet flat, and hold a padded dumbbell across the hip crease.",
+    "movement_instructions": "Raise hips until torso is level; keep chin tucked and lower hips slowly.",
+    "cue": "Finish with glutes, not a lower-back arch.",
+    "common_mistakes": [
+      "Overextending the spine",
+      "Driving through the toes"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 150,
+    "substitution_group": "hip-extension",
+    "thumbnail_url": "./media/thumbs/dumbbell-hip-thrust.webp",
+    "image_url": "./media/dumbbell-hip-thrust.webp",
+    "motion_url": "./media/dumbbell-hip-thrust.webp",
+    "motion_kind": "two-position",
+    "load_basis": "per_dumbbell",
+    "is_legacy": false
+  },
+  {
+    "name": "Barbell Hip Thrust",
+    "slug": "barbell-hip-thrust",
+    "canonical_name": "Barbell Hip Thrust",
+    "aliases": [
+      "barbell glute thrust"
+    ],
+    "primary_muscle": "Glutes",
+    "secondary_muscles": [
+      "Hamstrings"
+    ],
+    "body_region": "Lower body",
+    "movement_type": "Hip extension",
+    "movement_pattern": "Hip extension",
+    "equipment": "Barbell and bench",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Rest upper back on a stable bench and position a padded barbell over the hip crease, feet flat.",
+    "movement_instructions": "Extend hips until torso is level without over-arching; lower under control.",
+    "cue": "Finish with glutes, not a lower-back arch.",
+    "common_mistakes": [
+      "Overextending the spine",
+      "Driving through the toes"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 150,
+    "substitution_group": "hip-extension",
+    "thumbnail_url": "./media/thumbs/barbell-hip-thrust.webp",
+    "image_url": "./media/barbell-hip-thrust.webp",
+    "motion_url": "./media/barbell-hip-thrust.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Machine Hip Thrust",
+    "slug": "machine-hip-thrust",
+    "canonical_name": "Machine Hip Thrust",
+    "aliases": [
+      "glute drive machine"
+    ],
+    "primary_muscle": "Glutes",
+    "secondary_muscles": [
+      "Hamstrings"
+    ],
+    "body_region": "Lower body",
+    "movement_type": "Hip extension",
+    "movement_pattern": "Hip extension",
+    "equipment": "Hip thrust machine",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Beginner",
+    "setup_instructions": "Adjust the back support and secure the padded belt or hip pad across the pelvis, feet on the platform.",
+    "movement_instructions": "Drive hips upward against resistance; return while maintaining foot pressure.",
+    "cue": "Finish with glutes, not a lower-back arch.",
+    "common_mistakes": [
+      "Overextending the spine",
+      "Driving through the toes"
+    ],
+    "rest_min_seconds": 90,
+    "rest_max_seconds": 150,
+    "substitution_group": "hip-extension",
+    "thumbnail_url": "./media/thumbs/machine-hip-thrust.webp",
+    "image_url": "./media/machine-hip-thrust.webp",
+    "motion_url": "./media/machine-hip-thrust.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Cable Glute Kickback",
+    "slug": "cable-glute-kickback",
+    "canonical_name": "Cable Glute Kickback",
+    "aliases": [
+      "cable kickback",
+      "ankle strap kickback"
+    ],
+    "primary_muscle": "Glutes",
+    "secondary_muscles": [
+      "Hamstrings"
+    ],
+    "body_region": "Lower body",
+    "movement_type": "Isolated hip extension",
+    "movement_pattern": "Isolated hip extension",
+    "equipment": "Cable",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Attach an ankle cuff to a low machine pulley. Face the tower and hold a stable support, working leg connected by the cuff.",
+    "movement_instructions": "Move the working leg backward from the hip; return without rotating pelvis or arching.",
+    "cue": "Keep hips square and range controlled.",
+    "common_mistakes": [
+      "Rotating the pelvis",
+      "Arching the lower back"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "glute-isolation",
+    "thumbnail_url": "./media/thumbs/cable-glute-kickback.webp",
+    "image_url": "./media/cable-glute-kickback.webp",
+    "motion_url": "./media/cable-glute-kickback.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Hip Abduction Machine",
+    "slug": "hip-abduction-machine",
+    "canonical_name": "Hip Abduction Machine",
+    "aliases": [
+      "abductor machine",
+      "outer thigh machine"
+    ],
+    "primary_muscle": "Glutes",
+    "secondary_muscles": [
+      "Tensor fasciae latae"
+    ],
+    "body_region": "Lower body",
+    "movement_type": "Hip abduction",
+    "movement_pattern": "Hip abduction",
+    "equipment": "Selectorized machine",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Beginner",
+    "setup_instructions": "Sit against the back pad with outer knees or thighs against the pads.",
+    "movement_instructions": "Open legs outward from hips; return slowly without slamming pads.",
+    "cue": "Open from the hips with a still torso.",
+    "common_mistakes": [
+      "Bouncing the pads",
+      "Twisting the torso"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "abduction",
+    "thumbnail_url": "./media/thumbs/hip-abduction-machine.webp",
+    "image_url": "./media/hip-abduction-machine.webp",
+    "motion_url": "./media/hip-abduction-machine.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Conventional Deadlift",
+    "slug": "conventional-deadlift",
+    "canonical_name": "Conventional Deadlift",
+    "aliases": [
+      "deadlift",
+      "barbell deadlift"
+    ],
+    "primary_muscle": "Posterior chain",
+    "secondary_muscles": [
+      "Quads",
+      "Back",
+      "Forearms"
+    ],
+    "body_region": "Full body",
+    "movement_type": "Deadlift",
+    "movement_pattern": "Deadlift",
+    "equipment": "Barbell",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Stand with bar above mid-foot, bend hips and knees to grip just outside legs, brace with a neutral back.",
+    "movement_instructions": "Push the floor away and stand with bar close; hinge and bend knees to lower it.",
+    "cue": "Brace before lifting; push the floor away.",
+    "common_mistakes": [
+      "Jerking slack out of the bar",
+      "Rounding under load"
+    ],
+    "rest_min_seconds": 120,
+    "rest_max_seconds": 240,
+    "substitution_group": "deadlift",
+    "thumbnail_url": "./media/thumbs/conventional-deadlift.webp",
+    "image_url": "./media/conventional-deadlift.webp",
+    "motion_url": "./media/conventional-deadlift.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Dumbbell Romanian Deadlift",
+    "slug": "dumbbell-romanian-deadlift",
+    "canonical_name": "Dumbbell Romanian Deadlift",
+    "aliases": [
+      "dumbbell rdl",
+      "db rdl"
+    ],
+    "primary_muscle": "Hamstrings",
+    "secondary_muscles": [
+      "Glutes",
+      "Spinal erectors"
+    ],
+    "body_region": "Lower body",
+    "movement_type": "Hip hinge",
+    "movement_pattern": "Hip hinge",
+    "equipment": "Dumbbells",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Stand with dumbbells in front of thighs and knees slightly bent.",
+    "movement_instructions": "Send hips backward as weights track close to legs; return to standing when hamstrings limit depth.",
+    "cue": "Push hips backward and keep load close.",
+    "common_mistakes": [
+      "Rounding the back",
+      "Turning a hinge into a squat"
+    ],
+    "rest_min_seconds": 120,
+    "rest_max_seconds": 180,
+    "substitution_group": "hinge",
+    "thumbnail_url": "./media/thumbs/dumbbell-romanian-deadlift.webp",
+    "image_url": "./media/dumbbell-romanian-deadlift.webp",
+    "motion_url": "./media/dumbbell-romanian-deadlift.webp",
+    "motion_kind": "two-position",
+    "load_basis": "per_dumbbell",
+    "is_legacy": false
+  },
+  {
+    "name": "Stiff-Leg Deadlift",
+    "slug": "stiff-leg-deadlift",
+    "canonical_name": "Stiff-Leg Deadlift",
+    "aliases": [
+      "stiff legged deadlift"
+    ],
+    "primary_muscle": "Hamstrings",
+    "secondary_muscles": [
+      "Glutes",
+      "Spinal erectors"
+    ],
+    "body_region": "Lower body",
+    "movement_type": "Hip hinge",
+    "movement_pattern": "Hip hinge",
+    "equipment": "Barbell",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Stand with a barbell at thighs and knees only slightly unlocked. Use a light load and controlled range.",
+    "movement_instructions": "Hinge back while keeping knee angle nearly constant; stop before the back rounds and stand.",
+    "cue": "Push hips backward and keep load close.",
+    "common_mistakes": [
+      "Rounding the back",
+      "Turning a hinge into a squat"
+    ],
+    "rest_min_seconds": 120,
+    "rest_max_seconds": 180,
+    "substitution_group": "hinge",
+    "thumbnail_url": "./media/thumbs/stiff-leg-deadlift.webp",
+    "image_url": "./media/stiff-leg-deadlift.webp",
+    "motion_url": "./media/stiff-leg-deadlift.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Trap-Bar Deadlift",
+    "slug": "trap-bar-deadlift",
+    "canonical_name": "Trap-Bar Deadlift",
+    "aliases": [
+      "hex bar deadlift"
+    ],
+    "primary_muscle": "Posterior chain",
+    "secondary_muscles": [
+      "Quads",
+      "Back",
+      "Forearms"
+    ],
+    "body_region": "Full body",
+    "movement_type": "Deadlift",
+    "movement_pattern": "Deadlift",
+    "equipment": "Trap bar",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Stand centered inside a hex bar, grip both side handles and brace with hips and knees bent.",
+    "movement_instructions": "Push the floor away to stand tall; lower by bending hips and knees together.",
+    "cue": "Brace before lifting; push the floor away.",
+    "common_mistakes": [
+      "Jerking slack out of the bar",
+      "Rounding under load"
+    ],
+    "rest_min_seconds": 120,
+    "rest_max_seconds": 240,
+    "substitution_group": "deadlift",
+    "thumbnail_url": "./media/thumbs/trap-bar-deadlift.webp",
+    "image_url": "./media/trap-bar-deadlift.webp",
+    "motion_url": "./media/trap-bar-deadlift.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Lying Leg Curl",
+    "slug": "lying-leg-curl",
+    "canonical_name": "Lying Leg Curl",
+    "aliases": [
+      "prone hamstring curl"
+    ],
+    "primary_muscle": "Hamstrings",
+    "secondary_muscles": [
+      "Gastrocnemius"
+    ],
+    "body_region": "Lower body",
+    "movement_type": "Knee flexion",
+    "movement_pattern": "Knee flexion",
+    "equipment": "Selectorized machine",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Beginner",
+    "setup_instructions": "Lie face down with knees near the pivot and roller above the back of the ankles.",
+    "movement_instructions": "Curl heels toward glutes while hips stay on the pad; lower slowly.",
+    "cue": "Curl without lifting hips off the pad.",
+    "common_mistakes": [
+      "Arching the back",
+      "Letting the stack slam"
+    ],
+    "rest_min_seconds": 60,
+    "rest_max_seconds": 90,
+    "substitution_group": "leg-curl",
+    "thumbnail_url": "./media/thumbs/lying-leg-curl.webp",
+    "image_url": "./media/lying-leg-curl.webp",
+    "motion_url": "./media/lying-leg-curl.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Standing Single-Leg Curl",
+    "slug": "standing-single-leg-curl",
+    "canonical_name": "Standing Single-Leg Curl",
+    "aliases": [
+      "standing hamstring curl"
+    ],
+    "primary_muscle": "Hamstrings",
+    "secondary_muscles": [
+      "Gastrocnemius"
+    ],
+    "body_region": "Lower body",
+    "movement_type": "Knee flexion",
+    "movement_pattern": "Knee flexion",
+    "equipment": "Leg curl machine",
+    "laterality": "Unilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Beginner",
+    "setup_instructions": "Adjust the standing machine so the working knee aligns with its pivot and roller sits above the ankle.",
+    "movement_instructions": "Bend the working knee to draw heel back; lower without moving the hip.",
+    "cue": "Curl without lifting hips off the pad.",
+    "common_mistakes": [
+      "Arching the back",
+      "Letting the stack slam"
+    ],
+    "rest_min_seconds": 60,
+    "rest_max_seconds": 90,
+    "substitution_group": "leg-curl",
+    "thumbnail_url": "./media/thumbs/standing-single-leg-curl.webp",
+    "image_url": "./media/standing-single-leg-curl.webp",
+    "motion_url": "./media/standing-single-leg-curl.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Nordic Hamstring Curl",
+    "slug": "nordic-hamstring-curl",
+    "canonical_name": "Nordic Hamstring Curl",
+    "aliases": [
+      "nordic curl",
+      "assisted nordic"
+    ],
+    "primary_muscle": "Hamstrings",
+    "secondary_muscles": [
+      "Gastrocnemius"
+    ],
+    "body_region": "Lower body",
+    "movement_type": "Knee flexion",
+    "movement_pattern": "Knee flexion",
+    "equipment": "Nordic bench",
+    "laterality": "Bilateral",
+    "exercise_type": "bodyweight",
+    "difficulty": "Advanced",
+    "setup_instructions": "Kneel on a padded Nordic bench with ankles secured under its padded support. Keep a straight line from knees to shoulders and hands ready to catch.",
+    "movement_instructions": "Lean forward slowly from the knees; catch with hands and assist the return as needed.",
+    "cue": "Curl without lifting hips off the pad.",
+    "common_mistakes": [
+      "Arching the back",
+      "Letting the stack slam"
+    ],
+    "rest_min_seconds": 60,
+    "rest_max_seconds": 90,
+    "substitution_group": "leg-curl",
+    "thumbnail_url": "./media/thumbs/nordic-hamstring-curl.webp",
+    "image_url": "./media/nordic-hamstring-curl.webp",
+    "motion_url": "./media/nordic-hamstring-curl.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Good Morning",
+    "slug": "good-morning",
+    "canonical_name": "Good Morning",
+    "aliases": [
+      "barbell good morning"
+    ],
+    "primary_muscle": "Hamstrings",
+    "secondary_muscles": [
+      "Glutes",
+      "Spinal erectors"
+    ],
+    "body_region": "Lower body",
+    "movement_type": "Hip hinge",
+    "movement_pattern": "Hip hinge",
+    "equipment": "Barbell",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Advanced",
+    "setup_instructions": "Rest a light bar across upper traps, feet around hip-width and knees softly bent.",
+    "movement_instructions": "Push hips backward as torso tips forward; stop before back position changes and stand.",
+    "cue": "Push hips backward and keep load close.",
+    "common_mistakes": [
+      "Rounding the back",
+      "Turning a hinge into a squat"
+    ],
+    "rest_min_seconds": 120,
+    "rest_max_seconds": 180,
+    "substitution_group": "hinge",
+    "thumbnail_url": "./media/thumbs/good-morning.webp",
+    "image_url": "./media/good-morning.webp",
+    "motion_url": "./media/good-morning.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Standing Calf Raise",
+    "slug": "standing-calf-raise",
+    "canonical_name": "Standing Calf Raise",
+    "aliases": [
+      "bodyweight standing calf raise"
+    ],
+    "primary_muscle": "Calves",
+    "secondary_muscles": [],
+    "body_region": "Lower body",
+    "movement_type": "Plantar flexion",
+    "movement_pattern": "Plantar flexion",
+    "equipment": "Bodyweight",
+    "laterality": "Bilateral",
+    "exercise_type": "bodyweight",
+    "difficulty": "Beginner",
+    "setup_instructions": "Stand on a stable step with balls of feet supported and heels free; hold a support for balance.",
+    "movement_instructions": "Rise onto toes; lower heels slowly through a comfortable range.",
+    "cue": "Pause at the top and lower slowly.",
+    "common_mistakes": [
+      "Bouncing",
+      "Rolling onto the outside edge of the foot"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "calf",
+    "thumbnail_url": "./media/thumbs/standing-calf-raise.webp",
+    "image_url": "./media/standing-calf-raise.webp",
+    "motion_url": "./media/standing-calf-raise.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Seated Calf Raise",
+    "slug": "seated-calf-raise",
+    "canonical_name": "Seated Calf Raise",
+    "aliases": [
+      "bent knee calf raise"
+    ],
+    "primary_muscle": "Calves",
+    "secondary_muscles": [],
+    "body_region": "Lower body",
+    "movement_type": "Plantar flexion",
+    "movement_pattern": "Plantar flexion",
+    "equipment": "Calf raise machine",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Beginner",
+    "setup_instructions": "Sit with knees bent beneath thigh pads and balls of feet on the platform.",
+    "movement_instructions": "Lift heels, pause, then lower under control while knees stay bent.",
+    "cue": "Pause at the top and lower slowly.",
+    "common_mistakes": [
+      "Bouncing",
+      "Rolling onto the outside edge of the foot"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "calf",
+    "thumbnail_url": "./media/thumbs/seated-calf-raise.webp",
+    "image_url": "./media/seated-calf-raise.webp",
+    "motion_url": "./media/seated-calf-raise.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Leg-Press Calf Raise",
+    "slug": "leg-press-calf-raise",
+    "canonical_name": "Leg-Press Calf Raise",
+    "aliases": [
+      "calf press",
+      "toe press"
+    ],
+    "primary_muscle": "Calves",
+    "secondary_muscles": [],
+    "body_region": "Lower body",
+    "movement_type": "Plantar flexion",
+    "movement_pattern": "Plantar flexion",
+    "equipment": "Leg press machine",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Beginner",
+    "setup_instructions": "Sit in a leg press with back supported, balls of feet on the platform and knees slightly unlocked; set safeties.",
+    "movement_instructions": "Move only at ankles to press the sled away; lower heels without slipping.",
+    "cue": "Pause at the top and lower slowly.",
+    "common_mistakes": [
+      "Bouncing",
+      "Rolling onto the outside edge of the foot"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "calf",
+    "thumbnail_url": "./media/thumbs/leg-press-calf-raise.webp",
+    "image_url": "./media/leg-press-calf-raise.webp",
+    "motion_url": "./media/leg-press-calf-raise.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Smith Machine Calf Raise",
+    "slug": "smith-machine-calf-raise",
+    "canonical_name": "Smith Machine Calf Raise",
+    "aliases": [
+      "smith calf raise"
+    ],
+    "primary_muscle": "Calves",
+    "secondary_muscles": [],
+    "body_region": "Lower body",
+    "movement_type": "Plantar flexion",
+    "movement_pattern": "Plantar flexion",
+    "equipment": "Smith machine",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Beginner",
+    "setup_instructions": "Set bar across upper traps and balls of feet on a secure step, with safety stops set.",
+    "movement_instructions": "Rise through ankles; lower heels slowly while body remains upright.",
+    "cue": "Pause at the top and lower slowly.",
+    "common_mistakes": [
+      "Bouncing",
+      "Rolling onto the outside edge of the foot"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "calf",
+    "thumbnail_url": "./media/thumbs/smith-machine-calf-raise.webp",
+    "image_url": "./media/smith-machine-calf-raise.webp",
+    "motion_url": "./media/smith-machine-calf-raise.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Single-Leg Calf Raise",
+    "slug": "single-leg-calf-raise",
+    "canonical_name": "Single-Leg Calf Raise",
+    "aliases": [
+      "one leg calf raise"
+    ],
+    "primary_muscle": "Calves",
+    "secondary_muscles": [],
+    "body_region": "Lower body",
+    "movement_type": "Plantar flexion",
+    "movement_pattern": "Plantar flexion",
+    "equipment": "Bodyweight",
+    "laterality": "Unilateral",
+    "exercise_type": "bodyweight",
+    "difficulty": "Beginner",
+    "setup_instructions": "Stand on one foot on a stable step and hold a support; keep working knee softly unlocked.",
+    "movement_instructions": "Raise heel, pause, then lower slowly. Repeat on both sides.",
+    "cue": "Pause at the top and lower slowly.",
+    "common_mistakes": [
+      "Bouncing",
+      "Rolling onto the outside edge of the foot"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "calf",
+    "thumbnail_url": "./media/thumbs/single-leg-calf-raise.webp",
+    "image_url": "./media/single-leg-calf-raise.webp",
+    "motion_url": "./media/single-leg-calf-raise.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Machine Crunch",
+    "slug": "machine-crunch",
+    "canonical_name": "Machine Crunch",
+    "aliases": [
+      "ab crunch machine"
+    ],
+    "primary_muscle": "Abs",
+    "secondary_muscles": [
+      "Obliques"
+    ],
+    "body_region": "Core",
+    "movement_type": "Trunk flexion",
+    "movement_pattern": "Trunk flexion",
+    "equipment": "Selectorized machine",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Beginner",
+    "setup_instructions": "Adjust the seat and chest or shoulder pad to the machine design, feet supported.",
+    "movement_instructions": "Curl ribs toward pelvis against the pad; return slowly.",
+    "cue": "Curl ribs toward pelvis; breathe out.",
+    "common_mistakes": [
+      "Pulling on the neck",
+      "Using hip momentum"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "core-flexion",
+    "thumbnail_url": "./media/thumbs/machine-crunch.webp",
+    "image_url": "./media/machine-crunch.webp",
+    "motion_url": "./media/machine-crunch.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Reverse Crunch",
+    "slug": "reverse-crunch",
+    "canonical_name": "Reverse Crunch",
+    "aliases": [
+      "reverse abdominal crunch"
+    ],
+    "primary_muscle": "Abs",
+    "secondary_muscles": [
+      "Hip flexors"
+    ],
+    "body_region": "Core",
+    "movement_type": "Posterior pelvic tilt",
+    "movement_pattern": "Posterior pelvic tilt",
+    "equipment": "Bodyweight",
+    "laterality": "Bilateral",
+    "exercise_type": "bodyweight",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Lie on your back with hips and knees bent, arms beside you.",
+    "movement_instructions": "Curl pelvis off the floor to bring knees toward chest; lower without swinging.",
+    "cue": "Curl the pelvis without swinging.",
+    "common_mistakes": [
+      "Arching the lower back",
+      "Swinging the legs"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "leg-raise",
+    "thumbnail_url": "./media/thumbs/reverse-crunch.webp",
+    "image_url": "./media/reverse-crunch.webp",
+    "motion_url": "./media/reverse-crunch.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Hanging Knee Raise",
+    "slug": "hanging-knee-raise",
+    "canonical_name": "Hanging Knee Raise",
+    "aliases": [
+      "hanging knee lift"
+    ],
+    "primary_muscle": "Abs",
+    "secondary_muscles": [
+      "Hip flexors"
+    ],
+    "body_region": "Core",
+    "movement_type": "Posterior pelvic tilt",
+    "movement_pattern": "Posterior pelvic tilt",
+    "equipment": "Pull-up bar",
+    "laterality": "Bilateral",
+    "exercise_type": "bodyweight",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Hang from a secure bar with shoulders controlled and knees bent.",
+    "movement_instructions": "Raise knees and curl pelvis forward; lower without swinging.",
+    "cue": "Curl the pelvis without swinging.",
+    "common_mistakes": [
+      "Arching the lower back",
+      "Swinging the legs"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "leg-raise",
+    "thumbnail_url": "./media/thumbs/hanging-knee-raise.webp",
+    "image_url": "./media/hanging-knee-raise.webp",
+    "motion_url": "./media/hanging-knee-raise.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Hanging Leg Raise",
+    "slug": "hanging-leg-raise",
+    "canonical_name": "Hanging Leg Raise",
+    "aliases": [
+      "hanging straight leg raise"
+    ],
+    "primary_muscle": "Abs",
+    "secondary_muscles": [
+      "Hip flexors"
+    ],
+    "body_region": "Core",
+    "movement_type": "Posterior pelvic tilt",
+    "movement_pattern": "Posterior pelvic tilt",
+    "equipment": "Pull-up bar",
+    "laterality": "Bilateral",
+    "exercise_type": "bodyweight",
+    "difficulty": "Advanced",
+    "setup_instructions": "Hang from a secure bar with legs extended and shoulders controlled.",
+    "movement_instructions": "Raise legs as far as you can without swinging, adding a pelvic curl; lower slowly.",
+    "cue": "Curl the pelvis without swinging.",
+    "common_mistakes": [
+      "Arching the lower back",
+      "Swinging the legs"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "leg-raise",
+    "thumbnail_url": "./media/thumbs/hanging-leg-raise.webp",
+    "image_url": "./media/hanging-leg-raise.webp",
+    "motion_url": "./media/hanging-leg-raise.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Captain’s-Chair Knee Raise",
+    "slug": "captains-chair-knee-raise",
+    "canonical_name": "Captain’s-Chair Knee Raise",
+    "aliases": [
+      "captains chair raise",
+      "vertical knee raise",
+      "vkr"
+    ],
+    "primary_muscle": "Abs",
+    "secondary_muscles": [
+      "Hip flexors"
+    ],
+    "body_region": "Core",
+    "movement_type": "Posterior pelvic tilt",
+    "movement_pattern": "Posterior pelvic tilt",
+    "equipment": "Captain's chair",
+    "laterality": "Bilateral",
+    "exercise_type": "bodyweight",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Support forearms on pads with back against the support and legs hanging.",
+    "movement_instructions": "Lift knees toward chest with a small pelvic curl; lower without swinging.",
+    "cue": "Curl the pelvis without swinging.",
+    "common_mistakes": [
+      "Arching the lower back",
+      "Swinging the legs"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "leg-raise",
+    "thumbnail_url": "./media/thumbs/captains-chair-knee-raise.webp",
+    "image_url": "./media/captains-chair-knee-raise.webp",
+    "motion_url": "./media/captains-chair-knee-raise.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Ab-Wheel Rollout",
+    "slug": "ab-wheel-rollout",
+    "canonical_name": "Ab-Wheel Rollout",
+    "aliases": [
+      "ab roller",
+      "roll out"
+    ],
+    "primary_muscle": "Abs",
+    "secondary_muscles": [
+      "Glutes",
+      "Shoulders"
+    ],
+    "body_region": "Core",
+    "movement_type": "Anti-extension",
+    "movement_pattern": "Anti-extension",
+    "equipment": "Ab wheel",
+    "laterality": "Bilateral",
+    "exercise_type": "bodyweight",
+    "difficulty": "Advanced",
+    "setup_instructions": "Kneel on a pad with both hands on the wheel beneath shoulders, glutes and abs braced.",
+    "movement_instructions": "Roll forward only as far as you can keep the lower back steady; pull back to start.",
+    "cue": "Brace and keep breathing.",
+    "common_mistakes": [
+      "Sagging hips",
+      "Holding the breath"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "brace",
+    "thumbnail_url": "./media/thumbs/ab-wheel-rollout.webp",
+    "image_url": "./media/ab-wheel-rollout.webp",
+    "motion_url": "./media/ab-wheel-rollout.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Side Plank",
+    "slug": "side-plank",
+    "canonical_name": "Side Plank",
+    "aliases": [
+      "side bridge"
+    ],
+    "primary_muscle": "Obliques",
+    "secondary_muscles": [
+      "Glute medius",
+      "Shoulders"
+    ],
+    "body_region": "Core",
+    "movement_type": "Anti-lateral flexion",
+    "movement_pattern": "Anti-lateral flexion",
+    "equipment": "Bodyweight",
+    "laterality": "Unilateral",
+    "exercise_type": "timed",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Lie on one side, elbow under shoulder and feet stacked or staggered.",
+    "movement_instructions": "Lift hips to form a straight line; hold while breathing, then switch sides.",
+    "cue": "Keep shoulders, hips and ankles aligned.",
+    "common_mistakes": [
+      "Hips sagging",
+      "Rotating forward"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "side-brace",
+    "thumbnail_url": "./media/thumbs/side-plank.webp",
+    "image_url": "./media/side-plank.webp",
+    "motion_url": "./media/side-plank.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Pallof Press",
+    "slug": "pallof-press",
+    "canonical_name": "Pallof Press",
+    "aliases": [
+      "anti rotation press"
+    ],
+    "primary_muscle": "Obliques",
+    "secondary_muscles": [
+      "Abs",
+      "Glutes"
+    ],
+    "body_region": "Core",
+    "movement_type": "Anti-rotation",
+    "movement_pattern": "Anti-rotation",
+    "equipment": "Cable",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Stand side-on to a machine pulley at chest height. Hold one handle with both hands against the chest and brace.",
+    "movement_instructions": "Press hands straight forward without turning toward the cable; draw back to chest.",
+    "cue": "Keep chest and hips facing forward.",
+    "common_mistakes": [
+      "Rotating toward the cable",
+      "Leaning sideways"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "anti-rotation",
+    "thumbnail_url": "./media/thumbs/pallof-press.webp",
+    "image_url": "./media/pallof-press.webp",
+    "motion_url": "./media/pallof-press.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Russian Twist",
+    "slug": "russian-twist",
+    "canonical_name": "Russian Twist",
+    "aliases": [
+      "seated torso twist"
+    ],
+    "primary_muscle": "Obliques",
+    "secondary_muscles": [
+      "Abs"
+    ],
+    "body_region": "Core",
+    "movement_type": "Controlled rotation",
+    "movement_pattern": "Controlled rotation",
+    "equipment": "Bodyweight",
+    "laterality": "Bilateral",
+    "exercise_type": "bodyweight",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Sit with knees bent and feet grounded, torso leaned back slightly with a long spine, hands together.",
+    "movement_instructions": "Rotate the rib cage gently from side to side while hips remain steady.",
+    "cue": "Rotate under control through a comfortable range.",
+    "common_mistakes": [
+      "Jerking through the low back",
+      "Using more weight than you can control"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "rotation",
+    "thumbnail_url": "./media/thumbs/russian-twist.webp",
+    "image_url": "./media/russian-twist.webp",
+    "motion_url": "./media/russian-twist.webp",
+    "motion_kind": "still",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Cable Woodchop",
+    "slug": "cable-woodchop",
+    "canonical_name": "Cable Woodchop",
+    "aliases": [
+      "wood chop",
+      "high to low cable chop"
+    ],
+    "primary_muscle": "Obliques",
+    "secondary_muscles": [
+      "Abs"
+    ],
+    "body_region": "Core",
+    "movement_type": "Controlled rotation",
+    "movement_pattern": "Controlled rotation",
+    "equipment": "Cable",
+    "laterality": "Bilateral",
+    "exercise_type": "weighted",
+    "difficulty": "Intermediate",
+    "setup_instructions": "Stand side-on to a high machine pulley, hold one handle with both hands and feet spaced for balance.",
+    "movement_instructions": "Draw handle diagonally downward across the body with controlled torso and hip rotation; return.",
+    "cue": "Rotate under control through a comfortable range.",
+    "common_mistakes": [
+      "Jerking through the low back",
+      "Using more weight than you can control"
+    ],
+    "rest_min_seconds": 45,
+    "rest_max_seconds": 90,
+    "substitution_group": "rotation",
+    "thumbnail_url": "./media/thumbs/cable-woodchop.webp",
+    "image_url": "./media/cable-woodchop.webp",
+    "motion_url": "./media/cable-woodchop.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Treadmill Run",
+    "slug": "treadmill-run",
+    "canonical_name": "Treadmill Run",
+    "aliases": [
+      "treadmill running",
+      "jogging"
+    ],
+    "primary_muscle": "Cardio",
+    "secondary_muscles": [
+      "Legs"
+    ],
+    "body_region": "Full body",
+    "movement_type": "Cardio",
+    "movement_pattern": "Cardio",
+    "equipment": "Treadmill",
+    "laterality": "Bilateral",
+    "exercise_type": "cardio",
+    "difficulty": "Beginner",
+    "setup_instructions": "Attach the safety clip and build from walking to a manageable running speed.",
+    "movement_instructions": "Run with short controlled strides under your body; slow the belt before stepping off.",
+    "cue": "Choose a pace you can sustain with control.",
+    "common_mistakes": [
+      "Starting too fast",
+      "Ignoring equipment stop controls"
+    ],
+    "rest_min_seconds": 0,
+    "rest_max_seconds": 60,
+    "substitution_group": "cardio",
+    "thumbnail_url": "./media/thumbs/treadmill-run.webp",
+    "image_url": "./media/treadmill-run.webp",
+    "motion_url": "./media/treadmill-run.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Incline Treadmill Walk",
+    "slug": "incline-treadmill-walk",
+    "canonical_name": "Incline Treadmill Walk",
+    "aliases": [
+      "incline treadmill",
+      "hill walk"
+    ],
+    "primary_muscle": "Cardio",
+    "secondary_muscles": [
+      "Legs"
+    ],
+    "body_region": "Full body",
+    "movement_type": "Cardio",
+    "movement_pattern": "Cardio",
+    "equipment": "Treadmill",
+    "laterality": "Bilateral",
+    "exercise_type": "cardio",
+    "difficulty": "Beginner",
+    "setup_instructions": "Attach safety clip, start walking, then increase incline gradually.",
+    "movement_instructions": "Walk uphill with a slight whole-body lean; avoid supporting body weight on the rails.",
+    "cue": "Choose a pace you can sustain with control.",
+    "common_mistakes": [
+      "Starting too fast",
+      "Ignoring equipment stop controls"
+    ],
+    "rest_min_seconds": 0,
+    "rest_max_seconds": 60,
+    "substitution_group": "cardio",
+    "thumbnail_url": "./media/thumbs/incline-treadmill-walk.webp",
+    "image_url": "./media/incline-treadmill-walk.webp",
+    "motion_url": "./media/incline-treadmill-walk.webp",
+    "motion_kind": "still",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Stair Climber",
+    "slug": "stair-climber",
+    "canonical_name": "Stair Climber",
+    "aliases": [
+      "stairmaster",
+      "stepmill"
+    ],
+    "primary_muscle": "Cardio",
+    "secondary_muscles": [
+      "Legs"
+    ],
+    "body_region": "Full body",
+    "movement_type": "Cardio",
+    "movement_pattern": "Cardio",
+    "equipment": "Stair machine",
+    "laterality": "Bilateral",
+    "exercise_type": "cardio",
+    "difficulty": "Beginner",
+    "setup_instructions": "Step onto the stopped machine, identify its stop control and begin at a slow speed.",
+    "movement_instructions": "Take controlled steps with whole feet supported as practical; use rails lightly for balance.",
+    "cue": "Choose a pace you can sustain with control.",
+    "common_mistakes": [
+      "Starting too fast",
+      "Ignoring equipment stop controls"
+    ],
+    "rest_min_seconds": 0,
+    "rest_max_seconds": 60,
+    "substitution_group": "cardio",
+    "thumbnail_url": "./media/thumbs/stair-climber.webp",
+    "image_url": "./media/stair-climber.webp",
+    "motion_url": "./media/stair-climber.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Elliptical",
+    "slug": "elliptical",
+    "canonical_name": "Elliptical",
+    "aliases": [
+      "cross trainer"
+    ],
+    "primary_muscle": "Cardio",
+    "secondary_muscles": [
+      "Legs"
+    ],
+    "body_region": "Full body",
+    "movement_type": "Cardio",
+    "movement_pattern": "Cardio",
+    "equipment": "Elliptical machine",
+    "laterality": "Bilateral",
+    "exercise_type": "cardio",
+    "difficulty": "Beginner",
+    "setup_instructions": "Step onto pedals while holding fixed handles; select a comfortable resistance.",
+    "movement_instructions": "Move pedals in a smooth continuous cycle with upright posture.",
+    "cue": "Choose a pace you can sustain with control.",
+    "common_mistakes": [
+      "Starting too fast",
+      "Ignoring equipment stop controls"
+    ],
+    "rest_min_seconds": 0,
+    "rest_max_seconds": 60,
+    "substitution_group": "cardio",
+    "thumbnail_url": "./media/thumbs/elliptical.webp",
+    "image_url": "./media/elliptical.webp",
+    "motion_url": "./media/elliptical.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Stationary Bike",
+    "slug": "stationary-bike",
+    "canonical_name": "Stationary Bike",
+    "aliases": [
+      "upright bike",
+      "spin bike",
+      "cycling"
+    ],
+    "primary_muscle": "Cardio",
+    "secondary_muscles": [
+      "Legs"
+    ],
+    "body_region": "Full body",
+    "movement_type": "Cardio",
+    "movement_pattern": "Cardio",
+    "equipment": "Exercise bike",
+    "laterality": "Bilateral",
+    "exercise_type": "cardio",
+    "difficulty": "Beginner",
+    "setup_instructions": "Adjust saddle so the knee stays slightly bent at the bottom of the pedal stroke.",
+    "movement_instructions": "Pedal smoothly with relaxed shoulders and controlled cadence.",
+    "cue": "Choose a pace you can sustain with control.",
+    "common_mistakes": [
+      "Starting too fast",
+      "Ignoring equipment stop controls"
+    ],
+    "rest_min_seconds": 0,
+    "rest_max_seconds": 60,
+    "substitution_group": "cardio",
+    "thumbnail_url": "./media/thumbs/stationary-bike.webp",
+    "image_url": "./media/stationary-bike.webp",
+    "motion_url": "./media/stationary-bike.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Recumbent Bike",
+    "slug": "recumbent-bike",
+    "canonical_name": "Recumbent Bike",
+    "aliases": [
+      "recumbent cycle"
+    ],
+    "primary_muscle": "Cardio",
+    "secondary_muscles": [
+      "Legs"
+    ],
+    "body_region": "Full body",
+    "movement_type": "Cardio",
+    "movement_pattern": "Cardio",
+    "equipment": "Recumbent bike",
+    "laterality": "Bilateral",
+    "exercise_type": "cardio",
+    "difficulty": "Beginner",
+    "setup_instructions": "Adjust seat distance so knees remain slightly bent at full pedal reach, back supported.",
+    "movement_instructions": "Pedal steadily without locking knees or rocking the pelvis.",
+    "cue": "Choose a pace you can sustain with control.",
+    "common_mistakes": [
+      "Starting too fast",
+      "Ignoring equipment stop controls"
+    ],
+    "rest_min_seconds": 0,
+    "rest_max_seconds": 60,
+    "substitution_group": "cardio",
+    "thumbnail_url": "./media/thumbs/recumbent-bike.webp",
+    "image_url": "./media/recumbent-bike.webp",
+    "motion_url": "./media/recumbent-bike.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Rowing Machine",
+    "slug": "rowing-machine",
+    "canonical_name": "Rowing Machine",
+    "aliases": [
+      "rower",
+      "erg",
+      "rowing erg"
+    ],
+    "primary_muscle": "Cardio",
+    "secondary_muscles": [
+      "Legs"
+    ],
+    "body_region": "Full body",
+    "movement_type": "Cardio",
+    "movement_pattern": "Cardio",
+    "equipment": "Rowing ergometer",
+    "laterality": "Bilateral",
+    "exercise_type": "cardio",
+    "difficulty": "Beginner",
+    "setup_instructions": "Secure feet in straps and sit tall holding the handle with arms straight and knees bent.",
+    "movement_instructions": "Drive legs first, then open hips and pull handle to lower ribs; recover arms, hips, then knees.",
+    "cue": "Choose a pace you can sustain with control.",
+    "common_mistakes": [
+      "Starting too fast",
+      "Ignoring equipment stop controls"
+    ],
+    "rest_min_seconds": 0,
+    "rest_max_seconds": 60,
+    "substitution_group": "cardio",
+    "thumbnail_url": "./media/thumbs/rowing-machine.webp",
+    "image_url": "./media/rowing-machine.webp",
+    "motion_url": "./media/rowing-machine.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  },
+  {
+    "name": "Sled Push",
+    "slug": "sled-push",
+    "canonical_name": "Sled Push",
+    "aliases": [
+      "prowler push"
+    ],
+    "primary_muscle": "Cardio",
+    "secondary_muscles": [
+      "Legs"
+    ],
+    "body_region": "Full body",
+    "movement_type": "Cardio",
+    "movement_pattern": "Cardio",
+    "equipment": "Sled",
+    "laterality": "Bilateral",
+    "exercise_type": "cardio",
+    "difficulty": "Beginner",
+    "setup_instructions": "Load a push sled on suitable turf, grip its uprights and lean forward with a braced torso.",
+    "movement_instructions": "Take short powerful steps to drive the sled forward while keeping arms stable.",
+    "cue": "Choose a pace you can sustain with control.",
+    "common_mistakes": [
+      "Starting too fast",
+      "Ignoring equipment stop controls"
+    ],
+    "rest_min_seconds": 0,
+    "rest_max_seconds": 60,
+    "substitution_group": "cardio",
+    "thumbnail_url": "./media/thumbs/sled-push.webp",
+    "image_url": "./media/sled-push.webp",
+    "motion_url": "./media/sled-push.webp",
+    "motion_kind": "two-position",
+    "load_basis": "total",
+    "is_legacy": false
+  }
+]

@@ -67,7 +67,7 @@ async function getPlan(planId?: string | null) {
     id,name,goal,days_per_week,is_template,owner_id,
     plan_days(id,day_key,name,focus,sort_order,
       plan_day_exercises(id,sort_order,target_sets,min_reps,max_reps,target_rpe,rest_seconds,duration_minutes,progression_rule,pain_rule,
-        exercises(id,slug,name,primary_muscle,movement_type,equipment,default_rest_seconds,cue,image_url,animation_url)
+        exercises(*)
       )
     )
   `).eq("id", id).single();
@@ -77,11 +77,11 @@ async function getPlan(planId?: string | null) {
   return data;
 }
 async function history(userId: string, limit = 25) {
-  const { data: sessions, error } = await db.from("workout_sessions").select("id,plan_day_id,status,started_at,completed_at,duration_seconds,workout_notes,day_snapshot").eq("user_id", userId).order("started_at", { ascending: false }).limit(limit);
+  const { data: sessions, error } = await db.from("workout_sessions").select("id,plan_day_id,status,started_at,completed_at,duration_seconds,workout_notes,day_snapshot,updated_at").eq("user_id", userId).order("started_at", { ascending: false }).limit(limit);
   if (error) throw error;
   if (!sessions?.length) return [];
   const ids = sessions.map((s:any)=>s.id);
-  const { data: sets, error: e2 } = await db.from("workout_sets").select("id,session_id,exercise_id,set_number,weight,reps,rpe,elbow_pain,completion_status,notes,logged_at,duration_seconds,units").in("session_id", ids).order("set_number");
+  const { data: sets, error: e2 } = await db.from("workout_sets").select("id,session_id,exercise_id,set_number,weight,reps,rpe,elbow_pain,completion_status,notes,logged_at,duration_seconds,units,updated_at,load_basis,load_multiplier").in("session_id", ids).order("set_number");
   if (e2) throw e2;
   const dayIds = [...new Set(sessions.map((s:any)=>s.plan_day_id).filter(Boolean))];
   const { data: days } = dayIds.length ? await db.from("plan_days").select("id,name,focus,day_key,sort_order").in("id", dayIds) : { data: [] } as any;
@@ -97,7 +97,7 @@ Deno.serve(async (req: Request) => {
   const action = String(body.action || "");
   try {
     if(action === "dispatch_reminders")return await deliver(db,req);
-    if (action === "health") return out(req, { ok: true, service: "BodySmith API", version: "2.0.0" });
+    if (action === "health") return out(req, { ok: true, service: "BodySmith API", version: "2.2.0" });
 
     if (action === "register") {
       const username = String(body.username || "").trim().toLowerCase();
@@ -109,7 +109,7 @@ Deno.serve(async (req: Request) => {
       const salt = randomHex(16);
       const hash = await passwordHash(password, salt);
       const plan = await getPlan(null);
-      const { data, error } = await db.from("app_users").insert({ username, display_name: displayName, password_salt: salt, password_hash: hash, active_plan_id: plan?.id || null }).select("id,username,display_name,units,active_plan_id,created_at,preferences,onboarding_completed").single();
+      const { data, error } = await db.from("app_users").insert({ is_qa:body.qaMode===true&&/^bodysmith_qa_[a-f0-9]{12}$/.test(username), username, display_name: displayName, password_salt: salt, password_hash: hash, active_plan_id: plan?.id || null }).select("id,username,display_name,units,active_plan_id,created_at,preferences,onboarding_completed").single();
       if (error) {
         if (error.code === "23505") return out(req, { error: "That username is already taken." }, 409);
         throw error;
@@ -133,6 +133,43 @@ Deno.serve(async (req: Request) => {
     const userId = await auth(body);
     if (!userId) return out(req, { error: "Please sign in again." }, 401);
 
+    if(action === "cleanup_qa") {
+      const {error}=await db.rpc("cleanup_bodysmith_qa",{p_user:userId});
+      if(error)return out(req,{error:"Only designated temporary QA accounts can be cleaned up."},403);
+      return out(req,{ok:true});
+    }
+    if(action === "set_targets") {
+      const n=Number(body.targetSets);if(!Number.isInteger(n)||n<1||n>20)return out(req,{error:"Use 1–20 sets."},400);
+      const {data:s}=await db.from("workout_sessions").select("id,day_snapshot").eq("id",String(body.sessionId)).eq("user_id",userId).eq("status","in_progress").maybeSingle();
+      const slot=s?.day_snapshot?.plan_day_exercises?.find((x:any)=>x.id===body.slotId);if(!s||!slot)return out(req,{error:"Active slot not found."},404);
+      slot.programmed_sets??=slot.target_sets;slot.target_sets=n;
+      const {error}=await db.from("workout_sessions").update({day_snapshot:s.day_snapshot,updated_at:new Date().toISOString()}).eq("id",s.id).eq("user_id",userId);if(error)throw error;return out(req,{ok:true});
+    }
+    if(action === "delete_set") {
+      const {data:session}=await db.from("workout_sessions").select("id,status").eq("id",String(body.sessionId)).eq("user_id",userId).maybeSingle();
+      if(!session||!['completed','in_progress'].includes(session.status))return out(req,{error:"Editable workout not found."},404);
+      const {error}=await db.from("workout_sets").delete().eq("session_id",session.id).eq("user_id",userId).eq("exercise_id",String(body.exerciseId)).eq("set_number",Number(body.setNumber));if(error)throw error;
+      await db.from("workout_sessions").update({updated_at:new Date().toISOString()}).eq("id",session.id).eq("user_id",userId);
+      return out(req,{ok:true});
+    }
+    if(action === "session_notes") {
+      const {data,error}=await db.from("workout_sessions").update({workout_notes:String(body.notes||'').slice(0,1000),updated_at:new Date().toISOString()}).eq("id",String(body.sessionId)).eq("user_id",userId).select("id").maybeSingle();
+      if(error)throw error;if(!data)return out(req,{error:"Workout not found."},404);return out(req,{ok:true});
+    }
+    if(action === "start_custom_session") {
+      const day=body.day;
+      if(!day||!String(day.name||'').trim()||!Array.isArray(day.plan_day_exercises)||!day.plan_day_exercises.length||day.plan_day_exercises.length>30)return out(req,{error:"Choose 1–30 exercises."},400);
+      if((await history(userId,100)).some((s:any)=>s.status==='in_progress'))return out(req,{error:"Finish or change your active workout first."},409);
+      const {data:catalog,error:ce}=await db.from("exercises").select("*").or(`owner_id.is.null,owner_id.eq.${userId}`);if(ce)throw ce;
+      const seen=new Set();const slots=[];
+      for(const [i,x] of day.plan_day_exercises.entries()){
+        const ex=catalog.find((e:any)=>e.id===(x.exercises?.id||x.exercise_id));
+        if(!ex||seen.has(ex.id)||!Number.isInteger(+x.target_sets)||x.target_sets<1||x.target_sets>20||!Number.isInteger(+x.rest_seconds)||x.rest_seconds<0||x.rest_seconds>3600||!Number.isInteger(+x.min_reps)||x.min_reps<0||!Number.isInteger(+x.max_reps)||x.max_reps<x.min_reps||x.max_reps>1000||!Number.isInteger(+(x.duration_minutes||0))||+(x.duration_minutes||0)<0||+(x.duration_minutes||0)>240)return out(req,{error:"Check exercise targets."},400);
+        seen.add(ex.id);slots.push({...x,id:crypto.randomUUID(),sort_order:i,exercises:ex,exercise_id:ex.id});
+      }
+      const {data,error}=await db.rpc("start_bodysmith_session",{p_user:userId,p_day:null,p_snapshot:{name:String(day.name).slice(0,100),plan_day_exercises:slots,custom:true}});if(error)throw error;
+      return out(req,{session:{...data,sets:[]}},201);
+    }
     if (action === "logout") {
       const tokenHash = await sha256(String(body.token));
       await db.from("app_sessions").delete().eq("token_hash", tokenHash);
@@ -264,7 +301,7 @@ return out(req, { user, plan, history: hist, activeSession: active, exercises:ex
       if(existing) return out(req,{error:"Resume or finish your active workout first.",session:existing},409);
       const plan=await getPlan(user.active_plan_id);
       const snapshot=plan?.plan_days?.find((d:any)=>d.id===planDayId);
-      const { data, error } = await db.from("workout_sessions").insert({ user_id: userId, plan_day_id: planDayId, status: "in_progress", day_snapshot:snapshot, started_at: new Date().toISOString() }).select("*").single();
+      const { data, error } = await db.rpc("start_bodysmith_session",{p_user:userId,p_day:planDayId,p_snapshot:snapshot});
       if (error) throw error;
       return out(req, { session: { ...data, sets: [] } }, 201);
     }
@@ -274,7 +311,7 @@ return out(req, { user, plan, history: hist, activeSession: active, exercises:ex
       const exerciseId = String(body.exerciseId || "");
       const setNumber = Number(body.setNumber);
       const { data: s } = await db.from("workout_sessions").select("id,status").eq("id", sessionId).eq("user_id", userId).maybeSingle();
-      if (!s || s.status !== "in_progress") return out(req, { error: "Active session not found." }, 404);
+      if (!s || !["in_progress","completed"].includes(s.status)) return out(req, { error: "Editable session not found." }, 404);
       if (!Number.isInteger(setNumber) || setNumber < 1 || setNumber > 20) return out(req, { error: "Invalid set number." }, 400);
       const row = {
         session_id: sessionId, user_id: userId, exercise_id: exerciseId, set_number: setNumber,
@@ -283,15 +320,16 @@ return out(req, { user, plan, history: hist, activeSession: active, exercises:ex
         rpe: body.rpe === "" || body.rpe == null ? null : Number(body.rpe),
         elbow_pain: body.elbowPain === "" || body.elbowPain == null ? 0 : Number(body.elbowPain),
         completion_status: ["completed","skipped"].includes(body.completionStatus) ? body.completionStatus : "completed",
-        duration_seconds: body.durationSeconds == null ? null : Number(body.durationSeconds), units: ["lb","kg"].includes(body.units)?body.units:(await getUser(userId)).units, notes: String(body.notes || "").slice(0,500), logged_at: new Date().toISOString()
+        duration_seconds: body.durationSeconds == null ? null : Number(body.durationSeconds), units: ["lb","kg"].includes(body.units)?body.units:(await getUser(userId)).units, notes: String(body.notes || "").slice(0,500), updated_at: new Date().toISOString(), load_basis:["total","per_dumbbell","per_side"].includes(body.loadBasis)?body.loadBasis:"total", load_multiplier:body.loadMultiplier===2?2:1
       };
       if ((row.weight!=null && (!Number.isFinite(row.weight)||row.weight<0||row.weight>10000)) || (row.reps!=null && (!Number.isInteger(row.reps)||row.reps<0||row.reps>10000)) || (row.duration_seconds!=null && (!Number.isInteger(row.duration_seconds)||row.duration_seconds<0||row.duration_seconds>86400))) return out(req,{error:"Invalid weight, reps, or duration."},400);
       const {data: exercise}=await db.from("exercises").select("id,owner_id").eq("id",exerciseId).maybeSingle();
       if(!exercise || (exercise.owner_id && exercise.owner_id!==userId)) return out(req,{error:"Exercise unavailable."},404);
-      if (row.rpe != null && (row.rpe < 1 || row.rpe > 10)) return out(req, { error: "RPE must be 1–10." }, 400);
-      if (row.elbow_pain != null && (row.elbow_pain < 0 || row.elbow_pain > 10)) return out(req, { error: "Pain must be 0–10." }, 400);
+      if (row.rpe != null && (!Number.isFinite(row.rpe) || row.rpe < 1 || row.rpe > 10)) return out(req, { error: "RPE must be 1–10." }, 400);
+      if (row.elbow_pain != null && (!Number.isFinite(row.elbow_pain) || row.elbow_pain < 0 || row.elbow_pain > 10)) return out(req, { error: "Pain must be 0–10." }, 400);
       const { data, error } = await db.from("workout_sets").upsert(row, { onConflict: "session_id,exercise_id,set_number" }).select("*").single();
       if (error) throw error;
+      await db.from("workout_sessions").update({updated_at:new Date().toISOString()}).eq("id",sessionId).eq("user_id",userId);
       return out(req, { set: data });
     }
 

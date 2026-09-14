@@ -31,3 +31,11 @@ GitHub Actions validates each push/PR. The live backend suite can be run manuall
 ## PWA updates
 
 Release 2.0 versions the HTML asset references and service-worker cache together. App shell, raster install icons and exercise media are precached. Updates activate without deleting local workout storage. Close/reopen the installed app after a deployment to load the new frontend. Starting new sessions, plan editing and supplement creation require connectivity; active workout logging and supplement state logging queue offline.
+
+## Release 2.2 development
+
+The expanded catalog is authored in `scripts/build-catalog.py` and exported to `data/exercises.json`. Additive migrations preserve existing exercise UUIDs and personal plans. Michael Muscle Builder remains the default.
+
+Session tools support set correction, additional sets, completed-workout corrections, partial-session preservation, and one-off custom workouts. Loading preferences are per user and unit system. `training.js` contains explainable progression rules and a balanced plate-inventory solver; recommendations never modify plans.
+
+Run `npm test` for offline/UI, progression, plate, and service-worker tests. `node tests/assets-smoke.cjs` checks catalog/media completeness. Live backend and deployed-frontend suites use explicitly marked short-lived QA accounts and remove them through an authenticated, restricted cleanup action. Service-role credentials remain server-side.
