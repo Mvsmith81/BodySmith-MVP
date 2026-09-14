@@ -1,6 +1,6 @@
-const CACHE='bodysmith-release-2.2.0';
+const CACHE='bodysmith-release-2.3.0';
 const MEDIA='bodysmith-workout-media-v1';
-const SHELL=["./training.js?v=20260914-release22","./", "./index.html", "./styles.css?v=20260914-release22", "./auth-fix.js?v=20260914-release22", "./app.js?v=20260914-release22", "./manifest.webmanifest?v=20260914-release22", "./icon.svg?v=20260914-release22", "./icon-192.png", "./icon-512.png"];
+const SHELL=["./training.js?v=20260914-release23","./", "./index.html", "./styles.css?v=20260914-release23", "./auth-fix.js?v=20260914-release23", "./app.js?v=20260914-release23", "./manifest.webmanifest?v=20260914-release23", "./icon.svg?v=20260914-release23", "./icon-192.png", "./icon-512.png"];
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(SHELL)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('bodysmith-')&&k!==CACHE&&k!==MEDIA).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
 self.addEventListener('message',e=>{if(e.data?.type!=='CACHE_WORKOUT'||!Array.isArray(e.data.urls))return;const base=new URL('./media/',self.registration.scope);const urls=[...new Set(e.data.urls.filter(x=>typeof x==='string').map(x=>new URL(x,self.registration.scope).href).filter(x=>x.startsWith(base.href)&&x.endsWith('.webp')))].slice(0,32);e.waitUntil(caches.open(MEDIA).then(c=>Promise.allSettled(urls.map(async url=>{if(!await c.match(url)){const r=await fetch(url);if(r.ok)await c.put(url,r)}}))));});

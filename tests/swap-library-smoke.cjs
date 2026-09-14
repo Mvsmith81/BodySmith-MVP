@@ -1,0 +1,16 @@
+const {JSDOM}=require('jsdom'),fs=require('fs'),vm=require('vm'),assert=require('assert/strict');
+const dom=new JSDOM('<main id="app"></main><div id="toast"></div>',{url:'https://mvsmith81.github.io/BodySmith-MVP/',runScripts:'outside-only'}),w=dom.window,ctx=dom.getInternalVMContext();
+w.structuredClone=structuredClone;w.AbortController=AbortController;w.confirm=()=>true;w.fetch=async()=>{throw Error('offline')};
+vm.runInContext(fs.readFileSync('training.js','utf8'),ctx);vm.runInContext(fs.readFileSync('app.js','utf8').replace(/bootstrap\(\);\s*$/,''),ctx);
+const run=c=>vm.runInContext(c,ctx),q=s=>w.document.querySelector(s);
+const catalog=require('../data/exercises.json').map((e,i)=>({...e,id:'e'+i}));
+run(`S.exercises=${JSON.stringify(catalog)};S.user={id:'test',units:'lb',preferences:{},onboarding_completed:true};S.token='test';S.online=false;const bench=S.exercises.find(e=>e.slug==='barbell-bench-press');S.plan={id:'p',name:'The Smith Method',days_per_week:4,plan_days:[{id:'d',name:'Chest Day',plan_day_exercises:[{id:'slot',target_sets:3,min_reps:8,max_reps:12,target_rpe:'7-8',rest_seconds:90,exercises:bench}]}]};S.plans=[S.plan];S.active={id:'s',status:'in_progress',started_at:new Date().toISOString(),sets:[]};S.activeDay=structuredClone(S.plan.plan_days[0]);S.screen='active';S.swapOpen=true;render();`);
+assert.match(w.document.body.textContent,/Suggested first/);assert.ok(q('[data-swap-mode="all"]'),'browse-all button');
+q('[data-swap-mode="all"]').click();assert.ok(q('#swapSearch'),'full-library search');
+q('#swapSearch').value='leg extension';q('#swapSearch').dispatchEvent(new w.Event('input',{bubbles:true}));
+assert.match(w.document.body.textContent,/Leg Extension/);assert.ok([...w.document.querySelectorAll('[data-swap]')].some(b=>/Leg Extension/.test(b.textContent)),'leg extension selectable from bench slot');
+run(`S.active.sets=[{exercise_id:S.activeDay.plan_day_exercises[0].exercises.id,set_number:1,weight:90,reps:10,completion_status:'completed'}];S.swapOpen=true;render()`);
+assert.match(w.document.body.textContent,/Delete those logged sets before changing this slot/);
+assert.match(run('planControls()'),/The Smith Method is the recommended four-day starter/);
+run(`S.active.sets=[];S.swapOpen=true;S.swapBrowseAll=true;S.swapSearch='row';render()`);assert.ok(w.document.querySelectorAll('[data-swap]').length>0,'full library search returns options');
+console.log('PASS suggested substitutions, full-library search, logged-set guidance, and Smith Method naming');dom.window.close();
