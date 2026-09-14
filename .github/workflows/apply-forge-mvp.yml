@@ -1,0 +1,32 @@
+name: Apply Forge MVP
+on:
+  push:
+    paths:
+      - 'tools/apply-forge-mvp.py'
+permissions:
+  contents: write
+jobs:
+  forge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Apply Forge frontend and test patch
+        run: python tools/apply-forge-mvp.py
+      - name: Install dependencies
+        run: npm ci --ignore-scripts
+      - name: Run local regression suite
+        run: npm test
+      - name: Run live Forge backend smoke test
+        run: npm run test:forge
+      - name: Commit Forge MVP and remove one-time tooling
+        run: |
+          rm -f tools/apply-forge-mvp.py .github/workflows/apply-forge-mvp.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Release BodySmith 2.5 with The Forge community MVP"
+          git push
