@@ -1,0 +1,1 @@
+Retry BodySmith v2.3 punchlist after updating the service-worker upgrade assertion.

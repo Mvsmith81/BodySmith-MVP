@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - 'tools/apply-punchlist.py'
+      - 'tools/retrigger-punchlist.txt'
 permissions:
   contents: write
 jobs:
@@ -22,7 +23,7 @@ jobs:
         run: npm test
       - name: Commit production changes and remove one-time patch tooling
         run: |
-          rm -f tools/apply-punchlist.py .github/workflows/apply-punchlist.yml
+          rm -f tools/apply-punchlist.py tools/retrigger-punchlist.txt .github/workflows/apply-punchlist.yml
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
