@@ -26,17 +26,33 @@ jobs:
         run: |
           node <<'NODE'
           const fs=require('fs');
-          let app=fs.readFileSync('app.js','utf8');
-          app=app.replaceAll('v2.8.0','v2.9.0');
-          fs.writeFileSync('app.js',app);
 
-          for(const file of ['index.html','sw.js','tests/auth-flex-v28-smoke.cjs','tests/release29-smoke.cjs']){
+          for(const file of fs.readdirSync('.').filter(f=>f.endsWith('.js'))){
+            let s=fs.readFileSync(file,'utf8');
+            s=s.replaceAll('v2.8.0','v2.9.0');
+            fs.writeFileSync(file,s);
+          }
+
+          for(const file of ['index.html','sw.js']){
             let s=fs.readFileSync(file,'utf8');
             s=s.replaceAll('20260915-release280','20260915-release291');
             s=s.replaceAll('20260915-release281','20260915-release291');
             s=s.replaceAll('20260915-release290','20260915-release291');
+            s=s.replaceAll('bodysmith-release-2.8.0-release281','bodysmith-release-2.9.0-release291');
             s=s.replaceAll('bodysmith-release-2.9.0-release290','bodysmith-release-2.9.0-release291');
             fs.writeFileSync(file,s);
+          }
+
+          for(const file of fs.readdirSync('tests').filter(f=>f.endsWith('.cjs'))){
+            const path='tests/'+file;
+            let s=fs.readFileSync(path,'utf8');
+            s=s.replaceAll('20260915-release280','20260915-release291');
+            s=s.replaceAll('20260915-release281','20260915-release291');
+            s=s.replaceAll('20260915-release290','20260915-release291');
+            s=s.replaceAll('bodysmith-release-2.8.0-release281','bodysmith-release-2.9.0-release291');
+            s=s.replaceAll('bodysmith-release-2.9.0-release290','bodysmith-release-2.9.0-release291');
+            s=s.replaceAll("v2.8.0","v2.9.0");
+            fs.writeFileSync(path,s);
           }
 
           let brand=fs.readFileSync('tests/brand-smoke.cjs','utf8');
@@ -49,7 +65,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add app.js index.html sw.js tests/auth-flex-v28-smoke.cjs tests/release29-smoke.cjs tests/brand-smoke.cjs
+          git add app.js history-log.js index.html sw.js tests/*.cjs
           if git diff --cached --quiet; then
             echo 'No changes needed.'
           else
