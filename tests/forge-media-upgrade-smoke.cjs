@@ -1,0 +1,12 @@
+const fs=require('fs'),assert=require('assert/strict');
+const js=fs.readFileSync('forge-media-upgrade.js','utf8');
+const css=fs.readFileSync('release-210.css','utf8');
+const html=fs.readFileSync('index.html','utf8');
+const sw=fs.readFileSync('sw.js','utf8');
+for(const term of ['youtube-nocookie.com/embed/','youtu.be','youtube.com','image/gif','image/jpeg,image/png,image/webp,image/gif','submitForgeWithMedia','upload_media','visibility:\'private\''])assert.ok(js.includes(term),term);
+for(const term of ['forge-progress-field','forge-youtube-frame','aspect-ratio:16/9'])assert.ok(css.includes(term),term);
+assert.ok(html.includes('forge-media-upgrade.js?v=20260915-release210'));
+assert.ok(html.includes('release-210.css?v=20260915-release210'));
+assert.ok(sw.includes('forge-media-upgrade.js?v=20260915-release210'));
+assert.ok(sw.includes('release-210.css?v=20260915-release210'));
+console.log('PASS Forge general media uploads, GIF support and inline YouTube embed wiring');
