@@ -7,7 +7,7 @@
   <meta name="description" content="Join the BodySmith beta and help test a flexible workout, nutrition, progress, and community training app." />
   <link rel="icon" href="../brand/favicon-32.png" type="image/png" sizes="32x32" />
   <link rel="apple-touch-icon" href="../brand/apple-touch-icon.png" />
-  <link rel="stylesheet" href="./styles.css?v=20260915-beta1" />
+  <link rel="stylesheet" href="./styles.css?v=20260915-beta2" />
   <title>Test BodySmith</title>
 </head>
 <body>
@@ -88,7 +88,6 @@
       <label>Name<input name="name" autocomplete="name" maxlength="80" required placeholder="Your name" /></label>
       <label>Email<input name="email" type="email" autocomplete="email" maxlength="254" required placeholder="you@example.com" /></label>
       <label>Device you’re testing on<input name="device" id="deviceField" maxlength="240" required /></label>
-      <label class="honeypot" aria-hidden="true">Company<input name="company" tabindex="-1" autocomplete="off" /></label>
       <label class="check"><input name="consent" type="checkbox" required /><span>I’m okay receiving BodySmith beta/testing emails about this app.</span></label>
       <div id="formError" class="form-error" role="alert"></div>
       <button class="primary full" type="submit">Get Beta Access</button>
@@ -99,13 +98,13 @@
       <div class="success-mark">✓</div>
       <span class="eyebrow">YOU’RE IN</span>
       <h2>Welcome to the BodySmith beta.</h2>
-      <p>Your tester email has been captured. Launch the live app and start putting it through its paces.</p>
+      <p>We captured <strong data-captured-email>your email</strong>. A beta-access confirmation is sent from Number Smiths in the tester notification cycle, which can take up to about an hour during this early testing phase.</p>
       <a class="primary full link-button" href="../?release=210&utm_source=beta_landing&utm_medium=tester_signup">Launch BodySmith</a>
       <a class="secondary full link-button" href="mailto:numbersmithsatl@gmail.com?subject=BodySmith%20Beta%20Feedback">Send feedback</a>
       <button class="text-button" type="button" data-close-signup>Close</button>
     </section>
   </dialog>
 
-  <script src="./app.js?v=20260915-beta1"></script>
+  <script src="./app.js?v=20260915-beta2"></script>
 </body>
 </html>
