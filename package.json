@@ -1,13 +1,13 @@
 {
   "name": "bodysmith-mvp",
-  "version": "2.10.0",
-  "description": "BodySmith is a mobile-first workout PWA with cloud accounts, guided set logging, workout history, progress tracking, flexible training plans, community features, and nutrition tracking.",
+  "version": "2.11.0",
+  "description": "BodySmith is a mobile-first workout PWA with cloud accounts, guided set logging, workout history, progress tracking, flexible training plans, calendar planning, community features, and nutrition tracking.",
   "main": "app.js",
   "directories": {
     "test": "tests"
   },
   "scripts": {
-    "test": "node --check app.js && node --check history-log.js && node --check flex-profile.js && node --check workout-flex.js && node --check auth-upgrade.js && node --check exercise-groups.js && node --check nutrition.js && node --check forge-media-upgrade.js && node --check sw.js && node tests/ui-smoke.cjs && node tests/training-smoke.cjs && node tests/workout-edit-smoke.cjs && node tests/swap-library-smoke.cjs && node tests/sw-smoke.cjs && node tests/brand-smoke.cjs && node tests/forge-ui-smoke.cjs && node tests/history-ui-smoke.cjs && node tests/flexible-profile-smoke.cjs && node tests/auth-flex-v28-smoke.cjs && node tests/release29-smoke.cjs && node tests/forge-media-upgrade-smoke.cjs",
+    "test": "node --check app.js && node --check history-log.js && node --check flex-profile.js && node --check workout-flex.js && node --check auth-upgrade.js && node --check exercise-groups.js && node --check profile-details.js && node --check nutrition-v2.js && node --check forge-media-upgrade.js && node --check planner-runtime.js && node --check sw.js && node tests/ui-smoke.cjs && node tests/training-smoke.cjs && node tests/workout-edit-smoke.cjs && node tests/swap-library-smoke.cjs && node tests/sw-smoke.cjs && node tests/brand-smoke.cjs && node tests/forge-ui-smoke.cjs && node tests/history-ui-smoke.cjs && node tests/flexible-profile-smoke.cjs && node tests/auth-flex-v28-smoke.cjs && node tests/release29-smoke.cjs && node tests/forge-media-upgrade-smoke.cjs && node tests/release211-smoke.cjs",
     "test:backend": "node tests/backend-smoke.mjs",
     "test:forge": "node tests/forge-backend-smoke.mjs",
     "test:history": "node tests/history-backend-smoke.mjs",
