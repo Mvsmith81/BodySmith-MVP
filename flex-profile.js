@@ -24,11 +24,13 @@
     style.id='flexProfileStyles';
     style.textContent=`
       .flexible-workout-note{margin:-4px 0 14px;padding:11px 13px;border:1px solid var(--border,#293247);border-radius:12px;background:rgba(37,99,255,.08);line-height:1.45}
-      .profile-baseline-setup{margin:14px 0;padding:14px;border:1px solid var(--border,#293247);border-radius:14px;background:rgba(37,99,255,.06)}
-      .profile-baseline-setup h2{margin:0 0 4px;font-size:18px}.profile-baseline-setup>p{margin:0 0 12px}
+      .profile-baseline-setup,.flex-schedule-setup{margin:14px 0;padding:14px;border:1px solid var(--border,#293247);border-radius:14px;background:rgba(37,99,255,.06)}
+      .profile-baseline-setup h2,.flex-schedule-setup h2{margin:0 0 4px;font-size:18px}.profile-baseline-setup>p,.flex-schedule-setup>p{margin:0 0 12px}
       .training-baseline-card .baseline-grid,.weight-trend-card .baseline-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:10px}
       .training-baseline-card .baseline-item,.weight-trend-card .baseline-item{padding:10px 12px;border:1px solid var(--border,#293247);border-radius:12px;background:rgba(255,255,255,.025)}
       .training-baseline-card .baseline-item span,.weight-trend-card .baseline-item span{display:block;font-size:11px;color:var(--muted,#a8b0c0);margin-bottom:4px}.training-baseline-card .baseline-item strong,.weight-trend-card .baseline-item strong{font-size:15px}
+      .weight-spark{width:100%;height:128px;margin-top:14px;overflow:visible}.weight-spark .grid{stroke:rgba(255,255,255,.08);stroke-width:1}.weight-spark .line{fill:none;stroke:var(--accent,#4f7cff);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}.weight-spark .dot{fill:var(--accent,#4f7cff)}
+      .weight-log{margin-top:10px}.weight-log .mini-row{padding:8px 0}
       @media(max-width:520px){.training-baseline-card .baseline-grid,.weight-trend-card .baseline-grid{grid-template-columns:1fr 1fr}}
     `;
     document.head.appendChild(style);
@@ -77,6 +79,8 @@
     if(goal){
       for(const value of ['Lose fat','Improve endurance'])if(![...goal.options].some(o=>o.value===value)){const o=document.createElement('option');o.value=value;o.textContent=value;goal.appendChild(o)}
     }
+    const daysPerWeekLabel=labelFor(form,'daysPerWeek');
+    renameLabel(daysPerWeekLabel,'Weekly training target');
     const unitsLabel=labelFor(form,'units');
     const heightLabel=labelFor(form,'height');
     const weightLabel=labelFor(form,'bodyWeight');
@@ -86,6 +90,17 @@
     if(weight){weight.required=true;weight.min='1';weight.step='0.1';weight.placeholder='Current weight'}
     renameLabel(heightLabel,'Height');
     renameLabel(weightLabel,'Current body weight (selected units)');
+
+    const weekdayChecks=form.querySelector('.weekday-checks');
+    if(weekdayChecks){
+      const heading=weekdayChecks.previousElementSibling;
+      if(heading&&heading.tagName==='P')heading.remove();
+      const schedule=document.createElement('section');schedule.className='flex-schedule-setup';
+      schedule.innerHTML='<h2>Flexible schedule</h2><p class="muted tiny">Choose the days you usually train or want reminders. These are preferences only — they never restrict which workout you can start.</p>';
+      weekdayChecks.parentNode.insertBefore(schedule,weekdayChecks);
+      schedule.appendChild(weekdayChecks);
+    }
+
     const box=document.createElement('section');box.className='profile-baseline-setup';box.dataset.profileBaseline='1';
     box.innerHTML='<h2>Your starting profile</h2><p class="muted tiny">Height and current weight give BodySmith a baseline for progress tracking. No body-type label is required.</p>';
     if(heightLabel)box.appendChild(heightLabel);
@@ -109,6 +124,18 @@
     return{p,units,start,latest,checkins};
   }
 
+  function weightSparkline(start,checkins){
+    const points=[];
+    if(start!=null&&start!=='')points.push({date:'Start',value:Number(start)});
+    for(const c of checkins.slice(0,11).reverse())points.push({date:c.checkin_date||'',value:Number(c.body_weight)});
+    const clean=points.filter(p=>Number.isFinite(p.value));
+    if(clean.length<2)return '';
+    const vals=clean.map(p=>p.value),min=Math.min(...vals),max=Math.max(...vals),range=Math.max(.5,max-min),w=320,h=110,pad=10;
+    const coords=clean.map((p,i)=>({x:pad+(w-pad*2)*(i/Math.max(1,clean.length-1)),y:pad+(h-pad*2)*(1-(p.value-min)/range),...p}));
+    const path=coords.map((p,i)=>`${i?'L':'M'} ${p.x.toFixed(1)} ${p.y.toFixed(1)}`).join(' ');
+    return `<svg class="weight-spark" viewBox="0 0 ${w} ${h}" role="img" aria-label="Body weight trend"><line class="grid" x1="${pad}" y1="${h/2}" x2="${w-pad}" y2="${h/2}"></line><path class="line" d="${path}"></path>${coords.map(p=>`<circle class="dot" cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="3"><title>${esc(p.date)}: ${p.value}</title></circle>`).join('')}</svg>`;
+  }
+
   function enhanceProfile(){
     const title=[...document.querySelectorAll('.section-title h1')].find(h=>h.textContent.trim()==='Profile');
     if(!title||document.querySelector('.training-baseline-card'))return;
@@ -126,7 +153,7 @@
     if(!start&&!latest)return;
     const startNum=Number(start),latestNum=Number(latest),delta=Number.isFinite(startNum)&&Number.isFinite(latestNum)?Math.round((latestNum-startNum)*10)/10:null;
     const card=document.createElement('section');card.className='panel weight-trend-card';
-    card.innerHTML=`<h3>Body-weight trend</h3><div class="baseline-grid"><div class="baseline-item"><span>Starting profile</span><strong>${start?`${esc(start)} ${esc(units)}`:'—'}</strong></div><div class="baseline-item"><span>Latest check-in</span><strong>${latest?`${esc(latest)} ${esc(units)}`:'—'}</strong></div>${delta!=null?`<div class="baseline-item"><span>Change</span><strong>${delta>0?'+':''}${delta} ${esc(units)}</strong></div>`:''}<div class="baseline-item"><span>Weight check-ins</span><strong>${checkins.length}</strong></div></div><p class="muted tiny">BodySmith reports the trend only; whether gaining, losing, or maintaining weight is desirable depends on the goal you chose.</p>`;
+    card.innerHTML=`<h3>Body-weight trend</h3><div class="baseline-grid"><div class="baseline-item"><span>Starting profile</span><strong>${start?`${esc(start)} ${esc(units)}`:'—'}</strong></div><div class="baseline-item"><span>Latest check-in</span><strong>${latest?`${esc(latest)} ${esc(units)}`:'—'}</strong></div>${delta!=null?`<div class="baseline-item"><span>Change</span><strong>${delta>0?'+':''}${delta} ${esc(units)}</strong></div>`:''}<div class="baseline-item"><span>Weight check-ins</span><strong>${checkins.length}</strong></div></div>${weightSparkline(start,checkins)}${checkins.length?`<div class="weight-log">${checkins.slice(0,5).map(c=>`<div class="mini-row"><span>${esc(c.checkin_date||'')}</span><strong>${esc(c.body_weight)} ${esc(units)}</strong></div>`).join('')}</div>`:''}<p class="muted tiny">BodySmith reports the trend only; whether gaining, losing, or maintaining weight is desirable depends on the goal you chose.</p>`;
     const stats=title.closest('.section-title')?.nextElementSibling;let anchor=stats;while(anchor?.nextElementSibling&&!anchor.nextElementSibling.matches('.panel'))anchor=anchor.nextElementSibling;anchor?.insertAdjacentElement('afterend',card);
   }
 
