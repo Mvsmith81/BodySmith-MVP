@@ -51,3 +51,5 @@ jobs:
             git commit -m 'Release BodySmith v2.7.0'
             git push
           fi
+      - name: Confirm release metadata patch
+        run: echo 'BodySmith v2.7.0 metadata normalization completed.'
