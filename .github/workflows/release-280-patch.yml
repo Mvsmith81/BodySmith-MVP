@@ -33,3 +33,5 @@ jobs:
           git add app.js package.json package-lock.json tests/brand-smoke.cjs tests/flexible-profile-smoke.cjs supabase/functions/bodysmith-api/index.ts
           git commit -m 'Release BodySmith v2.8.0 account and workout flexibility' || exit 0
           git push
+      - name: Confirm release patch
+        run: echo 'v2.8 release patch completed'
