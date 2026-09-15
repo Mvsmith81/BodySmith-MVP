@@ -23,14 +23,18 @@ jobs:
       - name: Install dependencies
         run: npm ci --ignore-scripts
       - name: Patch v2.8 frontend and backend
-        run: node scripts/patch-v28.cjs
+        run: |
+          node scripts/patch-v28.cjs
+          sed -i 's/v2\.7\.0/v2.8.0/g' history-log.js
+          find tests -type f -name '*.cjs' -exec sed -i 's/20260915-release270/20260915-release280/g' {} +
+          sed -i 's/v2\.7\.0/v2.8.0/g' tests/history-ui-smoke.cjs
       - name: Run validation
         run: npm test
       - name: Commit release patch
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add app.js package.json package-lock.json tests/brand-smoke.cjs tests/flexible-profile-smoke.cjs supabase/functions/bodysmith-api/index.ts
+          git add app.js history-log.js package.json package-lock.json tests supabase/functions/bodysmith-api/index.ts
           git commit -m 'Release BodySmith v2.8.0 account and workout flexibility' || exit 0
           git push
       - name: Confirm release patch
