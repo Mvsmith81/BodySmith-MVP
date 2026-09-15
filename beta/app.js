@@ -6,6 +6,7 @@
   const success=document.getElementById('signupSuccess');
   const error=document.getElementById('formError');
   const device=document.getElementById('deviceField');
+  let submitted=false;
 
   function detectDevice(){
     const ua=navigator.userAgent||'';
@@ -25,9 +26,16 @@
     return `${d} · ${browser}`;
   }
 
-  device.value=detectDevice();
+  function resetForm(){
+    form.reset();
+    device.value=detectDevice();
+    error.textContent='';
+    submitted=false;
+  }
+  resetForm();
 
   function openSignup(){
+    if(submitted)resetForm();
     form.hidden=false;
     success.hidden=true;
     error.textContent='';
@@ -54,17 +62,19 @@
       name:String(fd.get('name')||'').trim(),
       email:String(fd.get('email')||'').trim(),
       device:String(fd.get('device')||'').trim(),
-      company:String(fd.get('company')||''),
       consent:fd.get('consent')==='on',
       source:'beta_landing'
     };
     submit.disabled=true;
     submit.textContent='Saving your spot…';
     try{
-      const res=await fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','apikey':API_KEY},body:JSON.stringify(payload)});
+      const res=await fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','apikey':API_KEY},cache:'no-store',body:JSON.stringify(payload)});
       const data=await res.json().catch(()=>({}));
-      if(!res.ok)throw new Error(data.error||'We could not save your signup. Please try again.');
-      try{localStorage.setItem('bodysmith-beta-tester',JSON.stringify({email:payload.email,date:new Date().toISOString()}));}catch{}
+      if(!res.ok||!data?.tester?.email)throw new Error(data.error||'We could not confirm your signup. Please try again.');
+      try{localStorage.setItem('bodysmith-beta-tester',JSON.stringify({email:data.tester.email,date:new Date().toISOString()}));}catch{}
+      const captured=document.querySelector('[data-captured-email]');
+      if(captured)captured.textContent=data.tester.email;
+      submitted=true;
       form.hidden=true;
       success.hidden=false;
     }catch(err){
