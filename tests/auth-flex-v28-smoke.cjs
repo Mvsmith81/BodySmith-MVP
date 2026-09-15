@@ -1,0 +1,14 @@
+const fs=require('fs'),assert=require('assert/strict');
+const auth=fs.readFileSync('auth-upgrade.js','utf8');
+const flex=fs.readFileSync('workout-flex.js','utf8');
+const html=fs.readFileSync('index.html','utf8');
+const sw=fs.readFileSync('sw.js','utf8');
+const backend=fs.readFileSync('supabase/functions/bodysmith-api/index.ts','utf8');
+for(const s of ['Account & sign-in','Save email & password','Continue with Google','request_password_reset','auth_exchange','set_email_password'])assert.ok(auth.includes(s),s);
+for(const s of ['Training Day ${n} this week','Choose a focus','Day ${n} means your','cleanFocus','trainingDayNumber'])assert.ok(flex.includes(s),s);
+assert.ok(html.includes('auth-upgrade.js?v=20260915-release280'));
+assert.ok(html.includes('workout-flex.js?v=20260915-release280'));
+assert.ok(sw.includes('bodysmith-release-2.8.0-release280'));
+assert.ok(sw.includes('auth-upgrade.js?v=20260915-release280'));
+for(const s of ['auth_user_id','set_email_password','request_password_reset','auth_exchange','SUPABASE_ANON_KEY'])assert.ok(backend.includes(s),s);
+console.log('PASS v2.8 weekly training-day choice, email account upgrade, recovery wiring and Google OAuth readiness');
