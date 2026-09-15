@@ -1,0 +1,17 @@
+const fs=require('fs'),assert=require('assert/strict');
+const html=fs.readFileSync('index.html','utf8');
+const sw=fs.readFileSync('sw.js','utf8');
+const css=fs.readFileSync('release-29.css','utf8');
+const groups=fs.readFileSync('exercise-groups.js','utf8');
+const nutrition=fs.readFileSync('nutrition.js','utf8');
+const nutritionBackend=fs.readFileSync('supabase/functions/bodysmith-nutrition/index.ts','utf8');
+for(const asset of ['release-29.css?v=20260915-release290','exercise-groups.js?v=20260915-release290','nutrition.js?v=20260915-release290'])assert.ok(html.includes(asset),asset);
+assert.ok(sw.includes("bodysmith-release-2.9.0-release290"));
+for(const asset of ['release-29.css?v=20260915-release290','exercise-groups.js?v=20260915-release290','nutrition.js?v=20260915-release290'])assert.ok(sw.includes(asset),asset);
+assert.ok(css.includes('.forge-hero [data-forge-new]'));
+assert.ok(css.includes('white-space:nowrap'));
+for(const term of ['Chest','Back','Shoulders','Biceps','Triceps','Quads','Hamstrings','Glutes','Calves','Core','Cardio'])assert.ok(groups.includes(term),term);
+assert.ok(groups.includes('optgroup'));
+for(const term of ['BodySmith suggestion','Quick water','nutritionTargets','v2.9.0','bodysmith-nutrition'])assert.ok(nutrition.includes(term),term);
+for(const action of ['health','day','week','log_entry','delete_entry'])assert.ok(nutritionBackend.includes(`action === \"${action}\"`)||nutritionBackend.includes(`action === '${action}'`),action);
+console.log('PASS v2.9 Forge mobile fix, body-part exercise grouping, nutrition UI/backend wiring and release cache');
