@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0B0F1A" />
+  <meta name="description" content="Join the BodySmith beta and help test a flexible workout, nutrition, progress, and community training app." />
+  <link rel="icon" href="../brand/favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="../brand/apple-touch-icon.png" />
+  <link rel="stylesheet" href="./styles.css?v=20260915-beta1" />
+  <title>Test BodySmith</title>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="BodySmith beta home">
+      <img src="../brand/mark.png" alt="" width="46" height="46" />
+      <img class="wordmark" src="../brand/wordmark-dark.webp" alt="BodySmith" width="190" height="34" />
+    </a>
+    <a class="text-link" href="../?release=210&utm_source=beta_landing">Already testing? Open the app</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">BODYSMITH BETA</span>
+        <h1>Train your way. Help shape what comes next.</h1>
+        <p class="lede">BodySmith is a mobile-first training app built around flexible workouts, guided logging, progress tracking, nutrition, and a community feed called The Forge. We’re opening it to a small group of testers before a wider release.</p>
+        <div class="hero-actions">
+          <button class="primary" type="button" data-open-signup>Start Testing BodySmith</button>
+          <a class="secondary" href="#features">See what’s inside</a>
+        </div>
+        <p class="trust-line">Free to test · No credit card · Your workout history stays tied to your account</p>
+      </div>
+
+      <div class="phone-shell" aria-label="BodySmith feature preview">
+        <div class="phone-top"><span></span><strong>BodySmith</strong><span class="version">v2.10</span></div>
+        <div class="app-card featured">
+          <span class="mini-label">TRAINING DAY 1</span>
+          <h3>Choose today’s focus</h3>
+          <div class="focus-grid"><span>Press + Core</span><span>Pull + Shoulders</span><span>Legs + Abs</span><span>Upper</span></div>
+        </div>
+        <div class="metric-row"><div><strong>4</strong><span>Workouts</span></div><div><strong>28</strong><span>Sets</span></div><div><strong>7.6</strong><span>Avg RPE</span></div></div>
+        <div class="app-card"><span class="mini-label">THE FORGE</span><p>Share workouts, images, GIFs, progress photos, and YouTube clips with other testers.</p></div>
+        <div class="bottom-tabs"><span>Plan</span><span>Home</span><span class="active">Forge</span><span>Progress</span></div>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <div class="section-heading"><span class="eyebrow">WHAT YOU’LL BE TESTING</span><h2>One training home instead of six disconnected tools.</h2></div>
+      <div class="feature-grid">
+        <article><div class="icon">01</div><h3>Flexible workout plans</h3><p>Choose the workout focus that fits your body and schedule instead of being locked into a rigid Monday-to-Friday order.</p></article>
+        <article><div class="icon">02</div><h3>Guided workout logging</h3><p>Track sets, reps, load, RPE, exercise swaps, rest, progression, and past workouts from one place.</p></article>
+        <article><div class="icon">03</div><h3>Progress that stays useful</h3><p>Review workout history, logged loads, check-ins, body-weight trends, and performance over time.</p></article>
+        <article><div class="icon">04</div><h3>Nutrition tracking</h3><p>Log calories, protein, carbs, fats, and water, with guidance tied to the goals you set in BodySmith.</p></article>
+        <article><div class="icon">05</div><h3>The Forge</h3><p>Post workouts, photos, GIFs, progress updates, comments, reactions, and playable YouTube links in the community feed.</p></article>
+        <article><div class="icon">06</div><h3>Built for real life</h3><p>Missed logging yesterday? Add a past workout. Training with a friend? Pick a different focus. The app adapts instead of scolding you.</p></article>
+      </div>
+    </section>
+
+    <section class="tester-strip">
+      <div><span class="eyebrow">EARLY TESTER ACCESS</span><h2>Use it. Push it. Tell us where it breaks.</h2><p>We’re looking for practical feedback on mobile layout, workout flow, exercise selection, nutrition logging, The Forge, and anything that feels confusing or unfinished.</p></div>
+      <button class="primary" type="button" data-open-signup>Join the beta</button>
+    </section>
+
+    <section class="section two-col">
+      <div>
+        <span class="eyebrow">WHAT HAPPENS NEXT</span>
+        <h2>Sign up once, then jump straight into the app.</h2>
+      </div>
+      <ol class="steps">
+        <li><strong>1</strong><span><b>Tell us who you are.</b> We’ll collect your name, email, and the device you’re testing on.</span></li>
+        <li><strong>2</strong><span><b>Launch BodySmith.</b> Create your account and start using the live beta immediately.</span></li>
+        <li><strong>3</strong><span><b>Send feedback.</b> Tell us what works, what doesn’t, and what would make you keep using it.</span></li>
+      </ol>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand"><img src="../brand/mark.png" alt="" width="32" height="32" /><span>BodySmith Beta</span></div>
+    <p>TRAIN · TRACK · PROGRESS · REPEAT</p>
+  </footer>
+
+  <dialog id="signupDialog" aria-labelledby="signupTitle">
+    <form id="testerForm" class="signup-card">
+      <div class="dialog-head"><div><span class="eyebrow">EARLY TESTER ACCESS</span><h2 id="signupTitle">Start testing BodySmith</h2></div><button class="close" type="button" data-close-signup aria-label="Close">×</button></div>
+      <p class="muted">We’ll use your email for BodySmith beta access and testing updates. No sales list, no credit card.</p>
+
+      <label>Name<input name="name" autocomplete="name" maxlength="80" required placeholder="Your name" /></label>
+      <label>Email<input name="email" type="email" autocomplete="email" maxlength="254" required placeholder="you@example.com" /></label>
+      <label>Device you’re testing on<input name="device" id="deviceField" maxlength="240" required /></label>
+      <label class="honeypot" aria-hidden="true">Company<input name="company" tabindex="-1" autocomplete="off" /></label>
+      <label class="check"><input name="consent" type="checkbox" required /><span>I’m okay receiving BodySmith beta/testing emails about this app.</span></label>
+      <div id="formError" class="form-error" role="alert"></div>
+      <button class="primary full" type="submit">Get Beta Access</button>
+      <button class="secondary full" type="button" data-close-signup>Not now</button>
+    </form>
+
+    <section id="signupSuccess" class="signup-card success" hidden>
+      <div class="success-mark">✓</div>
+      <span class="eyebrow">YOU’RE IN</span>
+      <h2>Welcome to the BodySmith beta.</h2>
+      <p>Your tester email has been captured. Launch the live app and start putting it through its paces.</p>
+      <a class="primary full link-button" href="../?release=210&utm_source=beta_landing&utm_medium=tester_signup">Launch BodySmith</a>
+      <a class="secondary full link-button" href="mailto:numbersmithsatl@gmail.com?subject=BodySmith%20Beta%20Feedback">Send feedback</a>
+      <button class="text-button" type="button" data-close-signup>Close</button>
+    </section>
+  </dialog>
+
+  <script src="./app.js?v=20260915-beta1"></script>
+</body>
+</html>
