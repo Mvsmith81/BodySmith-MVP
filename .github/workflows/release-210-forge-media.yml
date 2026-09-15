@@ -51,6 +51,7 @@ jobs:
           for(const file of fs.readdirSync('tests').filter(f=>f.endsWith('.cjs'))){
             const path='tests/'+file;let s=fs.readFileSync(path,'utf8');
             s=s.replaceAll('20260915-release291','20260915-release210');
+            s=s.replaceAll('bodysmith-release-2.9.0-release291','bodysmith-release-2.10.0-release210');
             s=s.replaceAll('bodysmith-release-2.9.0-release210','bodysmith-release-2.10.0-release210');
             if(file==='history-ui-smoke.cjs')s=s.replaceAll('v2.9.0','v2.10.0');
             if(file==='brand-smoke.cjs')s=s.replace('|9\\.0)', '|9\\.0|10\\.0)');
