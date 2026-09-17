@@ -8,7 +8,7 @@ for(const s of ['Account & sign-in','Save email & password','Continue with Googl
 for(const s of ['Training Day ${n} this week','Choose a focus','Day ${n} means your','cleanFocus','trainingDayNumber','setText','setHtml','MutationObserver(schedule).observe(app,{childList:true})'])assert.ok(flex.includes(s),s);
 assert.ok(html.includes('auth-upgrade.js?v=20260915-release211'));
 assert.ok(html.includes('workout-flex.js?v=20260915-release211'));
-assert.ok(sw.includes('bodysmith-release-2.11.0-release211'));
+assert.ok(sw.includes('bodysmith-release-2.13.0-release213'));
 assert.ok(sw.includes('workout-flex.js?v=20260915-release211'));
 assert.ok(sw.includes('auth-upgrade.js?v=20260915-release211'));
 for(const s of ['auth_user_id','set_email_password','request_password_reset','auth_exchange','SUPABASE_ANON_KEY'])assert.ok(backend.includes(s),s);
