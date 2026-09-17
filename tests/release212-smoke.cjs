@@ -1,0 +1,14 @@
+const fs=require('fs'),assert=require('assert/strict');
+const js=fs.readFileSync('workout-experience.js','utf8');
+const css=fs.readFileSync('release-212.css','utf8');
+const html=fs.readFileSync('index.html','utf8');
+const sw=fs.readFileSync('sw.js','utf8');
+const pkg=JSON.parse(fs.readFileSync('package.json','utf8'));
+for(const term of ['AudioContext','Rest timer sound','Test bell','Quick Workout','start_custom_session','calendar-day','openCalendarDay','PREVIOUS SESSION','Use last first set','Keep one add-on progression at a time','Push + Pull Progression'])assert.ok(js.includes(term),term);
+for(const term of ['calendar-day-detail','performance-baseline','quick-workout-launch'])assert.ok(css.includes(term),term);
+assert.ok(html.includes('workout-experience.js?v=20260916-release212'));
+assert.ok(html.includes('release-212.css?v=20260916-release212'));
+assert.ok(sw.includes('workout-experience.js?v=20260916-release212'));
+assert.ok(sw.includes('release-212.css?v=20260916-release212'));
+assert.equal(pkg.version,'2.12.0');
+console.log('PASS v2.12 audible rest bell, quick workouts, add-on guard, calendar day details and previous-performance starting reference');
