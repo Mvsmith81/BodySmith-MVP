@@ -41,7 +41,7 @@
 
   function clarifyAddOns(){const panel=document.querySelector('.progression-panel');if(!panel||panel.dataset.addonCopy==='1')return;panel.dataset.addonCopy='1';const eyebrow=panel.querySelector('.eyebrow'),heading=panel.querySelector('h3'),copy=panel.querySelector('p.muted');if(eyebrow)eyebrow.textContent='ADD-ON PROGRAMS';if(heading)heading.textContent='Supplement your main training plan';if(copy)copy.textContent='Keep your main plan active and add one bodyweight progression alongside it. Choose Push + Pull when you want both movements; BodySmith prevents overlapping progression programs.'}
 
-  function enhance(){document.querySelectorAll('.release').forEach(x=>{if(x.textContent!=='v2.12.0')x.textContent='v2.12.0'});if(!token())return;injectSoundSettings();injectQuickLaunch();injectBaseline();dateFromCalendar();clarifyAddOns();guardAddOnEnrollment()}
+  function enhance(){if(!token())return;injectSoundSettings();injectQuickLaunch();injectBaseline();dateFromCalendar();clarifyAddOns();guardAddOnEnrollment()}
   let queued=false;const schedule=()=>{if(queued)return;queued=true;requestAnimationFrame(()=>{queued=false;enhance()})};const app=document.getElementById('app');if(app)new MutationObserver(schedule).observe(app,{childList:true,subtree:true});new MutationObserver(schedule).observe(document.body,{childList:true,subtree:true});if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',enhance,{once:true});else enhance();
   window.BodySmithExperience={playRestBell,openQuick,openCalendarDay};
 })();
