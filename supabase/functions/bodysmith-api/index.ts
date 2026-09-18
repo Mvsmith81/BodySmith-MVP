@@ -90,6 +90,41 @@ async function history(userId: string, limit = 25) {
   const dmap = Object.fromEntries((days || []).map((d:any)=>[d.id,d]));
   return sessions.map((s:any)=>({ ...s, day:dmap[s.plan_day_id] || null, sets:(sets||[]).filter((x:any)=>x.session_id===s.id) }));
 }
+function usableWorkoutSnapshot(snapshot:any){
+  return !!(snapshot && Array.isArray(snapshot.plan_day_exercises) && snapshot.plan_day_exercises.length && snapshot.plan_day_exercises.some((x:any)=>x?.exercises?.id || x?.exercise_id));
+}
+async function markRecoveredAbandoned(userId:string,session:any,reason:string){
+  const now=new Date(),started=new Date(session.started_at||now),duration=Math.max(0,Math.round((now.getTime()-started.getTime())/1000));
+  const note=[String(session.workout_notes||'').trim(),`[BodySmith recovery] ${reason}`].filter(Boolean).join('\n').slice(0,1000);
+  const {error}=await db.from("workout_sessions").update({status:"abandoned",completed_at:now.toISOString(),duration_seconds:duration,workout_notes:note,updated_at:now.toISOString()}).eq("id",session.id).eq("user_id",userId).eq("status","in_progress");
+  if(error)throw error;
+}
+async function getActiveSession(userId:string){
+  const {data:rows,error}=await db.from("workout_sessions").select("id,plan_day_id,status,started_at,completed_at,duration_seconds,workout_notes,day_snapshot,updated_at").eq("user_id",userId).eq("status","in_progress").order("started_at",{ascending:false}).limit(5);
+  if(error)throw error;
+  if(!rows?.length)return null;
+  const current:any=rows[0];
+  for(const duplicate of rows.slice(1))await markRecoveredAbandoned(userId,duplicate,"Duplicate active session safely ended; the newest session was kept active.");
+  if(!usableWorkoutSnapshot(current.day_snapshot)&&current.plan_day_id){
+    const {data:day,error:dayError}=await db.from("plan_days").select(`
+      id,day_key,name,focus,sort_order,
+      plan_day_exercises(id,sort_order,target_sets,min_reps,max_reps,target_rpe,rest_seconds,duration_minutes,progression_rule,pain_rule,exercises(*))
+    `).eq("id",current.plan_day_id).maybeSingle();
+    if(dayError)throw dayError;
+    if(usableWorkoutSnapshot(day)){
+      current.day_snapshot=day;
+      const {error:updateError}=await db.from("workout_sessions").update({day_snapshot:day,updated_at:new Date().toISOString()}).eq("id",current.id).eq("user_id",userId).eq("status","in_progress");
+      if(updateError)throw updateError;
+    }
+  }
+  if(!usableWorkoutSnapshot(current.day_snapshot)){
+    await markRecoveredAbandoned(userId,current,"Orphaned active session had no usable exercise data and was safely ended.");
+    return null;
+  }
+  const {data:sets,error:setError}=await db.from("workout_sets").select("id,session_id,exercise_id,set_number,weight,reps,rpe,elbow_pain,completion_status,notes,logged_at,duration_seconds,units,updated_at,load_basis,load_multiplier").eq("session_id",current.id).eq("user_id",userId).order("set_number");
+  if(setError)throw setError;
+  return {...current,sets:sets||[]};
+}
 
 const USER_FIELDS = "id,username,display_name,units,active_plan_id,created_at,preferences,onboarding_completed,email,auth_user_id";
 function normalizeEmail(value: unknown) { return String(value || "").trim().toLowerCase(); }
@@ -124,7 +159,7 @@ Deno.serve(async (req: Request) => {
   const action = String(body.action || "");
   try {
     if(action === "dispatch_reminders")return await deliver(db,req);
-    if (action === "health") return out(req, { ok: true, service: "BodySmith API", version: "2.8.0" });
+    if (action === "health") return out(req, { ok: true, service: "BodySmith API", version: "2.14.0" });
 
     if (action === "register") {
       const username = String(body.username || "").trim().toLowerCase();
@@ -221,7 +256,7 @@ Deno.serve(async (req: Request) => {
     if(action === "start_custom_session") {
       const day=body.day;
       if(!day||!String(day.name||'').trim()||!Array.isArray(day.plan_day_exercises)||!day.plan_day_exercises.length||day.plan_day_exercises.length>30)return out(req,{error:"Choose 1–30 exercises."},400);
-      if((await history(userId,100)).some((s:any)=>s.status==='in_progress'))return out(req,{error:"Finish or change your active workout first."},409);
+      const existing=await getActiveSession(userId);if(existing)return out(req,{error:"A workout is already in progress.",activeSession:existing,session:existing},409);
       const {data:catalog,error:ce}=await db.from("exercises").select("*").or(`owner_id.is.null,owner_id.eq.${userId}`);if(ce)throw ce;
       const seen=new Set();const slots=[];
       for(const [i,x] of day.plan_day_exercises.entries()){
@@ -242,13 +277,13 @@ Deno.serve(async (req: Request) => {
       const {data:p}=await db.from("workout_plans").select("id,owner_id,is_template").eq("id",String(body.planId)).maybeSingle();
       if(!p || (!p.is_template && p.owner_id!==userId)) return out(req,{error:"Plan not available."},404);
       if(action==="select_plan") {
-        if((await history(userId,100)).some((s:any)=>s.status==="in_progress")) return out(req,{error:"Finish your active workout before changing plans."},409);
+        if(await getActiveSession(userId)) return out(req,{error:"Finish your active workout before changing plans."},409);
         const {error}=await db.from("app_users").update({active_plan_id:p.id}).eq("id",userId); if(error) throw error;
       }
       return out(req,{plan:await getPlan(p.id)});
     }
     if(action === "save_plan") {
-      if((await history(userId,100)).some((s:any)=>s.status==="in_progress")) return out(req,{error:"Finish your active workout before changing plans."},409);
+      if(await getActiveSession(userId)) return out(req,{error:"Finish your active workout before changing plans."},409);
       const p=body.plan;
       if(!p || !String(p.name||'').trim() || !Array.isArray(p.plan_days) || p.plan_days.length<1 || p.plan_days.length>7) return out(req,{error:"A plan needs a name and 1–7 days."},400);
       const {data:available,error:ee}=await db.from("exercises").select("id").or(`owner_id.is.null,owner_id.eq.${userId}`); if(ee)throw ee;
@@ -327,7 +362,7 @@ Deno.serve(async (req: Request) => {
       const user = await getUser(userId);
       const plan = await getPlan(user.active_plan_id);
       const hist = await history(userId, 40);
-      const active = hist.find((x:any)=>x.status === "in_progress") || null;
+      const active = await getActiveSession(userId);
       const [exercises,plans,supplements,logs,checkins] = await Promise.all([
  db.from("exercises").select("*").or(`owner_id.is.null,owner_id.eq.${userId}`).order("name"),
  db.from("workout_plans").select("id,name,goal,days_per_week,is_template").or(`is_template.eq.true,owner_id.eq.${userId}`).order("created_at"),
@@ -336,7 +371,7 @@ Deno.serve(async (req: Request) => {
  db.from("daily_checkins").select("*").eq("user_id",userId).order("checkin_date",{ascending:false}).limit(90)
 ]);
 for (const result of [exercises,plans,supplements,logs,checkins]) if(result.error) throw result.error;
-return out(req, { user, plan, history: hist, activeSession: active, exercises:exercises.data, plans:plans.data, supplements:supplements.data, supplementLogs:logs.data, checkins:checkins.data, version:"2.8.0" });
+return out(req, { user, plan, history: hist, activeSession: active, exercises:exercises.data, plans:plans.data, supplements:supplements.data, supplementLogs:logs.data, checkins:checkins.data, version:"2.14.0" });
     }
 
     if (action === "update_profile") {
@@ -359,8 +394,8 @@ return out(req, { user, plan, history: hist, activeSession: active, exercises:ex
       const { data: day } = await db.from("plan_days").select("id,plan_id").eq("id", planDayId).maybeSingle();
       const user = await getUser(userId);
       if (!day || (user.active_plan_id && day.plan_id !== user.active_plan_id)) return out(req, { error: "Workout day not available." }, 400);
-      const existing=(await history(userId,100)).find((s:any)=>s.status==="in_progress");
-      if(existing) return out(req,{error:"Resume or finish your active workout first.",session:existing},409);
+      const existing=await getActiveSession(userId);
+      if(existing) return out(req,{error:"A workout is already in progress.",activeSession:existing,session:existing},409);
       const plan=await getPlan(user.active_plan_id);
       const snapshot=plan?.plan_days?.find((d:any)=>d.id===planDayId);
       const { data, error } = await db.rpc("start_bodysmith_session",{p_user:userId,p_day:planDayId,p_snapshot:snapshot});
