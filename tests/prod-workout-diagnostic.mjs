@@ -23,6 +23,17 @@ try{
   const page=await browser.newPage({viewport:{width:390,height:844}});
   page.setDefaultTimeout(10000);
   const diagnostics=[];
+  await page.addInitScript(() => {
+    const NativeMO=window.MutationObserver; let seq=0;
+    window.__moStats=[];
+    window.MutationObserver=class extends NativeMO{
+      constructor(cb){
+        const id=++seq, stack=(new Error('MutationObserver '+id)).stack||'';
+        const rec={id,count:0,dropped:0,stack};window.__moStats.push(rec);
+        super((...args)=>{rec.count++;if(rec.count>200){rec.dropped++;return}return cb(...args)});
+      }
+    };
+  });
   page.on('console',m=>diagnostics.push('console '+m.type()+': '+m.text()));
   page.on('pageerror',e=>diagnostics.push('pageerror: '+e.message));
   page.on('requestfailed',r=>diagnostics.push('requestfailed: '+r.method()+' '+r.url()+' '+(r.failure()?.errorText||'')));
@@ -40,6 +51,7 @@ try{
   console.log('ACTIVE RENDERED',active);
   try{console.log('POST START BODY',await page.locator('body').innerText({timeout:3000}).then(x=>x.slice(0,1600)))}catch(e){console.log('BODY READ FAILED',e.message)}
   console.log('DIAGNOSTICS\n'+diagnostics.join('\n'));
+  try{console.log('MUTATION OBSERVERS',JSON.stringify(await page.evaluate(()=>window.__moStats),null,2))}catch(e){console.log('MO READ FAILED',e.message)}
   const boot=await call('bootstrap',{},token,200);
   console.log('BACKEND ACTIVE',JSON.stringify(boot.activeSession&&{id:boot.activeSession.id,status:boot.activeSession.status,name:boot.activeSession.day_snapshot?.name,sets:boot.activeSession.sets?.length,plan_day_id:boot.activeSession.plan_day_id}));
   if(boot.activeSession) await call('abandon_session',{sessionId:boot.activeSession.id,notes:'Production workout freeze diagnostic cleanup'},token,200);
