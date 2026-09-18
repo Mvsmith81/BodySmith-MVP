@@ -19,5 +19,5 @@ assert(profile.includes('heightCm'),'editable height missing');
 assert(profile.includes('activityLevel'),'activity profile missing');
 assert(nutrition.includes('macroSuggestion'),'profile-based macro suggestions missing');
 assert(nutrition.includes('Use suggested macros'),'macro apply action missing');
-assert(sw.includes("bodysmith-release-2.13.0-release213"),'current release cache missing');
+assert(sw.includes("bodysmith-release-2.14.0-release214"),'current release cache missing');
 console.log('BodySmith release 2.11 planner/profile/nutrition smoke passed inside current shell');
