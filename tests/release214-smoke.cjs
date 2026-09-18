@@ -1,0 +1,10 @@
+const fs=require('fs'),assert=require('node:assert/strict');
+const app=fs.readFileSync('app.js','utf8'),r213=fs.readFileSync('release-213.js','utf8'),backend=fs.readFileSync('supabase/functions/bodysmith-api/index.ts','utf8'),html=fs.readFileSync('index.html','utf8'),sw=fs.readFileSync('sw.js','utf8'),version=fs.readFileSync('release-version.js','utf8'),pkg=JSON.parse(fs.readFileSync('package.json','utf8'));
+for(const term of ['activeSessionCard','recoverActiveConflict','endActiveWorkout','openActiveResolver','mergeActiveSession','startBusy',"We couldn't start this workout"])assert.ok(app.includes(term),term);
+assert.ok(r213.includes("[data-delete-active213]"));assert.ok(!r213.includes("[data-delete-active-213]"));assert.ok(r213.includes('scheduleEnhance'));
+for(const term of ['getActiveSession','usableWorkoutSnapshot','markRecoveredAbandoned','activeSession:existing'])assert.ok(backend.includes(term),term);
+assert.ok(version.includes("VERSION='v2.14.0'"));
+assert.ok(html.includes('release-214.css?v=20260918-release214'));assert.ok(html.includes('app.js?v=20260918-release214'));
+assert.ok(sw.includes("bodysmith-release-2.14.0-release214"));assert.ok(sw.includes('release-214.css?v=20260918-release214'));
+assert.equal(pkg.version,'2.14.0');
+console.log('PASS v2.14 workout freeze repair, active-session recovery, duplicate-start guard and cache release wiring');
