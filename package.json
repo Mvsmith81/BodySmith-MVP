@@ -1,13 +1,13 @@
 {
   "name": "bodysmith-mvp",
-  "version": "2.13.0",
-  "description": "BodySmith is a mobile-first workout PWA with cloud accounts, guided set logging, editable workout history, progress tracking, flexible training plans, quick workouts, calendar planning, supplement adherence, community features, and nutrition tracking.",
+  "version": "2.14.0",
+  "description": "BodySmith is a mobile-first workout PWA with cloud accounts, recoverable active workout sessions, guided set logging, editable workout history, progress tracking, flexible training plans, quick workouts, calendar planning, supplement adherence, community features, and nutrition tracking.",
   "main": "app.js",
   "directories": {
     "test": "tests"
   },
   "scripts": {
-    "test": "node --check app.js && node --check history-log.js && node --check flex-profile.js && node --check workout-flex.js && node --check auth-upgrade.js && node --check exercise-groups.js && node --check profile-details.js && node --check nutrition-v2.js && node --check forge-media-upgrade.js && node --check planner-runtime.js && node --check workout-experience.js && node --check release-213.js && node --check sw.js && node tests/ui-smoke.cjs && node tests/training-smoke.cjs && node tests/workout-edit-smoke.cjs && node tests/swap-library-smoke.cjs && node tests/sw-smoke.cjs && node tests/brand-smoke.cjs && node tests/forge-ui-smoke.cjs && node tests/history-ui-smoke.cjs && node tests/flexible-profile-smoke.cjs && node tests/auth-flex-v28-smoke.cjs && node tests/release29-smoke.cjs && node tests/forge-media-upgrade-smoke.cjs && node tests/release211-smoke.cjs && node tests/release212-smoke.cjs && node tests/release213-smoke.cjs",
+    "test": "node --check app.js && node --check history-log.js && node --check flex-profile.js && node --check workout-flex.js && node --check auth-upgrade.js && node --check exercise-groups.js && node --check profile-details.js && node --check nutrition-v2.js && node --check forge-media-upgrade.js && node --check planner-runtime.js && node --check workout-experience.js && node --check release-213.js && node --check release-version.js && node --check sw.js && node tests/ui-smoke.cjs && node tests/training-smoke.cjs && node tests/workout-edit-smoke.cjs && node tests/swap-library-smoke.cjs && node tests/sw-smoke.cjs && node tests/brand-smoke.cjs && node tests/forge-ui-smoke.cjs && node tests/history-ui-smoke.cjs && node tests/flexible-profile-smoke.cjs && node tests/auth-flex-v28-smoke.cjs && node tests/release29-smoke.cjs && node tests/forge-media-upgrade-smoke.cjs && node tests/release211-smoke.cjs && node tests/release212-smoke.cjs && node tests/release213-smoke.cjs && node tests/workout-freeze-regression.cjs && node tests/workout-session-lifecycle-smoke.cjs && node tests/release214-smoke.cjs",
     "test:backend": "node tests/backend-smoke.mjs",
     "test:forge": "node tests/forge-backend-smoke.mjs",
     "test:history": "node tests/history-backend-smoke.mjs",
