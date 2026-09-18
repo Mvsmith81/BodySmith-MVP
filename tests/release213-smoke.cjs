@@ -10,10 +10,10 @@ for(const term of ['Delete this workout','Delete workout','delete_session','supp
 for(const term of ['danger-213','supplement-date-panel-213','supplement-past-checklist-213'])assert.ok(css.includes(term),term);
 for(const term of ['delete_session','workout_sessions','user_id','app_sessions','token_hash'])assert.ok(edge.includes(term),term);
 assert.ok(html.includes('release-213.css?v=20260917-release213'));
-assert.ok(html.includes('release-213.js?v=20260917-release213'));
-assert.ok(sw.includes('bodysmith-release-2.13.0-release213'));
+assert.ok(html.includes('release-213.js?v=20260918-release214'));
+assert.ok(sw.includes('bodysmith-release-2.14.0-release214'));
 assert.ok(sw.includes('release-213.js?v=20260917-release213'));
 assert.ok(sw.includes('release-213.css?v=20260917-release213'));
-assert.ok(version.includes("VERSION='v2.13.0'"));
-assert.equal(pkg.version,'2.13.0');
+assert.ok(version.includes("VERSION='v2.14.0'"));
+assert.equal(pkg.version,'2.14.0');
 console.log('PASS v2.13 workout deletion, calendar delete controls, AM/PM supplement times and past-date adherence logging');
