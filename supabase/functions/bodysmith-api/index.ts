@@ -264,7 +264,7 @@ Deno.serve(async (req: Request) => {
         if(!ex||seen.has(ex.id)||!Number.isInteger(+x.target_sets)||x.target_sets<1||x.target_sets>20||!Number.isInteger(+x.rest_seconds)||x.rest_seconds<0||x.rest_seconds>3600||!Number.isInteger(+x.min_reps)||x.min_reps<0||!Number.isInteger(+x.max_reps)||x.max_reps<x.min_reps||x.max_reps>1000||!Number.isInteger(+(x.duration_minutes||0))||+(x.duration_minutes||0)<0||+(x.duration_minutes||0)>240)return out(req,{error:"Check exercise targets."},400);
         seen.add(ex.id);slots.push({...x,id:crypto.randomUUID(),sort_order:i,exercises:ex,exercise_id:ex.id});
       }
-      const {data,error}=await db.rpc("start_bodysmith_session",{p_user:userId,p_day:null,p_snapshot:{name:String(day.name).slice(0,100),plan_day_exercises:slots,custom:true}});if(error)throw error;
+      const {data,error}=await db.rpc("start_bodysmith_session",{p_user:userId,p_day:null,p_snapshot:{name:String(day.name).slice(0,100),plan_day_exercises:slots,custom:true}});if(error){const active=await getActiveSession(userId);if(active)return out(req,{error:"A workout is already in progress.",activeSession:active,session:active},409);throw error;}
       return out(req,{session:{...data,sets:[]}},201);
     }
     if (action === "logout") {
@@ -399,7 +399,7 @@ return out(req, { user, plan, history: hist, activeSession: active, exercises:ex
       const plan=await getPlan(user.active_plan_id);
       const snapshot=plan?.plan_days?.find((d:any)=>d.id===planDayId);
       const { data, error } = await db.rpc("start_bodysmith_session",{p_user:userId,p_day:planDayId,p_snapshot:snapshot});
-      if (error) throw error;
+      if (error) { const active=await getActiveSession(userId); if(active)return out(req,{error:"A workout is already in progress.",activeSession:active,session:active},409); throw error; }
       return out(req, { session: { ...data, sets: [] } }, 201);
     }
 
