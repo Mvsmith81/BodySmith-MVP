@@ -10,6 +10,6 @@ for(const term of ['calendar-day-detail','performance-baseline','quick-workout-l
 for(const term of ["VERSION='v2.14.0'",'requestAnimationFrame'])assert.ok(version.includes(term),term);
 for(const asset of ['workout-experience.js?v=20260918-release214','release-212.css?v=20260916-release212']){assert.ok(html.includes(asset),asset);assert.ok(sw.includes(asset),asset)}
 assert.ok(html.includes('release-version.js?v=20260918-release214'));
-assert.ok(sw.includes('release-version.js?v=20260917-release213'));
+assert.ok(sw.includes('release-version.js?v=20260918-release214'));
 assert.equal(pkg.version,'2.14.0');
 console.log('PASS v2.12 workout experience features remain wired inside the v2.14 shell');
