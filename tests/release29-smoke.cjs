@@ -6,7 +6,7 @@ const groups=fs.readFileSync('exercise-groups.js','utf8');
 const nutrition=fs.readFileSync('nutrition-v2.js','utf8');
 const nutritionBackend=fs.readFileSync('supabase/functions/bodysmith-nutrition/index.ts','utf8');
 for(const asset of ['release-29.css?v=20260915-release211','exercise-groups.js?v=20260915-release211','nutrition-v2.js?v=20260915-release211'])assert.ok(html.includes(asset),asset);
-assert.ok(sw.includes("bodysmith-release-2.13.0-release213"));
+assert.ok(sw.includes("bodysmith-release-2.14.0-release214"));
 for(const asset of ['release-29.css?v=20260915-release211','exercise-groups.js?v=20260915-release211','nutrition-v2.js?v=20260915-release211'])assert.ok(sw.includes(asset),asset);
 assert.ok(css.includes('.forge-hero [data-forge-new]'));
 assert.ok(css.includes('white-space:nowrap'));
