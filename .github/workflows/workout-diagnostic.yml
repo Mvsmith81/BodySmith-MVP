@@ -2,7 +2,15 @@ name: Workout Production Diagnostic
 on:
   workflow_dispatch:
   push:
+    branches: [main]
     paths:
+      - 'app.js'
+      - 'release-213.js'
+      - 'release-version.js'
+      - 'release-214.css'
+      - 'index.html'
+      - 'sw.js'
+      - 'supabase/functions/bodysmith-api/**'
       - 'tests/prod-workout-diagnostic.mjs'
       - '.github/workflows/workout-diagnostic.yml'
 jobs:
