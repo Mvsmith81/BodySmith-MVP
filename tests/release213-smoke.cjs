@@ -12,7 +12,7 @@ for(const term of ['delete_session','workout_sessions','user_id','app_sessions',
 assert.ok(html.includes('release-213.css?v=20260917-release213'));
 assert.ok(html.includes('release-213.js?v=20260918-release214'));
 assert.ok(sw.includes('bodysmith-release-2.14.0-release214'));
-assert.ok(sw.includes('release-213.js?v=20260917-release213'));
+assert.ok(sw.includes('release-213.js?v=20260918-release214'));
 assert.ok(sw.includes('release-213.css?v=20260917-release213'));
 assert.ok(version.includes("VERSION='v2.14.0'"));
 assert.equal(pkg.version,'2.14.0');
